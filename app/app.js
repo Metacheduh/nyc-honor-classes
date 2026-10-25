@@ -155,6 +155,7 @@
         var box = el('section', { 'class': 'sponsors', 'aria-labelledby': 'sp-h' });
         box.innerHTML = '<h2 id="sp-h">Sponsors</h2>' +
             '<div class="ask"><h3>' + esc(sp.ask.title) + ': ' + esc(sp.ask.line.toLowerCase()) + '</h3><p>' + esc(sp.ask.detail) + '</p>' +
+            (sp.ask.detail2 ? '<p>' + esc(sp.ask.detail2) + '</p>' : '') +
             '<a class="btn" href="' + esc(mail) + '">Ask about sponsoring</a></div>';
         wrap.appendChild(box);
         wrap.appendChild(el('p', { 'class': 'foot' }, 'Built by NYC Honor Foundation volunteers. Educational content only, not tax, legal or investment advice. Your progress and answers stay on this phone. This app has no accounts and sends nothing about you anywhere.'));

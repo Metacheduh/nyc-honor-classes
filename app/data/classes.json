@@ -29,6 +29,6 @@
     { "id": "history",     "kind": "soon", "title": "World History", "sub": "Intro class" }
   ],
   "sponsors": {
-    "ask": { "title": "Your company here", "line": "Sponsor a class", "detail": "A Course Sponsor gift of $3,900 pays for a year of the free money course for high-school athletes. Course sponsors are credited on the course page.", "email": "eslyn@nychonor.org", "subject": "Course Sponsor ($3,900)" }
+    "ask": { "title": "Your company here", "line": "Sponsor a class", "detail": "A Course Sponsor gift of $3,900 pays for a year of the free money course for high-school athletes. Course sponsors are credited on the course page.", "detail2": "Presenting Sponsor ($10,000): your name on the app home screen for the 2026–27 school year.", "email": "eslyn@nychonor.org", "subject": "Course Sponsor ($3,900)" }
   }
 }
