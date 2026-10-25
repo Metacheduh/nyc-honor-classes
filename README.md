@@ -6,6 +6,10 @@ Free money classes for high-school students, as a phone app that works offline. 
 - **Money Tools:** a tax set-aside, a monthly split and savings goals.
 - No accounts, no ads, no tracking. Progress stays on the student's own phone (browser storage only).
 
+## Budget Simulator
+
+`budget-simulator/` is the classroom tool at [nychonor.org/budget-simulator](https://nychonor.org/budget-simulator): five steps in one class period (a first paycheck with 2026 federal, New York State and NYC taxes, needs/wants/savings, an emergency fund, the credit card minimum-payment trap, and starting to save at 16 vs 25). The math is in `budget-simulator/budget-simulator.js`, which also loads in Node (`require('./budget-simulator/budget-simulator.js')`) so you can test it. Update the `TAX` and `MIN_WAGE` figures each year.
+
 ## Run your own copy
 
 It's plain HTML, CSS and JavaScript with no build step.
@@ -14,7 +18,7 @@ It's plain HTML, CSS and JavaScript with no build step.
 python3 -m http.server 8000
 ```
 
-Then open http://localhost:8000/app/. To host it, upload the folder to any static host (Netlify, GitHub Pages, a school web server).
+Then open http://localhost:8000/app/ or http://localhost:8000/budget-simulator/. To host it, upload the folder to any static host (Netlify, GitHub Pages, a school web server).
 
 Lessons live in `app/data/nil/01.json` to `07.json`, and the class list is in `app/data/classes.json`. Edit those to adapt the content. Tax figures are for 2026; check them against the IRS and your state before each school year.
 

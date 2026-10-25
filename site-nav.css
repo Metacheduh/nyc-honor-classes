@@ -1,0 +1,256 @@
+/* One header for every page. Loaded last, after styles.css (and home.css / course.css where a
+   page uses them), so these rules win over the older per-page nav styles. The markup is written
+   into each page by scripts/apply_nav.py; edit the menu there, not by hand in the pages.
+   Look: the homepage's deep jersey green bar, the green-and-gold NYC HONOR wordmark, uppercase
+   links, gold Donate button. */
+
+.nav.site-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: 10px 0;
+    background: rgba(6, 35, 26, 0.94);
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    font-family: 'Inter', -apple-system, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.nav.site-nav.scrolled {
+    background: rgba(6, 35, 26, 0.98);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
+}
+
+.nav.site-nav .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+/* The wordmark: the original NYC Honor colors, upright, and it always goes home. */
+.nav.site-nav .nav-brand {
+    display: inline-block;   /* not flex: flex would drop the space between NYC and HONOR */
+    line-height: 44px;
+    font-family: inherit;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 1.4rem;
+    letter-spacing: 0.5px;
+    color: #15803D;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.nav.site-nav .nav-brand span { color: #B8923D; }
+
+.nav.site-nav .nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav.site-nav .nav-links a {
+    color: rgba(255, 255, 255, 0.88);
+    text-decoration: none;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+}
+
+.nav.site-nav .nav-links a:hover,
+.nav.site-nav .nav-links a[aria-current="page"] { color: #D9B45E; }
+
+/* Section menus: Team, Course, Give. The label is itself a link to the section's main page,
+   so a tap on a tablet still lands somewhere useful; hover or keyboard focus shows the rest. */
+.nav.site-nav .nav-group { position: relative; }
+
+.nav.site-nav .nav-group > a::after {
+    content: '';
+    width: 6px;
+    height: 6px;
+    margin-left: 7px;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: rotate(45deg) translateY(-2px);
+}
+
+.nav.site-nav .nav-drop {
+    list-style: none;
+    margin: 0;
+    padding: 8px 0;
+    position: absolute;
+    top: 100%;
+    left: -14px;
+    min-width: 230px;
+    background: #06231A;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(4px);
+    transition: opacity .15s, transform .15s, visibility .15s;
+}
+
+.nav.site-nav .nav-group:hover .nav-drop,
+.nav.site-nav .nav-group:focus-within .nav-drop {
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+}
+
+.nav.site-nav .nav-drop a {
+    display: flex;
+    padding: 0 18px;
+    min-height: 42px;
+    font-size: 0.74rem;
+    color: rgba(255, 255, 255, 0.86);
+}
+
+.nav.site-nav .nav-drop a:hover { background: rgba(255, 255, 255, 0.06); }
+
+.nav.site-nav a.nav-donate {
+    color: #111;
+    background: #D9B45E;
+    padding: 0 18px;
+    clip-path: polygon(8px 0, 100% 0, calc(100% - 8px) 100%, 0 100%);
+}
+
+.nav.site-nav a.nav-donate:hover,
+.nav.site-nav a.nav-donate[aria-current="page"] { background: #E8C878; color: #111; }
+
+.nav.site-nav .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Phone: wordmark, a Donate button that is always in reach, and the menu button. */
+.nav.site-nav .nav-donate-sm { display: none; }
+
+.nav.site-nav .hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 9px 11px;
+}
+
+.nav.site-nav .hamburger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    margin: 5px 0;
+    border-radius: 2px;
+    background: #fff;
+    transition: all 0.3s;
+}
+
+.nav.site-nav a:focus-visible,
+.nav.site-nav button:focus-visible,
+.mobile-menu.site-menu a:focus-visible {
+    outline: 3px solid #D9B45E;
+    outline-offset: 3px;
+}
+
+.mobile-menu.site-menu {
+    display: none;
+    position: fixed;
+    top: 64px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    background: #06231A;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 0;
+    padding: 20px 24px 40px;
+    overflow-y: auto;
+    font-family: 'Inter', -apple-system, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.mobile-menu.site-menu.show { display: flex; }
+
+.mobile-menu.site-menu .menu-group { margin-bottom: 18px; }
+
+.mobile-menu.site-menu .menu-label {
+    display: block;
+    margin-bottom: 4px;
+    color: #D9B45E;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.mobile-menu.site-menu a {
+    display: flex;
+    align-items: center;
+    min-height: 46px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: 800;
+    font-style: normal;
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+.mobile-menu.site-menu a:hover,
+.mobile-menu.site-menu a[aria-current="page"] { color: #D9B45E; }
+
+.mobile-menu.site-menu a.nav-donate {
+    justify-content: center;
+    margin-top: 8px;
+    background: #D9B45E;
+    color: #111;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 1rem;
+}
+
+@media (max-width: 960px) {
+    .nav.site-nav .nav-links { display: none; }
+    .nav.site-nav .hamburger { display: block; }
+    .nav.site-nav .nav-donate-sm {
+        display: inline-flex;
+        align-items: center;
+        min-height: 40px;
+        padding: 0 14px;
+        background: #D9B45E;
+        color: #111;
+        text-decoration: none;
+        font-size: 0.72rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+    }
+}
+
+@media (max-width: 360px) {
+    .nav.site-nav .nav-brand { font-size: 1.2rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .nav.site-nav .nav-drop { transition: none; }
+}
+
+/* Phones: main.js adds .nav-away while scrolling down (see the note there). */
+.nav.site-nav { transition: transform .25s ease, background .2s ease, box-shadow .2s ease; }
+.nav.site-nav.nav-away { transform: translateY(-100%); }
+@media (prefers-reduced-motion: reduce) { .nav.site-nav { transition: none; } }
+
+/* The NYC Honor crest is the brand mark in the header (scripts/apply_nav.py writes the <img>; the link keeps its aria-label). */
+.nav.site-nav .nav-brand .nav-crest { display: block; height: 44px; width: auto; }
+@media (max-width: 899px) { .nav.site-nav .nav-brand .nav-crest { height: 42px; } }

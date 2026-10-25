@@ -1,0 +1,470 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #FAF6EF;          /* CREAM tone */
+    --surface: #E9F3EB;     /* GREEN tone */
+    --card: #FFFFFF;
+    --border: rgba(21, 128, 61, 0.13);
+    --text: #16233A;
+    --text-muted: #51637A;
+    --text-dim: #5E6B6B;   /* darkened Sep 27 2026: #7c8a8a was 3.3:1 on cream, below the 4.5:1 readable minimum */
+    --accent: #15803D;
+    --accent-glow: rgba(21, 128, 61, 0.10);
+    --accent-hover: #126633;
+    --gold: #B8923D;
+    --gold-glow: rgba(184, 146, 61, 0.10);
+    --fn: 'Inter', -apple-system, sans-serif;
+    --mono: 'JetBrains Mono', monospace;
+    --radius: 14px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--fn);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Links with no style of their own fell back to the browser's default blue, which clashes
+   with the cream and green palette (iPhone review, Oct 23 2026). :where() keeps this at zero
+   specificity, so every existing link rule (gold story links, buttons, nav) still wins. */
+:where(a) {
+    color: var(--accent);
+}
+
+/* "Tell us the gift is coming", drawn by /gift-notice.js. One look on every page. */
+.gift-notice { margin-top: 1rem; }
+.gift-notice .gn-label {
+    display: block;
+    font-weight: 700;
+    color: var(--text);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+.gift-notice .gn-row { display: flex; gap: 10px; flex-wrap: wrap; }
+.gift-notice .gn-input {
+    flex: 1 1 220px;
+    min-width: 0;
+    min-height: 48px;
+    padding: 12px 14px;
+    background: #fff;
+    border: 1px solid rgba(21, 128, 61, 0.35);
+    border-radius: 10px;
+    color: var(--text);
+    font-size: 16px;
+    font-family: var(--fn);
+}
+.gift-notice .gn-input:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+.gift-notice .gn-btn {
+    flex: 0 0 auto;
+    min-height: 48px;
+    padding: 12px 20px;
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    font-family: var(--fn);
+    cursor: pointer;
+}
+.gift-notice .gn-btn:hover { background: var(--accent-hover); }
+.gift-notice .gn-btn:disabled { opacity: 0.6; cursor: default; }
+.gift-notice .gn-note { font-size: 0.85rem; color: var(--text-muted); margin-top: 0.6rem; line-height: 1.5; }
+.gift-notice .gn-note a { color: var(--accent); }
+.gift-notice .gn-done { margin: 0; color: var(--text); line-height: 1.6; }
+@media (max-width: 480px) {
+    .gift-notice .gn-btn { flex: 1 1 100%; }
+}
+
+/* ── NAV ── */
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: 14px 0;
+    background: rgba(250, 246, 239, 0.90);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    transition: padding 0.3s;
+}
+
+.nav.scrolled {
+    padding: 10px 0;
+    background: rgba(250, 246, 239, 0.97);
+    box-shadow: 0 2px 20px rgba(21, 128, 61, 0.07);
+}
+
+.nav .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-brand {
+    font-size: 1.4rem;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.nav-brand span {
+    color: var(--gold);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 28px;
+}
+
+.nav-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: color .2s;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+.nav-cta {
+    padding: 9px 22px;
+    background: var(--accent);
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.8rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all .2s;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-cta:hover {
+    background: var(--accent-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 16px rgba(34, 197, 94, 0.3);
+}
+
+/* Hamburger */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 9px 11px;   /* 44 x 44 tap target (was about 30 x 34) */
+}
+
+.hamburger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--text);
+    margin: 5px 0;
+    border-radius: 2px;
+    transition: all 0.3s;
+}
+
+.hamburger.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 56px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(250, 246, 239, 0.98);
+    z-index: 99;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.mobile-menu.show {
+    display: flex;
+}
+
+.mobile-menu a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.mobile-menu a:hover {
+    color: var(--accent);
+}
+
+/* ── BUTTONS ── */
+.btn-primary {
+    display: inline-block;
+    padding: 14px 36px;
+    background: var(--accent);
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.9rem;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.25s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background: var(--accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(34, 197, 94, 0.3);
+}
+
+.btn-outline {
+    display: inline-block;
+    padding: 14px 36px;
+    border: 1.5px solid var(--accent);
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.25s;
+    background: transparent;
+}
+
+.btn-outline:hover {
+    background: rgba(34, 197, 94, 0.08);
+}
+
+.btn-gold {
+    display: inline-block;
+    padding: 12px 28px;
+    border: 1.5px solid var(--gold);
+    color: var(--gold);
+    font-weight: 600;
+    font-size: 0.85rem;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.25s;
+    background: transparent;
+}
+
+.btn-gold:hover {
+    background: rgba(197, 160, 89, 0.1);
+}
+
+/* ── SECTIONS ── */
+.section {
+    padding: 80px 0;
+}
+
+.section-label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 12px;
+}
+
+.gold-text {
+    color: var(--gold) !important;
+}
+
+/* keyword POP — green highlight for important phrases */
+.hl {
+    color: var(--accent);
+    font-weight: 700;
+}
+.hl-strong {
+    color: var(--accent-hover);
+    font-weight: 800;
+}
+
+.section-surface {
+    background: var(--surface) !important;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 16px;
+    letter-spacing: -0.01em;
+}
+
+.section-desc {
+    color: var(--text-muted);
+    max-width: 600px;
+    margin-bottom: 48px;
+    font-size: 0.95rem;
+}
+
+/* ── FOOTER ── */
+.footer {
+    padding: 32px 0;
+    border-top: 1px solid var(--border);
+    text-align: center;
+}
+
+.footer-copy {
+    font-size: 0.72rem;
+    color: var(--text-dim);
+}
+
+.footer-sponsor {
+    font-size: 0.72rem;
+    color: var(--text-dim);
+    margin-top: 6px;
+}
+
+.footer-copy a,
+.footer-sponsor a {
+    color: var(--text-muted);
+    text-decoration: none;
+    border-bottom: 1px solid var(--border);
+}
+
+.footer-sponsor a:hover {
+    color: var(--accent);
+}
+
+/* ── SCROLL ANIMATIONS ── */
+.reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Readers who ask for reduced motion get the content immediately, not a fade. Without this
+   the entire article body of every guide page sits at opacity 0 until an IntersectionObserver
+   decides otherwise, which for these visitors is an accessibility failure rather than a
+   flourish. The fade is unchanged for everyone else. */
+@media (prefers-reduced-motion: reduce) {
+    .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+
+/* ── RESPONSIVE BASE ── */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .desktop-only {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    /* Keep Donate in the header on phones: when the nav list holds a /donate link, show only
+       that item as a compact button beside the hamburger. Every rule is gated on :has(), so a
+       browser without it falls back to the old behaviour (list hidden, Donate in the menu). */
+    .nav-links:has(> li > a[href^="/donate"]) {
+        display: flex;
+        margin-left: auto;
+        margin-right: 8px;
+        gap: 0;
+    }
+
+    .nav-links:has(> li > a[href^="/donate"]) > li:not(:has(> a[href^="/donate"])) {
+        display: none;
+    }
+
+    .nav-links:has(> li > a[href^="/donate"]) > li > a[href^="/donate"] {
+        display: inline-block;
+        padding: 10px 16px;
+        background: var(--accent);
+        color: #fff !important;   /* beats the inline gold colour used on desktop */
+        font-size: 0.85rem;
+        font-weight: 700;
+        line-height: 1.4;
+        border-radius: 8px;
+        white-space: nowrap;
+    }
+}
+
+/* Candid Seal of Transparency. Candid re-renders the SVG when a new Seal is earned,
+   so this needs no edit when Silver becomes Gold. The img carries width and height
+   attributes too, so the seal still sizes correctly if this stylesheet is cached. */
+.seal-link {
+    display: inline-block;
+    line-height: 0;
+    flex-shrink: 0;
+}
+
+.seal-link img {
+    display: block;
+}
+
+/* Jump links (#about, #packet...) land below the fixed top bar instead of under it. */
+html { scroll-padding-top: 80px; }
+
+/* ── PRINT ──
+   Added Oct 23 2026 after a print-to-PDF check of every calculator page. Three things went
+   wrong on paper: every .reveal section below the fold printed blank (the scroll fade never
+   ran, so they sat at opacity 0, which took the "Send it to NYC Honor" custodian wording with
+   them); the fixed menu bar repeated over the top of each page; and forms and buttons printed
+   as dead controls. The page's results and explanations are what a donor or their tax
+   preparer wants on paper, so that is what prints. */
+@media print {
+    @page { margin: 14mm 12mm; }
+    html, body { background: #fff !important; }
+    .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+    .nav, .site-nav, .mobile-menu, .site-menu, .hamburger, .nav-donate, .nav-donate-sm,
+    .tool-nav, .buckets-float,
+    form, button, .fintech-btn, .btn-primary, .btn-outline, .result-cta,
+    .gift-notice form, .gn-form, .howto-video, video, iframe {
+        display: none !important;
+    }
+    /* Pages pad their first section to clear the fixed menu bar; on paper there is no bar. */
+    .portal-hero, .article-hero { padding-top: 0 !important; margin-top: 0 !important; min-height: 0 !important; }
+    /* Closed "how this works" disclosures print their summary line only, which is fine. Keep
+       result cards and breakdown rows from splitting across a page break. */
+    .result-breakdown, .check-block, .flag { break-inside: avoid; }
+    a { color: inherit !important; }
+}

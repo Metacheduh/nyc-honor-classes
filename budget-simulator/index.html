@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Simulator for New York Personal Finance Classes (2026) | NYC Honor Academy</title>
+    <meta name="description"
+        content="Free budget simulator and one-period lesson for New York's high school personal finance requirement: a 2026 first paycheck with taxes, needs, wants and savings, an emergency fund, a credit card and compound growth.">
+    <link rel="canonical" href="https://nychonor.org/budget-simulator">
+    <link rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+    <meta property="og:title" content="Budget Simulator: a free New York personal finance lesson">
+    <meta property="og:description" content="Your first paycheck with 2026 taxes, a budget, an emergency fund, a credit card and compound growth. Free, no sign-up, nothing saved.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nychonor.org/budget-simulator">
+    <meta property="og:image" content="https://nychonor.org/assets/players/hero-honor-jerseys.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@NYCHonor">
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"LearningResource","name":"Budget Simulator: first paycheck, budget, emergency fund, credit card and compound growth","url":"https://nychonor.org/budget-simulator","description":"A free interactive budget simulator and one-period lesson for New York high school personal finance classes, with 2026 tax figures.","learningResourceType":["Interactive simulation","Lesson plan"],"interactivityType":"active","educationalLevel":"High school","teaches":["Gross pay, take-home pay and paycheck deductions","Needs, wants and savings budgeting","Emergency fund goals","Credit card interest and minimum payments","Compound growth and starting early"],"educationalAlignment":[{"@type":"AlignmentObject","alignmentType":"educationalSubject","educationalFramework":"NYSED Personal Finance Education, grades 9-12","targetName":"Budgeting and Money Management","targetUrl":"https://www.nysed.gov/standards-instruction/personal-finance-topics-grade-bands"},{"@type":"AlignmentObject","alignmentType":"educationalSubject","educationalFramework":"NYSED Personal Finance Education, grades 9-12","targetName":"Credit and Debt Management","targetUrl":"https://www.nysed.gov/standards-instruction/personal-finance-topics-grade-bands"},{"@type":"AlignmentObject","alignmentType":"educationalSubject","educationalFramework":"NYSED Personal Finance Education, grades 9-12","targetName":"Earning Income","targetUrl":"https://www.nysed.gov/standards-instruction/personal-finance-topics-grade-bands"},{"@type":"AlignmentObject","alignmentType":"educationalSubject","educationalFramework":"NYSED Personal Finance Education, grades 9-12","targetName":"Saving and Investing","targetUrl":"https://www.nysed.gov/standards-instruction/personal-finance-topics-grade-bands"}],"license":"https://creativecommons.org/licenses/by-nc-sa/4.0/","audience":[{"@type":"EducationalAudience","educationalRole":"teacher"},{"@type":"EducationalAudience","educationalRole":"student"}],"isAccessibleForFree":true,"inLanguage":"en","datePublished":"2026-10-14","dateModified":"2026-10-14","timeRequired":"PT45M","isPartOf":{"@type":"Course","name":"NYC Honor Academy","url":"https://nychonor.org/academy"},"publisher":{"@type":"NGO","name":"NYC Honor Foundation Inc.","url":"https://nychonor.org/","taxID":"42-1836369"}}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"NYC Honor Foundation","item":"https://nychonor.org/"},{"@type":"ListItem","position":2,"name":"NYC Honor Academy","item":"https://nychonor.org/academy"},{"@type":"ListItem","position":3,"name":"Budget Simulator","item":"https://nychonor.org/budget-simulator"}]}
+    </script>
+    <script>document.documentElement.className += ' js';</script>
+    <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/fonts/fonts.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="course.css">
+    <!-- Course-family page for students: NO Clarity, NO GA4, no course-count tally, self-hosted fonts.
+         The simulator (budget-simulator.js) does its math in the browser and sends and saves nothing.
+         Tax figures are 2026 and must be re-verified every January (see the header of budget-simulator.js).
+         Wording rule: this page "covers" NYSED topics; never claim it satisfies the requirement. -->
+    <style>
+        .sim { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.4rem 1.4rem 1.2rem; margin: 1.6rem 0; }
+        .sim h2 { margin-top: 0; }
+        .sim-step { display: inline-block; font-size: .72rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); margin-bottom: .3rem; }
+        .ctl { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); margin: 1rem 0; }
+        .ctl label { display: block; font-size: .88rem; font-weight: 600; color: var(--text); margin-bottom: .3rem; }
+        .ctl .val { font-family: var(--mono); font-weight: 700; color: var(--accent); float: right; }
+        .ctl input[type=range] { width: 100%; accent-color: var(--accent); }
+        .ctl input[type=number], .ctl select { width: 100%; padding: 9px 10px; border: 1px solid var(--border); border-radius: 10px; font: inherit; font-size: 1rem; background: #fff; color: var(--text); }
+        .ctl .check { display: flex; gap: .5rem; align-items: flex-start; font-weight: 500; }
+        .ctl .check input { margin-top: .35rem; accent-color: var(--accent); }
+        .hint { font-size: .8rem; color: var(--text-dim); margin: .25rem 0 0; }
+        .stub { width: 100%; border-collapse: collapse; font-size: .95rem; margin: .4rem 0 .8rem; }
+        .stub td { padding: 8px 6px; border-bottom: 1px solid var(--border); vertical-align: top; }
+        .stub td:last-child { text-align: right; font-family: var(--mono); white-space: nowrap; }
+        .stub .src { display: block; font-size: .76rem; color: var(--text-dim); }
+        .stub tr.total td { font-weight: 800; border-bottom: 2px solid var(--accent); color: var(--text); }
+        .stub tr.gross td { font-weight: 700; }
+        .est { display: inline-block; font-size: .66rem; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; padding: 1px 7px; border-radius: 50px; background: rgba(184, 146, 61, 0.16); color: #7a5f1f; margin-left: 4px; vertical-align: middle; }
+        .big { display: grid; gap: .8rem; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); margin: .8rem 0; }
+        .big div { background: var(--surface); border-radius: 12px; padding: .8rem 1rem; }
+        .big b { display: block; font-family: var(--mono); font-size: 1.35rem; color: var(--text); line-height: 1.2; }
+        .big span { font-size: .8rem; color: var(--text-muted); }
+        .bar { display: flex; height: 30px; border-radius: 8px; overflow: hidden; margin: .6rem 0; border: 1px solid var(--border); }
+        .bar span { display: flex; align-items: center; justify-content: center; font-size: .75rem; font-weight: 700; color: #fff; white-space: nowrap; overflow: hidden; transition: width .2s; }
+        .bar .n { background: #1F4E79; } .bar .w { background: var(--gold); color: #1d1606; } .bar .s { background: var(--accent); }
+        .bar.rule { height: 14px; opacity: .55; }
+        .legend { font-size: .82rem; color: var(--text-muted); }
+        .progress { height: 18px; background: var(--surface); border-radius: 50px; overflow: hidden; margin: .5rem 0; }
+        .progress span { display: block; height: 100%; background: var(--accent); transition: width .2s; }
+        .warn { background: rgba(185, 28, 28, 0.08); border-left: 4px solid #B91C1C; padding: .7rem .9rem; border-radius: 6px; font-size: .92rem; color: var(--text); }
+        .btn-row { display: flex; flex-wrap: wrap; gap: .5rem; margin: .5rem 0; }
+        .btn-row button { font: inherit; font-size: .85rem; font-weight: 700; padding: 8px 14px; border-radius: 10px; border: 1px solid var(--accent); background: #fff; color: var(--accent); cursor: pointer; }
+        .btn-row button.solid { background: var(--accent); color: #fff; }
+        .chart-wrap { margin: .8rem 0; }
+        .chart-wrap svg { width: 100%; height: auto; display: block; }
+        .chart-key { display: flex; flex-wrap: wrap; gap: 1rem; font-size: .82rem; color: var(--text-muted); }
+        .chart-key i { display: inline-block; width: 14px; height: 4px; border-radius: 2px; vertical-align: middle; margin-right: 6px; }
+        .summary { border: 2px solid var(--gold); background: #fff; }
+        .summary ul { padding-left: 1.1rem; }
+        .summary li { margin-bottom: .35rem; }
+        .write { border-bottom: 1px solid #bbb; height: 2rem; margin: .2rem 0 .6rem; }
+        .print-head { display: none; }
+        .teacher { background: var(--surface); border-radius: var(--radius); padding: 1.4rem; margin: 2rem 0; }
+        .teacher h2 { margin-top: 0; }
+        .map { width: 100%; border-collapse: collapse; font-size: .9rem; }
+        .map th, .map td { padding: 8px 6px; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; color: var(--text-muted); }
+        .map th { color: var(--text); font-size: .74rem; text-transform: uppercase; letter-spacing: .5px; }
+        .map td:first-child { font-weight: 700; color: var(--text); }
+        .plan { width: 100%; border-collapse: collapse; font-size: .92rem; }
+        .plan td { padding: 7px 6px; border-bottom: 1px solid var(--border); vertical-align: top; }
+        .plan td:first-child { font-family: var(--mono); white-space: nowrap; font-weight: 700; }
+        .give { font-size: .9rem; color: var(--text-muted); border-top: 1px solid var(--border); padding-top: 1rem; margin-top: 2rem; }
+        .no-js-note { display: none; }
+        html:not(.js) .no-js-note { display: block; }
+        @media (max-width: 600px) {
+            .sim { padding: 1.1rem .9rem 1rem; }
+            .teacher { padding: 1.1rem .9rem; }
+            .stub, .map, .plan { font-size: .85rem; }
+            .big b { font-size: 1.15rem; }
+        }
+        /* Print = the summary card only. The old rule hid everything else with visibility:hidden,
+           which keeps the hidden content's height, so "Print this summary" came out as one page
+           of summary plus seven blank pages (QA Oct 23 2026). display:none removes it instead:
+           every element that neither is the summary, sits inside it, nor contains it is dropped. */
+        @media print {
+            body *:not(#summary):not(#summary *):not(:has(#summary)) { display: none !important; }
+            body :has(#summary) { padding: 0 !important; margin: 0 !important; min-height: 0 !important; background: none !important; }
+            #summary { position: static; width: 100%; border: none; margin: 0; padding: 0; opacity: 1 !important; transform: none !important; }
+            #summary .btn-row { display: none; }
+            .print-head { display: block; font-size: .8rem; color: #555; margin-bottom: .6rem; }
+            body { background: #fff; }
+        }
+    </style>
+    <link rel="icon" href="/favicon.ico" sizes="48x48">
+    <link rel="icon" href="/icon-192.png" sizes="192x192" type="image/png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="stylesheet" href="/site-nav.css">
+</head>
+
+<body>
+
+    <nav class="nav site-nav" id="nav" aria-label="Main">
+        <div class="container">
+            <a class="nav-brand" href="https://nychonor.org/" aria-label="NYC Honor Foundation, home"><img class="nav-crest" src="https://nychonor.org/assets/nyc-honor-crest-nav.png" alt="" width="36" height="44"></a>
+            <ul class="nav-links">
+                <li class="nav-group">
+                    <a href="https://nychonor.org/2026-season">Team</a>
+                    <ul class="nav-drop">
+                        <li><a href="https://nychonor.org/2026-season">2026 Season</a></li>
+                        <li><a href="https://nychonor.org/players">Players</a></li>
+                        <li><a href="https://nychonor.org/#about">About Us</a></li>
+                    </ul>
+                </li>
+                <li class="nav-group">
+                    <a href="https://nychonor.org/academy">Academy</a>
+                    <ul class="nav-drop">
+                        <li><a href="https://nychonor.org/academy">NIL Money Course</a></li>
+                        <li><a href="https://nychonor.org/honor-system">NIL Tax Calculator</a></li>
+                        <li><a href="https://nychonor.org/nil-parents-guide">Parents' Guide</a></li>
+                        <li><a href="https://nychonor.org/academy-teachers">Teacher Kit</a></li>
+                    </ul>
+                </li>
+                <li class="nav-group">
+                    <a href="https://nychonor.org/impact">Give</a>
+                    <ul class="nav-drop">
+                        <li><a href="https://nychonor.org/impact">Our Impact</a></li>
+                        <li><a href="https://nychonor.org/ways-to-give">Ways to Give</a></li>
+                        <li><a href="https://nychonor.org/sponsors">Sponsors</a></li>
+                        <li><a href="https://nychonor.org/funders">For Funders</a></li>
+                        <li><a href="https://nychonor.org/giving-calculator">Giving Calculator</a></li>
+                        <li><a href="https://nychonor.org/qcd-calculator">IRA Gift (QCD) Calculator</a></li>
+                    </ul>
+                </li>
+                <li><a href="https://nychonor.org/donate" class="nav-donate">Donate</a></li>
+            </ul>
+            <div class="nav-right">
+                <a href="https://nychonor.org/donate" class="nav-donate-sm">Donate</a>
+                <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <div class="mobile-menu site-menu" id="mobile-menu">
+        <div class="menu-group">
+            <span class="menu-label">Team</span>
+            <a href="https://nychonor.org/2026-season" onclick="closeMenu()">2026 Season</a>
+            <a href="https://nychonor.org/players" onclick="closeMenu()">Players</a>
+            <a href="https://nychonor.org/#about" onclick="closeMenu()">About Us</a>
+        </div>
+        <div class="menu-group">
+            <span class="menu-label">Academy</span>
+            <a href="https://nychonor.org/academy" onclick="closeMenu()">NIL Money Course</a>
+            <a href="https://nychonor.org/honor-system" onclick="closeMenu()">NIL Tax Calculator</a>
+            <a href="https://nychonor.org/nil-parents-guide" onclick="closeMenu()">Parents' Guide</a>
+            <a href="https://nychonor.org/academy-teachers" onclick="closeMenu()">Teacher Kit</a>
+        </div>
+        <div class="menu-group">
+            <span class="menu-label">Give</span>
+            <a href="https://nychonor.org/impact" onclick="closeMenu()">Our Impact</a>
+            <a href="https://nychonor.org/ways-to-give" onclick="closeMenu()">Ways to Give</a>
+            <a href="https://nychonor.org/sponsors" onclick="closeMenu()">Sponsors</a>
+            <a href="https://nychonor.org/funders" onclick="closeMenu()">For Funders</a>
+            <a href="https://nychonor.org/giving-calculator" onclick="closeMenu()">Giving Calculator</a>
+            <a href="https://nychonor.org/qcd-calculator" onclick="closeMenu()">IRA Gift (QCD) Calculator</a>
+        </div>
+        <a href="https://nychonor.org/donate" onclick="closeMenu()" class="nav-donate">Donate</a>
+    </div>
+
+    <section class="article-hero">
+        <div class="container">
+            <nav class="crumbs" aria-label="Breadcrumb"><a href="https://nychonor.org/">NYC Honor Foundation</a><span aria-hidden="true">/</span><a href="https://nychonor.org/academy">NYC Honor Academy</a><span aria-hidden="true">/</span><span aria-current="page">Budget Simulator</span></nav>
+            <div class="kicker">NYC Honor Academy &middot; Free classroom tool</div>
+            <h1>Budget Simulator<br><span class="gr">your first paycheck, budget and savings</span></h1>
+            <p>Pick a job, see what actually lands in your account, then decide where it goes. Five
+            short steps: a paycheck with 2026 taxes, needs, wants and savings, an emergency fund, a
+            credit card, and what saving early turns into by 65.</p>
+            <div class="year-stamp">2026 tax figures &middot; checked October 14, 2026 against the IRS, SSA and NY Tax Department</div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="story">
+
+                <p class="answer">This free simulator lets a student build a first paycheck from a
+                New York hourly wage, split it into needs, wants and savings, set an emergency fund
+                goal, see what a credit card minimum payment really costs, and watch monthly saving
+                grow from age 16 or 25. It runs in your browser, needs no sign-up, and doesn't send
+                or save anything you enter. Teachers: the <a href="#teachers">one-period lesson plan
+                and NYSED topic map</a> are at the bottom.</p>
+
+                <p class="no-js-note warn">The simulator needs JavaScript turned on. The lesson plan
+                below works without it.</p>
+
+                <!-- STEP 1: PAYCHECK -->
+                <div class="sim" id="paycheck">
+                    <span class="sim-step">Step 1 &middot; Earning income</span>
+                    <h2>Your first paycheck</h2>
+                    <p>Start with where you work. New York's minimum wage depends on the region. From
+                    January 1, 2026 it is $17.00 an hour in New York City, Long Island and Westchester,
+                    and $16.00 in the rest of the state.</p>
+                    <div class="ctl">
+                        <div>
+                            <label for="region">Where you work</label>
+                            <select id="region">
+                                <option value="nyc">New York City ($17.00 minimum)</option>
+                                <option value="li">Long Island or Westchester ($17.00 minimum)</option>
+                                <option value="upstate">Rest of New York State ($16.00 minimum)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="wage">Hourly wage <span class="val" id="wage-v"></span></label>
+                            <input type="range" id="wage" min="16" max="40" step="0.25" value="17">
+                            <p class="hint">Starts at your region's minimum wage.</p>
+                        </div>
+                        <div>
+                            <label for="hours">Hours a week <span class="val" id="hours-v"></span></label>
+                            <input type="range" id="hours" min="1" max="40" step="1" value="15">
+                        </div>
+                        <div>
+                            <label for="weeks">Weeks you work this year <span class="val" id="weeks-v"></span></label>
+                            <input type="range" id="weeks" min="1" max="52" step="1" value="52">
+                            <p class="hint">A summer job might be 10. Income tax depends on the whole year.</p>
+                        </div>
+                        <div>
+                            <label class="check"><input type="checkbox" id="nyc-live" checked> I live in New York City</label>
+                            <label class="check"><input type="checkbox" id="dependent" checked> A parent or guardian can claim me as a dependent</label>
+                            <p class="hint">Most high school students can be claimed. It changes the standard deduction.</p>
+                        </div>
+                    </div>
+
+                    <table class="stub" aria-live="polite">
+                        <tbody>
+                            <tr class="gross"><td>Gross pay for one week<span class="src" id="gross-how"></span></td><td id="p-gross"></td></tr>
+                            <tr><td>Social Security (6.2%)<span class="src">2026 employee rate, IRS Topic 751 and SSA</span></td><td id="p-ss"></td></tr>
+                            <tr><td>Medicare (1.45%)<span class="src">2026 employee rate, IRS Topic 751 and SSA</span></td><td id="p-med"></td></tr>
+                            <tr><td>Federal income tax <span class="est">estimate</span><span class="src" id="fed-how"></span></td><td id="p-fed"></td></tr>
+                            <tr><td>New York State income tax <span class="est">estimate</span><span class="src" id="ny-how"></span></td><td id="p-ny"></td></tr>
+                            <tr id="nyc-row"><td>New York City income tax <span class="est">estimate</span><span class="src">2026 NYC rates from 3.078%, NY Tax Department Form IT-2105-I</span></td><td id="p-nyc"></td></tr>
+                            <tr class="total"><td>Take-home pay for the week</td><td id="p-net"></td></tr>
+                        </tbody>
+                    </table>
+                    <p class="hint">How the estimates work: we add up your pay for the year, subtract the
+                    2026 standard deduction, apply the 2026 rates, and spread the tax evenly over the
+                    weeks you work. Social Security and Medicare are exact percentages of each paycheck.
+                    A real pay stub can differ, because your employer withholds income tax using the
+                    forms you fill out when you're hired (federal Form W-4 and New York Form IT-2104).
+                    Any difference is settled when you file a tax return, which is how many students
+                    get money back. Tax credits, other income, and the federal tips and overtime
+                    deductions for 2025 to 2028 are not included.</p>
+                    <div class="big">
+                        <div><b id="k-keep"></b><span>of every dollar you keep</span></div>
+                        <div><b id="k-month"></b><span>take-home in a month you work</span></div>
+                        <div><b id="k-year"></b><span>gross pay for the year</span></div>
+                    </div>
+                </div>
+
+                <!-- STEP 2: BUDGET -->
+                <div class="sim" id="budget">
+                    <span class="sim-step">Step 2 &middot; Budgeting and money management</span>
+                    <h2>Needs, wants and savings</h2>
+                    <p><b>Needs</b> are what you must pay: a phone bill, a MetroCard or OMNY rides, school
+                    costs, money you give at home. <b>Wants</b> are the rest: food out, games, clothes
+                    beyond the basics. <b>Savings</b> is money you pay to your future self first. Slide
+                    to split your monthly take-home of <b id="b-income"></b>.</p>
+                    <div class="ctl">
+                        <div>
+                            <label for="needs">Needs <span class="val" id="needs-v"></span></label>
+                            <input type="range" id="needs" min="0" max="100" step="1" value="40">
+                        </div>
+                        <div>
+                            <label for="wants">Wants <span class="val" id="wants-v"></span></label>
+                            <input type="range" id="wants" min="0" max="100" step="1" value="40">
+                        </div>
+                    </div>
+                    <div class="bar" id="b-bar" role="img" aria-label="Your budget split"><span class="n" id="b-n"></span><span class="w" id="b-w"></span><span class="s" id="b-s"></span></div>
+                    <p class="legend">Your plan: needs <b id="b-n2"></b>, wants <b id="b-w2"></b>, savings <b id="b-s2"></b> a month.</p>
+                    <div class="bar rule" role="img" aria-label="The 50/30/20 rule of thumb"><span class="n" style="width:50%"></span><span class="w" style="width:30%"></span><span class="s" style="width:20%"></span></div>
+                    <p class="legend">Faded bar: the 50/30/20 rule of thumb (50% needs, 30% wants, 20% savings). It is
+                    a common starting point, not a rule anyone has to follow. A student living at home may
+                    have small needs and can save far more than 20%.</p>
+                    <div class="btn-row"><button type="button" id="b-503020">Try 50/30/20</button></div>
+                    <p id="b-msg" class="hint"></p>
+                </div>
+
+                <!-- STEP 3: EMERGENCY FUND -->
+                <div class="sim" id="emergency">
+                    <span class="sim-step">Step 3 &middot; Saving</span>
+                    <h2>Emergency fund goal</h2>
+                    <p>An emergency fund is savings you don't touch except for a surprise: a cracked
+                    phone screen, a lost MetroCard, a bill you didn't expect. Pick a goal that would
+                    cover a surprise in your life.</p>
+                    <div class="ctl">
+                        <div>
+                            <label for="ef-goal">Goal ($)</label>
+                            <input type="number" id="ef-goal" min="50" max="20000" step="50" value="1000" inputmode="numeric">
+                        </div>
+                        <div>
+                            <label for="ef-start">Already saved ($)</label>
+                            <input type="number" id="ef-start" min="0" max="20000" step="10" value="0" inputmode="numeric">
+                        </div>
+                        <div>
+                            <label for="ef-month">Saving each month ($)</label>
+                            <input type="number" id="ef-month" min="0" max="10000" step="5" value="0" inputmode="numeric">
+                            <p class="hint">Filled in from your savings in step 2. You can change it.</p>
+                        </div>
+                    </div>
+                    <div class="progress" role="img" id="ef-progress-wrap" aria-label="Progress toward the goal"><span id="ef-progress"></span></div>
+                    <p id="ef-msg"></p>
+                </div>
+
+                <!-- STEP 4: CREDIT CARD -->
+                <div class="sim" id="credit">
+                    <span class="sim-step">Step 4 &middot; Credit and debt management</span>
+                    <h2>The credit card trap</h2>
+                    <p>A card's minimum payment keeps your account in good standing, but it is set low on
+                    purpose. Put in a balance and see what paying only the minimum costs.</p>
+                    <div class="ctl">
+                        <div>
+                            <label for="cc-bal">Balance ($)</label>
+                            <input type="number" id="cc-bal" min="50" max="20000" step="50" value="1000" inputmode="numeric">
+                        </div>
+                        <div>
+                            <label for="cc-apr">APR, the yearly interest rate (%)</label>
+                            <input type="number" id="cc-apr" min="0" max="40" step="0.1" value="24" inputmode="decimal">
+                            <p class="hint">24% is an example. Every card states its own APR in its terms.</p>
+                        </div>
+                        <div>
+                            <label for="cc-pct">Minimum payment (% of balance)</label>
+                            <input type="number" id="cc-pct" min="1" max="10" step="0.5" value="2" inputmode="decimal">
+                            <p class="hint">Or <span id="cc-floor-label">$25</span>, whichever is more. Cards set their own formula.</p>
+                        </div>
+                        <div>
+                            <label for="cc-fixed">Instead, pay a fixed amount each month ($)</label>
+                            <input type="number" id="cc-fixed" min="10" max="5000" step="5" value="100" inputmode="numeric">
+                        </div>
+                    </div>
+                    <div class="big">
+                        <div><b id="cc-min-m"></b><span>to pay off, minimum only</span></div>
+                        <div><b id="cc-min-i"></b><span>interest paid, minimum only</span></div>
+                        <div><b id="cc-fix-m"></b><span id="cc-fix-l1">to pay off at a fixed amount</span></div>
+                        <div><b id="cc-fix-i"></b><span>interest paid at the fixed amount</span></div>
+                    </div>
+                    <p id="cc-msg"></p>
+                    <p class="hint">Illustrative math: interest is added once a month at the APR divided by 12,
+                    no new purchases, no fees. Real cards usually figure interest daily, and a late payment
+                    can bring a fee and a higher rate.</p>
+                </div>
+
+                <!-- STEP 5: COMPOUND GROWTH -->
+                <div class="sim" id="growth">
+                    <span class="sim-step">Step 5 &middot; Saving and investing</span>
+                    <h2>Start at 16 or start at 25</h2>
+                    <p>Money that is invested can earn a return, and next year the return earns a return
+                    too. That is compound growth. Compare the same monthly amount started at 16 and at
+                    25, both stopping at 65.</p>
+                    <div class="ctl">
+                        <div>
+                            <label for="g-month">Save each month <span class="val" id="g-month-v"></span></label>
+                            <input type="range" id="g-month" min="10" max="500" step="5" value="50">
+                        </div>
+                        <div>
+                            <label for="g-rate">Assumed yearly return <span class="val" id="g-rate-v"></span></label>
+                            <input type="range" id="g-rate" min="0" max="10" step="0.5" value="7">
+                            <p class="hint">An assumption to play with, not a promise. Investments can lose money, and real returns go up and down every year.</p>
+                        </div>
+                    </div>
+                    <div class="chart-wrap" id="g-chart"></div>
+                    <div class="chart-key"><span><i style="background:var(--accent)"></i>Start at 16</span><span><i style="background:var(--gold)"></i>Start at 25</span></div>
+                    <div class="big">
+                        <div><b id="g-16"></b><span>at 65, starting at 16 (you put in <span id="g-16p"></span>)</span></div>
+                        <div><b id="g-25"></b><span>at 65, starting at 25 (you put in <span id="g-25p"></span>)</span></div>
+                        <div><b id="g-diff"></b><span>the difference from those nine extra years</span></div>
+                    </div>
+                    <p class="hint">The math: the monthly amount is added at the end of each month and the
+                    assumed yearly return is applied monthly. No taxes, fees or inflation.</p>
+                </div>
+
+                <!-- STEP 6: SUMMARY -->
+                <div class="sim summary" id="summary">
+                    <div class="print-head">NYC Honor Academy &middot; Budget Simulator &middot; nychonor.org/budget-simulator &middot; Name: ____________________ &nbsp; Class: ________</div>
+                    <span class="sim-step">Step 6 &middot; Wrap-up</span>
+                    <h2>What I learned</h2>
+                    <ul id="sum-list"></ul>
+                    <p><b>One thing that surprised me:</b></p>
+                    <div class="write"></div>
+                    <p><b>One money habit I'll try this month:</b></p>
+                    <div class="write"></div>
+                    <p><b>One question I still have:</b></p>
+                    <div class="write"></div>
+                    <div class="btn-row"><button type="button" class="solid" id="print-btn">Print this summary</button></div>
+                    <p class="hint">Printing uses your browser. Nothing is saved or sent to us. Write your name on the paper, not on the page.</p>
+                </div>
+
+                <!-- TEACHERS -->
+                <div class="teacher" id="teachers">
+                    <h2>For teachers: a one-period lesson</h2>
+                    <p>New York requires personal finance instruction for high school students by the end
+                    of grade 12, starting in the 2026-27 school year, and each district picks its own
+                    materials (8 NYCRR 100.2(c)(13);
+                    <a href="https://www.nysed.gov/standards-instruction/personal-finance-education" target="_blank" rel="noopener">NYSED</a>).
+                    This simulator is a free supplement your class can use on phones, laptops or one
+                    projected screen. Students don't make accounts, and nothing they type leaves their
+                    browser.</p>
+
+                    <h3>Which NYSED topics each step covers</h3>
+                    <div class="table-wrap"><table class="map">
+                        <thead><tr><th scope="col">Step</th><th scope="col">NYSED topic</th><th scope="col">Grade 9-12 objective (our short label)</th></tr></thead>
+                        <tbody>
+                            <tr><td>1. First paycheck</td><td>Earning Income</td><td>3.7 Taxes and deductions on a pay stub, Social Security and Medicare</td></tr>
+                            <tr><td>2. Needs, wants, savings</td><td>Budgeting and Money Management</td><td>1.1 Build and track a budget with fixed and variable expenses</td></tr>
+                            <tr><td>3. Emergency fund</td><td>Saving and Investing</td><td>5.1 Saving versus investing, and short- and long-term goals; 5.2 Strategies to reach saving goals</td></tr>
+                            <tr><td>4. Credit card</td><td>Credit and Debt Management</td><td>2.2 Credit card APR, fees and terms; avoiding fees and rate increases</td></tr>
+                            <tr><td>5. Compound growth</td><td>Saving and Investing</td><td>5.5 Why investing earlier builds more wealth</td></tr>
+                        </tbody>
+                    </table></div>
+                    <p class="hint">Risk Management isn't part of this simulator; Module 07,
+                    <a href="https://nychonor.org/nil-insurance">Risk and Insurance</a>, covers it. The full objective wording
+                    is on <a href="https://www.nysed.gov/standards-instruction/personal-finance-topics-grade-bands" target="_blank" rel="noopener">NYSED's learning objectives page</a>.
+                    This is our own match; NYSED has not reviewed it.</p>
+
+                    <h3>Lesson outline (45 minutes)</h3>
+                    <div class="table-wrap"><table class="plan">
+                        <tbody>
+                            <tr><td>0-5</td><td><b>Warm-up.</b> Ask: "You work 15 hours at $17. How much do you think you take home?" Students write a guess.</td></tr>
+                            <tr><td>5-15</td><td><b>Step 1, paycheck.</b> Compare the guess with take-home. Switch the dependent box and the region, and talk about where each deduction goes. Ask why New York State tax can start before federal tax for a student who is claimed as a dependent.</td></tr>
+                            <tr><td>15-23</td><td><b>Step 2, budget.</b> In pairs, list three needs and three wants, then set the sliders. Compare with the 50/30/20 rule of thumb and discuss why a student's split can differ.</td></tr>
+                            <tr><td>23-28</td><td><b>Step 3, emergency fund.</b> Each student picks a goal and reads how many months it takes. What would make it faster?</td></tr>
+                            <tr><td>28-36</td><td><b>Step 4, credit card.</b> Run $1,000 at 24% on the minimum, then at a fixed $100. Try a balance where the minimum doesn't cover the interest. Who benefits from a low minimum?</td></tr>
+                            <tr><td>36-41</td><td><b>Step 5, compound growth.</b> Compare 16 and 25. Ask why the earlier saver ends with more while putting in only a little more.</td></tr>
+                            <tr><td>41-45</td><td><b>Exit ticket.</b> Students fill in "What I learned" and print it or copy the three prompts onto paper.</td></tr>
+                        </tbody>
+                    </table></div>
+
+                    <h3>Go further</h3>
+                    <ul>
+                        <li>The free <a href="https://nychonor.org/academy-teachers">NYC Honor Academy teacher kit</a> has a
+                        45-minute plan, worksheet, pre/post quiz and answer keys for each of the seven
+                        lessons.</li>
+                        <li><a href="https://nychonor.org/academy-new-york">NYC Honor Academy for New York teachers</a> maps
+                        every lesson to NYSED's five topics and 33 grade 9-12 objectives, including the
+                        ones we don't reach yet.</li>
+                        <li>Lessons that go deeper on these steps: <a href="https://nychonor.org/nil-budget">Module 01, Money
+                        Fundamentals</a> (budgeting), <a href="https://nychonor.org/nil-taxes">Module 03, NIL and Taxes</a>,
+                        <a href="https://nychonor.org/nil-investing">Module 04, Make It Grow</a> (compound growth) and
+                        <a href="https://nychonor.org/nil-protect">Module 06, Protect the Bag</a> (credit).</li>
+                        <li>Free to copy and adapt under
+                        <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license noopener" target="_blank">CC BY-NC-SA 4.0</a>,
+                        with credit to NYC Honor Foundation, not for sale, shared the same way.</li>
+                    </ul>
+                    <p><a class="btn-small gold" href="https://nychonor.org/academy">Open the free course</a></p>
+                </div>
+
+                <h2 id="sources">Sources for the 2026 figures</h2>
+                <ul style="font-size:0.85rem;">
+                    <li>Social Security 6.2% and Medicare 1.45% employee rates; 2026 Social Security wage base $184,500:
+                    <a href="https://www.irs.gov/taxtopics/tc751" target="_blank" rel="noopener">IRS Topic 751</a> and
+                    <a href="https://www.ssa.gov/oact/cola/cbb.html" target="_blank" rel="noopener">SSA, Contribution and Benefit Base</a>.</li>
+                    <li>2026 federal rates for single filers (10% up to $12,400 of taxable income, 12% up to $50,400, 22% up to $105,700),
+                    the $16,100 standard deduction, and the standard deduction for someone who can be claimed as a dependent
+                    (the larger of $1,350 or earned income plus $450, up to $16,100):
+                    <a href="https://www.irs.gov/pub/irs-drop/rp-25-32.pdf" target="_blank" rel="noopener">IRS Rev. Proc. 2025-32</a>.</li>
+                    <li>Federal deductions for qualified tips and overtime, tax years 2025 to 2028 (not modeled here):
+                    <a href="https://www.irs.gov/newsroom/one-big-beautiful-bill-how-to-take-advantage-of-no-tax-on-tips-and-overtime" target="_blank" rel="noopener">IRS</a>.</li>
+                    <li>2026 New York State rates for single filers (3.9% on the first $8,500 of taxable income, then 4.4%, 5.15%, 5.4% and 5.9%),
+                    2026 New York City rates (3.078% on the first $12,000, then 3.762%, 3.819% and 3.876%), and the New York standard
+                    deduction ($8,000 single; $3,100 if you can be claimed as a dependent):
+                    <a href="https://www.tax.ny.gov/pdf/current_forms/it/it2105i.pdf" target="_blank" rel="noopener">NY Department of Taxation and Finance, Form IT-2105-I (2026)</a>.</li>
+                    <li>Minimum wage from January 1, 2026 ($17.00 New York City, Long Island and Westchester; $16.00 rest of state):
+                    <a href="https://dol.ny.gov/minimum-wage-0" target="_blank" rel="noopener">NYS Department of Labor</a> and
+                    <a href="https://www.ny.gov/new-york-states-minimum-wage/new-york-states-minimum-wage" target="_blank" rel="noopener">ny.gov</a>.</li>
+                    <li>NYSED, <a href="https://www.nysed.gov/standards-instruction/personal-finance-topics-grade-bands" target="_blank" rel="noopener">Personal Finance Education learning objectives, grades 9-12</a>.</li>
+                </ul>
+                <p class="hint">The example APR, the minimum payment formula, the emergency fund goal and the
+                assumed return are illustrative inputs you can change, not facts about any card or
+                investment. All sources read October 14, 2026.</p>
+
+                <p class="disclaimer">Educational content only. Not tax, legal or investment advice.
+                The tax figures are simplified estimates for learning. This is NYC Honor Foundation's own
+                tool; NYSED has not reviewed or approved it, and NYC Honor Foundation is not affiliated
+                with NYSED. Your district decides how it delivers the required instruction. Built by NYC
+                Honor Foundation volunteers. Spot a mistake? Email
+                <a href="mailto:eslyn@nychonor.org?subject=Budget%20Simulator">eslyn@nychonor.org</a>.</p>
+
+                <p class="give">NYC Honor Academy is free for every student and teacher. If it helped your
+                class, you can <a href="https://nychonor.org/donate">support it with a gift</a> to NYC Honor Foundation, a
+                501(c)(3) public charity.</p>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-copy">&copy; 2026 NYC Honor Foundation. A 501(c)(3) organization. Educational content only. Free to share under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license noopener" target="_blank">CC BY-NC-SA 4.0</a>. &middot; <a href="https://nychonor.org/privacy">Privacy</a> &middot; <a href="https://nychonor.org/donate">Donate</a></div>
+            <div class="footer-sponsor">Follow the season:
+                <a href="https://x.com/NYCHonor" target="_blank" rel="noopener">X @NYCHonor</a> &middot;
+                <a href="https://www.instagram.com/NYCHonor" target="_blank" rel="noopener">Instagram @nychonor</a> &middot;
+                <a href="https://www.youtube.com/@NYCHonor" target="_blank" rel="noopener">YouTube @NYCHonor</a></div>
+        </div>
+    </footer>
+
+    <script src="main.js" defer></script>
+    <script src="budget-simulator.js"></script>
+    <script>
+    (function () {
+        'use strict';
+        var S = window.BudgetSim;
+        if (!S) return;
+        var $ = function (id) { return document.getElementById(id); };
+        var money0 = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
+        var money2 = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 2, maximumFractionDigits: 2 });
+        var m0 = function (n) { return money0.format(Math.round(n)); };
+        var m2 = function (n) { return money2.format(n); };
+        var num = function (id, lo, hi) { var v = parseFloat($(id).value); if (!isFinite(v)) v = lo; return Math.min(hi, Math.max(lo, v)); };
+        var efTouched = false;
+        var state = {};
+
+        function years(mo) {
+            if (mo === Infinity) return 'never';
+            var y = Math.floor(mo / 12), r = mo % 12, out = [];
+            if (y) out.push(y + (y === 1 ? ' year' : ' years'));
+            if (r || !y) out.push(r + (r === 1 ? ' month' : ' months'));
+            return out.join(', ');
+        }
+
+        function paycheck() {
+            var wage = num('wage', 16, 40), hours = num('hours', 1, 40), weeks = num('weeks', 1, 52);
+            var dep = $('dependent').checked, nyc = $('nyc-live').checked;
+            $('wage-v').textContent = m2(wage);
+            $('hours-v').textContent = hours;
+            $('weeks-v').textContent = weeks;
+            var p = S.paycheck({ wage: wage, hours: hours, weeks: weeks, dependent: dep, nyc: nyc });
+            $('gross-how').textContent = m2(wage) + ' x ' + hours + ' hours';
+            $('p-gross').textContent = m2(p.gross);
+            var minus = function (v) { return v >= 0.005 ? '-' + m2(v) : m2(0); };
+            $('p-ss').textContent = minus(p.ss);
+            $('p-med').textContent = minus(p.medicare);
+            $('p-fed').textContent = minus(p.fed);
+            $('p-ny').textContent = minus(p.ny);
+            $('p-nyc').textContent = minus(p.nyc);
+            $('nyc-row').style.display = nyc ? '' : 'none';
+            $('p-net').textContent = m2(p.net);
+            $('fed-how').textContent = '2026 IRS rates; ' + m0(p.yearly) + ' a year minus a standard deduction of ' + m0(p.fedStd) + (p.fedYear ? '' : ' leaves no federal income tax');
+            $('ny-how').textContent = '2026 NY rates from 3.9%; ' + m0(p.yearly) + ' a year minus a NY standard deduction of ' + m0(p.nyStd);
+            $('k-keep').textContent = Math.round(p.net / p.gross * 100) + ' cents';
+            var monthly = p.net * 52 / 12;
+            $('k-month').textContent = m0(monthly);
+            $('k-year').textContent = m0(p.yearly);
+            state.p = p; state.monthly = monthly; state.wage = wage; state.hours = hours;
+        }
+
+        function budget() {
+            var n = num('needs', 0, 100), w = num('wants', 0, 100);
+            if (n + w > 100) { if (this && this.id === 'needs') { w = 100 - n; $('wants').value = w; } else { n = 100 - w; $('needs').value = n; } }
+            var s = 100 - n - w, inc = state.monthly;
+            $('needs-v').textContent = n + '%'; $('wants-v').textContent = w + '%';
+            $('b-income').textContent = m0(inc);
+            [['b-n', n, 'Needs'], ['b-w', w, 'Wants'], ['b-s', s, 'Savings']].forEach(function (x) {
+                var el = $(x[0]); el.style.width = x[1] + '%'; el.textContent = x[1] >= 12 ? x[2] + ' ' + x[1] + '%' : '';
+            });
+            $('b-bar').setAttribute('aria-label', 'Your budget: needs ' + n + '%, wants ' + w + '%, savings ' + s + '%');
+            $('b-n2').textContent = m0(inc * n / 100); $('b-w2').textContent = m0(inc * w / 100); $('b-s2').textContent = m0(inc * s / 100);
+            $('b-msg').textContent = s === 0 ? 'Nothing is going to savings. Try moving a few percent from wants.' :
+                (s >= 20 ? 'You are saving ' + s + '% of your pay, at or above the rule of thumb.' : 'You are saving ' + s + '%. Every percent you move from wants adds about ' + m0(inc / 100) + ' a month.');
+            state.n = n; state.w = w; state.s = s; state.save = inc * s / 100;
+            if (!efTouched) $('ef-month').value = Math.round(state.save);
+        }
+
+        function emergency() {
+            var goal = num('ef-goal', 50, 20000), start = num('ef-start', 0, 20000), mo = num('ef-month', 0, 10000);
+            var months = S.monthsToGoal(goal, start, mo);
+            var pct = Math.min(100, start / goal * 100);
+            $('ef-progress').style.width = pct + '%';
+            $('ef-progress-wrap').setAttribute('aria-label', Math.round(pct) + '% of the goal saved so far');
+            var msg;
+            if (months === 0) msg = 'You already have your goal. Keep it somewhere safe and separate from spending money.';
+            else if (months === Infinity) msg = 'At $0 a month you won’t reach ' + m0(goal) + '. Even ' + m0(Math.max(5, goal / 24)) + ' a month gets you there in about two years.';
+            else msg = 'Saving ' + m0(mo) + ' a month, you reach ' + m0(goal) + ' in ' + years(months) + '.';
+            $('ef-msg').textContent = msg;
+            state.ef = { goal: goal, months: months, mo: mo };
+        }
+
+        function credit() {
+            var bal = num('cc-bal', 50, 20000), apr = num('cc-apr', 0, 40), pct = num('cc-pct', 1, 10), fixed = num('cc-fixed', 10, 5000);
+            var a = S.payoff(bal, apr, pct, 25, 0), b = S.payoff(bal, apr, pct, 25, fixed);
+            $('cc-min-m').textContent = years(a.months);
+            $('cc-min-i').textContent = a.interest === Infinity ? 'keeps growing' : m0(a.interest);
+            $('cc-fix-m').textContent = years(b.months);
+            $('cc-fix-l1').textContent = 'to pay off at ' + m0(fixed) + ' a month';
+            $('cc-fix-i').textContent = b.interest === Infinity ? 'keeps growing' : m0(b.interest);
+            var msg = $('cc-msg');
+            if (a.months === Infinity) {
+                msg.className = 'warn';
+                msg.textContent = 'At this balance and rate, the minimum payment doesn’t even cover the interest, so the balance never goes down.';
+            } else {
+                msg.className = '';
+                msg.textContent = 'Paying only the minimum, a ' + m0(bal) + ' balance costs ' + m0(bal + a.interest) + ' in total. ' +
+                    (b.months === Infinity ? '' : 'At ' + m0(fixed) + ' a month it costs ' + m0(bal + b.interest) + ', saving ' + m0(a.interest - b.interest) + ' in interest.');
+            }
+            state.cc = { bal: bal, apr: apr, a: a, b: b, fixed: fixed };
+        }
+
+        function chart(a, b) {
+            var W = Math.max(300, Math.min(640, $('g-chart').clientWidth || 640)), H = Math.round(W * 0.47), L = 52, R = 12, T = 12, B = 30;
+            var max = a[65].balance || 1;
+            var step = Math.pow(10, Math.floor(Math.log10(max))); var top = Math.ceil(max / step) * step; if (top / step > 6) step *= 2; top = Math.ceil(max / step) * step;
+            var x = function (age) { return L + (age - 16) / (65 - 16) * (W - L - R); };
+            var y = function (v) { return T + (1 - v / top) * (H - T - B); };
+            var path = function (pts, from) { return pts.filter(function (p) { return p.age >= from; }).map(function (p, i) { return (i ? 'L' : 'M') + x(p.age).toFixed(1) + ' ' + y(p.balance).toFixed(1); }).join(' '); };
+            var g = '';
+            for (var v = 0; v <= top + 0.5; v += step) {
+                g += '<line x1="' + L + '" x2="' + (W - R) + '" y1="' + y(v) + '" y2="' + y(v) + '" stroke="rgba(21,128,61,0.13)"/>' +
+                     '<text x="' + (L - 8) + '" y="' + (y(v) + 4) + '" text-anchor="end" font-size="12" fill="#51637A">' + (v >= 1000 ? '$' + Math.round(v / 1000) + 'k' : '$' + v) + '</text>';
+            }
+            [16, 25, 35, 45, 55, 65].forEach(function (age) {
+                g += '<text x="' + x(age) + '" y="' + (H - 10) + '" text-anchor="middle" font-size="12" fill="#51637A">' + age + '</text>';
+            });
+            g += '<path d="' + path(b, 16) + '" fill="none" stroke="#B8923D" stroke-width="3" stroke-linejoin="round"/>';
+            g += '<path d="' + path(a, 16) + '" fill="none" stroke="#15803D" stroke-width="3" stroke-linejoin="round"/>';
+            $('g-chart').innerHTML = '<svg viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="Savings by age. Starting at 16 reaches ' + m0(a[65].balance) + ' at 65; starting at 25 reaches ' + m0(b[65].balance) + '.">' + g + '</svg>';
+        }
+
+        function growth() {
+            var mo = num('g-month', 10, 500), rate = num('g-rate', 0, 10);
+            $('g-month-v').textContent = m0(mo); $('g-rate-v').textContent = rate + '%';
+            var a = S.growth(mo, rate, 16, 65), b = S.growth(mo, rate, 25, 65);
+            $('g-16').textContent = m0(a[65].balance); $('g-25').textContent = m0(b[65].balance);
+            $('g-16p').textContent = m0(a[65].put); $('g-25p').textContent = m0(b[65].put);
+            $('g-diff').textContent = m0(a[65].balance - b[65].balance);
+            chart(a, b);
+            state.g = { mo: mo, rate: rate, a: a[65], b: b[65] };
+        }
+
+        function summary() {
+            var p = state.p, items = [];
+            items.push('Working ' + state.hours + ' hours a week at ' + m2(state.wage) + ', my gross pay is ' + m2(p.gross) + ' a week and I take home about ' + m2(p.net) + '. Social Security and Medicare take 7.65% of every paycheck.');
+            items.push('My budget: ' + state.n + '% needs, ' + state.w + '% wants, ' + state.s + '% savings, which is ' + m0(state.save) + ' a month saved.');
+            items.push(state.ef.months === 0 ? 'I already reached my emergency fund goal of ' + m0(state.ef.goal) + '.' :
+                state.ef.months === Infinity ? 'I need to save something each month to reach my ' + m0(state.ef.goal) + ' emergency fund.' :
+                'I can reach a ' + m0(state.ef.goal) + ' emergency fund in ' + years(state.ef.months) + '.');
+            var c = state.cc;
+            items.push(c.a.months === Infinity ? 'On a ' + m0(c.bal) + ' card balance at ' + c.apr + '% APR, the minimum payment never pays it off.' :
+                'A ' + m0(c.bal) + ' card balance at ' + c.apr + '% APR takes ' + years(c.a.months) + ' and ' + m0(c.a.interest) + ' in interest on the minimum' +
+                (c.b.months === Infinity ? '.' : ', or ' + years(c.b.months) + ' and ' + m0(c.b.interest) + ' at ' + m0(c.fixed) + ' a month.'));
+            items.push('Saving ' + m0(state.g.mo) + ' a month at an assumed ' + state.g.rate + '% return, starting at 16 could grow to ' + m0(state.g.a.balance) + ' by 65, versus ' + m0(state.g.b.balance) + ' starting at 25.');
+            $('sum-list').innerHTML = '';
+            items.forEach(function (t) { var li = document.createElement('li'); li.textContent = t; $('sum-list').appendChild(li); });
+        }
+
+        function all() { paycheck(); budget.call(this); emergency(); credit(); growth(); summary(); }
+
+        $('region').addEventListener('change', function () {
+            var min = S.MIN_WAGE[this.value];
+            $('wage').min = min; $('wage').value = min;
+            $('nyc-live').checked = this.value === 'nyc';
+            all();
+        });
+        ['wage', 'hours', 'weeks', 'dependent', 'nyc-live'].forEach(function (id) { $(id).addEventListener('input', all); $(id).addEventListener('change', all); });
+        ['needs', 'wants'].forEach(function (id) { $(id).addEventListener('input', all); });
+        $('ef-month').addEventListener('input', function () { efTouched = true; emergency(); summary(); });
+        ['ef-goal', 'ef-start'].forEach(function (id) { $(id).addEventListener('input', function () { emergency(); summary(); }); });
+        ['cc-bal', 'cc-apr', 'cc-pct', 'cc-fixed'].forEach(function (id) { $(id).addEventListener('input', function () { credit(); summary(); }); });
+        ['g-month', 'g-rate'].forEach(function (id) { $(id).addEventListener('input', function () { growth(); summary(); }); });
+        $('b-503020').addEventListener('click', function () { $('needs').value = 50; $('wants').value = 30; all(); });
+        $('print-btn').addEventListener('click', function () { window.print(); });
+        var rt; window.addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(growth, 150); });
+        all();
+    })();
+    </script>
+</body>
+
+</html>
