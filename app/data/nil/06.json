@@ -1,0 +1,470 @@
+{
+ "id": "06",
+ "slug": "nil-protect",
+ "title": "Protect the Bag",
+ "tagline": "Spot the scam. Own your credit.",
+ "kicker": "NYC Honor Academy · Module 06 · about 12 minutes",
+ "intro": "Once people know you are getting paid, the messages start. This lesson shows the scams aimed at young athletes and how to shut them down, how to protect your identity, and how credit really works before you turn 18 and after. Then you make the calls in the Film Room.",
+ "updated": "Updated October 1, 2026 · rules checked against the FTC, CFPB and SEC",
+ "minutes": 12,
+ "badge": "",
+ "blurb": "The scams aimed at athletes, how to guard your identity, how credit scores work, credit cards before 21, and what debt really costs.",
+ "video": {
+  "title": "Watch first: protect the bag",
+  "file": "assets/film/nil-protect-the-bag.mp4",
+  "poster": "assets/film/posters/nil-protect-the-bag.jpg",
+  "caption": "Protect the Bag, about 87 seconds",
+  "note": "About 90 seconds, with captions. 24% is an example rate, not a quote of any card. The rest of this lesson explains each step.",
+  "vtt": "assets/film/nil-protect-the-bag.vtt"
+ },
+ "youtube": "4xuZ4NidKkc",
+ "blocks": [
+  {
+   "t": "h2",
+   "html": "Which scams target athletes, and how do you spot them?"
+  },
+  {
+   "t": "lead",
+   "html": "Anyone who wants you to pay first so you can get paid. A real deal pays you. The FTC says a request to send money or pay for something is a sign of a job scam, and so is a \"recruiter\" using a personal account, email or number. Watch for these five."
+  },
+  {
+   "t": "list",
+   "ordered": false,
+   "flags": false,
+   "items": [
+    "<b>The fake brand deal.</b> A \"brand ambassador manager\" offers free gear and big pay to post, then wants a fee or your bank details. The FTC says to contact the company yourself, using a number or website you know is real, and walk away if you cannot confirm it.",
+    "<b>The check that bounces.</b> Someone loves your photo, sends a check, and asks you to send part of it back. The FTC says that is a scam every time. The money can show up in your account first, but the check is fake, and you owe the bank what you took out.",
+    "<b>The fake agent.</b> In New York, an athlete agent must be registered with the Secretary of State (<a href=\"#/nil/02\">Module 02</a>). A fee up front to \"get you deals\" is a red flag.",
+    "<b>Money flipping.</b> Viral posts pitch a check \"hack\": write a check for more than you have, deposit it, and pull the cash out before it clears. The FTC warns that could leave you owing all the money, kicked out of your bank, and in legal trouble for bank fraud. Moving money through your account for someone else makes you a money mule, and the FBI says mules can face charges even if they did not know.",
+    "<b>Crypto and \"guaranteed\" profits.</b> The FTC says only scammers demand payment in crypto or guarantee profits. Crypto payments usually cannot be reversed."
+   ]
+  },
+  {
+   "t": "list",
+   "ordered": false,
+   "flags": true,
+   "items": [
+    "You have to pay first: a fee, a \"starter kit,\" or a cut of a check.",
+    "Pay only by gift card, crypto, a payment app or a wire.",
+    "A \"brand\" or \"agent\" on a personal account, email or number.",
+    "Pressure to decide now, before you can ask anyone.",
+    "Anyone who wants to use your bank account to move money."
+   ]
+  },
+  {
+   "t": "quote",
+   "html": "\"No real business or government agency will ever tell you to buy a gift card to pay them.\"",
+   "cite": "FTC, Avoiding and Reporting Gift Card Scams."
+  },
+  {
+   "t": "p",
+   "html": "<b>What to do:</b> stop answering, keep the messages, and tell a parent or coach. Report it at ReportFraud.ftc.gov, and online fraud to the FBI at ic3.gov."
+  },
+  {
+   "t": "h2",
+   "html": "How do you protect your identity?"
+  },
+  {
+   "t": "lead",
+   "html": "Guard your Social Security number, passwords and login codes. Identity theft is when someone uses your personal or financial information without your permission, to open cards, take a tax refund or get a job in your name. If it happens, report it at IdentityTheft.gov for a free recovery plan."
+  },
+  {
+   "t": "list",
+   "ordered": false,
+   "flags": false,
+   "items": [
+    "<b>Your Social Security number.</b> A real brand needs it on a Form W-9 before it pays you (<a href=\"#/nil/03\">Module 03</a>). But the FTC says the IRS, your bank and your employer won't call, email, or text you to ask for it. If they do, it's a scammer.",
+    "<b>Phishing.</b> A text that looks like your bank says there is a problem and asks you to click a link. Don't. Go to the real website or app yourself.",
+    "<b>Lock your accounts.</b> Use a strong password and multi-factor authentication, which the FTC says makes it harder for scammers to get in even if they have your password."
+   ]
+  },
+  {
+   "t": "p",
+   "html": "<b>Check your credit report for free.</b> AnnualCreditReport.com is the only website authorized to give the free reports federal law guarantees, and you can check each of the three nationwide credit bureaus (Equifax, Experian and TransUnion) every week for free. Accounts you do not recognize can be a sign of identity theft. Most people under 18 have no credit report at all, so if one exists for you, a parent should find out why."
+  },
+  {
+   "t": "p",
+   "html": "<b>Freeze your credit.</b> A credit freeze stops anyone from opening a new credit account in your name. It is free to place and lift, and it does not affect your credit score."
+  },
+  {
+   "t": "quote",
+   "html": "\"If your child is under 16, request a free credit freeze to make it harder for someone to open new accounts in your child's name.\"",
+   "cite": "FTC, Credit Freezes and Fraud Alerts."
+  },
+  {
+   "t": "p",
+   "html": "A parent asks each of the three bureaus. If you have no file yet, they create one just to freeze it, and it cannot be used for credit."
+  },
+  {
+   "t": "h2",
+   "html": "What is a credit score, and what moves it?"
+  },
+  {
+   "t": "lead",
+   "html": "A credit report is the record of how you have handled borrowed money. A credit score is a number made from that report that predicts how likely you are to pay a loan back on time. The habit that matters most is paying on time, every time."
+  },
+  {
+   "t": "p",
+   "html": "Your report lists your accounts, balances, payment history, debts sent to collections, and who has looked at it. Lenders use it to decide whether to lend to you and at what interest rate. Landlords and insurers can use it too, and so can an employer if you agree. Scoring models usually look at:"
+  },
+  {
+   "t": "list",
+   "ordered": false,
+   "flags": false,
+   "items": [
+    "Your bill-paying history.",
+    "How much you owe, and how much of your credit limit you use.",
+    "How long your accounts have been open, and what kinds you have.",
+    "New applications for credit.",
+    "Debts sent to collection, and bankruptcies."
+   ]
+  },
+  {
+   "t": "quote",
+   "html": "\"Most credit scores consider repayment history as the number one factor for building a strong credit score.\"",
+   "cite": "CFPB, How do I get and keep a good credit score?"
+  },
+  {
+   "t": "p",
+   "html": "A late payment can stay on your report for up to seven years. You do not need to carry a balance to build a score; paying in full each month gets the best scores and the lowest interest. Applying for credit is a hard inquiry, which can affect your score. Checking your own report is a soft inquiry, which does not. You can dispute a mistake for free with the credit bureau and the company that reported it, so never pay someone to \"repair\" your credit: no one can remove accurate late payments."
+  },
+  {
+   "t": "h2",
+   "html": "Can you get a credit card before 21?"
+  },
+  {
+   "t": "lead",
+   "html": "Only one of two ways. Federal law says a card issuer may not open a credit card for anyone under 21 unless the person shows an independent ability to make the minimum payments, or a cosigner who is at least 21 signs on and becomes responsible for the debt."
+  },
+  {
+   "t": "quote",
+   "html": "\"No credit card may be issued to, or open end consumer credit plan established by or on behalf of, a consumer who has not attained the age of 21, unless the consumer has submitted a written application to the card issuer that meets the requirements of subparagraph (B).\"",
+   "cite": "15 U.S.C. 1637(c)(8), from the Credit CARD Act of 2009. The rule is carried out in Regulation Z, 12 CFR 1026.51(b)."
+  },
+  {
+   "t": "list",
+   "ordered": false,
+   "flags": false,
+   "items": [
+    "<b>Your own income counts.</b> Regulation Z's official commentary says income can include self-employment and irregular pay, so NIL pay you earn can count. Under 21, the card company may only look at your own income or assets, not a parent's, unless that parent cosigns.",
+    "<b>A cosigner owes the debt too.</b> Before you turn 21, the limit cannot go up unless the cosigner agrees in writing.",
+    "<b>Authorized user.</b> A parent can add you to their card. The CFPB says the account's entire history then shows up on your credit record, and an authorized user generally does not owe the debt. That only helps if the parent pays on time.",
+    "<b>Secured card.</b> You put down a cash deposit, for example $500, and can spend up to that amount. The CFPB lists it as one way to start building credit. A debit or prepaid card does not build credit, because you are not borrowing."
+   ]
+  },
+  {
+   "t": "p",
+   "html": "This lesson does not recommend any card, bank or lender. A parent should be part of any credit decision before 18."
+  },
+  {
+   "t": "h2",
+   "html": "What does debt really cost?"
+  },
+  {
+   "t": "lead",
+   "html": "Interest. The APR, or annual percentage rate, is the yearly cost of borrowing, and the card company must tell you the APR before you agree to use the card. On most cards, if you pay the full balance by the due date, you pay no interest on purchases. Pay only part, and interest grows on the rest."
+  },
+  {
+   "t": "p",
+   "html": "Here is what a $500 balance costs at an example APR of 24% (2% a month), with no new charges:"
+  },
+  {
+   "t": "table",
+   "caption": "Paying off $500 at an example 24% APR",
+   "head": [
+    "You pay each month",
+    "Months to pay off",
+    "Interest paid"
+   ],
+   "rows": [
+    [
+     "The full $500 by the due date",
+     "1",
+     "<b>$0</b>"
+    ],
+    [
+     "$50",
+     "12",
+     "<b>about $64</b>"
+    ],
+    [
+     "$25",
+     "26",
+     "<b>about $145</b>"
+    ]
+   ]
+  },
+  {
+   "t": "math",
+   "html": "Each month: interest = balance × 0.02, then subtract the payment"
+  },
+  {
+   "t": "note",
+   "html": "Hypothetical example. 24% is an example rate, not a quote of any card. Real cards set their own rates and fees, and many figure interest daily, so real numbers will differ."
+  },
+  {
+   "t": "p",
+   "html": "Smaller payments stretch the loan out, and a longer loan costs more interest. That is why federal law requires a minimum payment warning on card statements:"
+  },
+  {
+   "t": "quote",
+   "html": "\"Minimum Payment Warning: Making only the minimum payment will increase the amount of interest you pay and the time it takes to repay your balance.\"",
+   "cite": "15 U.S.C. 1637(b)(11), Truth in Lending Act. Regulation Z sets the exact wording printed on statements."
+  },
+  {
+   "t": "p",
+   "html": "Paying late costs more too. A low starting rate on a new card has to last at least six months, unless you are more than 60 days late on a payment, and then the card company can raise your rate. If debt gets out of hand, credit counseling, usually from a nonprofit, can help with a budget and a plan."
+  },
+  {
+   "t": "h3",
+   "html": "What about buy now, pay later?"
+  },
+  {
+   "t": "p",
+   "html": "Buy now, pay later (BNPL) splits a purchase into smaller payments, typically four payments over six weeks with no interest. The CFPB found real benefits, and real risks:"
+  },
+  {
+   "t": "list",
+   "ordered": false,
+   "flags": false,
+   "items": [
+    "<b>Late fees.</b> Many BNPL lenders charge one when you miss a payment, often around $7 on an average loan of $135 (CFPB, 2022).",
+    "<b>Stacking.</b> In 2022, about 63 percent of BNPL borrowers had more than one loan going at the same time (CFPB, 2025).",
+    "<b>Young borrowers lean on it most.</b> For borrowers 18 to 24, BNPL was 28 percent of their unsecured debt in the months they used it, compared with 17 percent for all ages (CFPB, 2025).",
+    "<b>It may not build credit.</b> In the CFPB's study, most BNPL loans did not appear in credit records."
+   ]
+  },
+  {
+   "t": "p",
+   "html": "Four small payments still add up to the full price."
+  },
+  {
+   "t": "h2",
+   "html": "How do you spot a misleading money ad?"
+  },
+  {
+   "t": "lead",
+   "html": "Ask who is paying for the post, and whether the results shown are what most people get. Under the FTC Act, ads must be truthful and not misleading, and advertisers need evidence to back up their claims. When an \"I made $10K this month\" post is selling something, those rules apply."
+  },
+  {
+   "t": "list",
+   "ordered": false,
+   "flags": false,
+   "items": [
+    "<b>The #ad rule works both ways.</b> In <a href=\"#/nil/02\">Module 02</a> you learned to label your own paid posts. When an influencer pushes an app, a course or a coin with no label, you cannot tell whether they were paid, and under the FTC's Endorsement Guides they should have said so.",
+    "<b>One big win is not proof.</b> The FTC treats a testimonial about results as a claim that most people will get similar results. If they won't, the ad should clearly say what people generally get.",
+    "<b>Some hype is paid.</b> The SEC warns that fraudsters pay actors, influencers and celebrities to promote investments, and that screenshots of accounts growing fast are often fake.",
+    "<b>Ads are not checked for you.</b> The FTC says anyone can pay to place ads in your social media feed, including scammers \"touting a program to teach you how to invest and beat the stock market.\""
+   ]
+  },
+  {
+   "t": "quote",
+   "html": "\"Do not be swayed by testimonials or celebrity endorsements when making an investment decision.\"",
+   "cite": "SEC, Investor Alert: Social Media and Investment Fraud (Aug. 29, 2022)."
+  },
+  {
+   "t": "p",
+   "html": "Before you buy, search the name plus \"scam\" or \"complaint,\" and compare what several well-known sources say, not just one account."
+  },
+  {
+   "t": "keys",
+   "title": "Protect the bag",
+   "pairs": [
+    [
+     "1",
+     "A real deal pays you. Never pay to get paid."
+    ],
+    [
+     "2",
+     "Gift cards, crypto or a check to \"send back\" mean scam."
+    ],
+    [
+     "3",
+     "Your Social Security number goes only on a W-9 for a brand you checked is real."
+    ],
+    [
+     "4",
+     "Pay every bill on time, and pay cards in full."
+    ],
+    [
+     "5",
+     "Check your credit for free at AnnualCreditReport.com, and ask a parent about a freeze."
+    ]
+   ]
+  },
+  {
+   "t": "h2",
+   "html": "Sources"
+  },
+  {
+   "t": "list",
+   "ordered": false,
+   "flags": false,
+   "items": [
+    "FTC, How To Avoid a Scam (July 2023); Avoiding and Reporting Gift Card Scams; What To Know About Cryptocurrency and Scams, consumer.ftc.gov (checked Oct. 1, 2026).",
+    "FTC consumer alerts: Influencers: Spot a job scam (Mar. 2024); Scammers target young adults on social media with fake check scam (July 2024); The social media trend that's actually bank fraud (Aug. 2025); Are ads on social media vetted or checked for scams? (Aug. 2026).",
+    "FTC Business Blog, Influence peddling? Bogus \"brand ambassador managers\" scam prospective influencers (Oct. 2023).",
+    "FBI Internet Crime Complaint Center, Money Mules: A Financial Crisis, PSA211203 (Dec. 3, 2021), ic3.gov.",
+    "FTC, What To Know About Identity Theft; How To Recognize and Avoid Phishing Scams; Free Credit Reports; Credit Freezes and Fraud Alerts; How To Protect Your Child From Identity Theft; New protections available for minors under 16 (Mar. 2019).",
+    "CFPB, Ask CFPB: What is a credit report?; What is a credit score?; How do I get and keep a good credit score?; How long does information stay on my credit report?; What is a credit inquiry?; How do I dispute an error on my credit report?; How do I check to see if a child has a credit report?; How do I get a free copy of my credit reports?",
+    "15 U.S.C. 1637(c)(8) (applications from underage consumers) and 1637(b)(11) (minimum payment warning), Truth in Lending Act as amended by the Credit CARD Act of 2009; 12 CFR 1026.51(b), Regulation Z (rules affecting young consumers), eCFR.",
+    "CFPB, Can a credit card company consider my age when deciding to lend me a card?; What are some ways to start or rebuild a good credit history?; I was an authorized user on my deceased relative's credit card account. Am I liable to repay the debt?; CFPB Data Point: Becoming Credit Visible (June 2017), section 4.3, Authorized Users.",
+    "CFPB, Credit cards key terms (APR; balance transfer); What is a grace period for a credit card?; How does my credit card company calculate the amount of interest I owe?; How long can I keep a low rate on a balance transfer or other introductory rate?; What is credit counseling?",
+    "CFPB, Buy Now, Pay Later: Market trends and consumer impacts (Sept. 15, 2022); Consumer Use of Buy Now, Pay Later and Other Unsecured Debt (Jan. 13, 2025).",
+    "FTC, Advertising FAQs: A Guide for Small Business; Disclosures 101 for Social Media Influencers; FTC Endorsement Guides, 16 CFR 255.2 and 255.5, eCFR.",
+    "SEC Office of Investor Education and Advocacy, Investor Alert: Social Media and Investment Fraud (Aug. 29, 2022), investor.gov."
+   ]
+  }
+ ],
+ "warmup": [
+  {
+   "label": "Question 1",
+   "q": "A \"brand ambassador manager\" DMs you: free gear and $500 a month to post, but first you pay $49 for a starter kit. What is it?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "A normal deal. Brands charge for kits."
+    },
+    {
+     "id": "b",
+     "text": "A scam. A real deal pays you, not the other way around."
+    },
+    {
+     "id": "c",
+     "text": "Fine, as long as you pay with a gift card."
+    }
+   ],
+   "answer": "b",
+   "overtime": false
+  },
+  {
+   "label": "Question 2",
+   "q": "Which habit does the most to build a strong credit score?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Paying every bill on time, every time."
+    },
+    {
+     "id": "b",
+     "text": "Carrying a small balance on a card each month."
+    },
+    {
+     "id": "c",
+     "text": "Checking your own credit report often."
+    }
+   ],
+   "answer": "a",
+   "overtime": false
+  },
+  {
+   "label": "Question 3",
+   "q": "You just turned 18. You have no job and no income of your own. Can you open a credit card by yourself?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Yes. At 18 anyone can."
+    },
+    {
+     "id": "b",
+     "text": "Yes, if a parent says it is OK by text."
+    },
+    {
+     "id": "c",
+     "text": "No. Under 21 you need your own income or a cosigner who is 21 or older."
+    }
+   ],
+   "answer": "c",
+   "overtime": false
+  }
+ ],
+ "filmroom": [
+  {
+   "label": "Call 1",
+   "q": "A stranger says they love your game-day photo and mails you a $2,000 check to use it. They ask you to deposit it and send $300 back in gift cards for \"the photographer.\" What is the call?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Deposit it. Once the money shows up, it is safe."
+    },
+    {
+     "id": "b",
+     "text": "Send the $300 first so the deal does not fall through."
+    },
+    {
+     "id": "c",
+     "text": "It is a scam. The check will bounce and you would owe the bank."
+    }
+   ],
+   "answer": "c",
+   "overtime": false,
+   "why": "A stranger's check with money to send back is a scam, and gift card payment is a second red flag. The money can appear first, but you owe the bank once the fake check bounces."
+  },
+  {
+   "label": "Call 2",
+   "q": "You have your first credit card and want a strong score. What should you do with the bill each month?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Leave a small balance so it shows you use credit."
+    },
+    {
+     "id": "b",
+     "text": "Pay it in full and on time, every month."
+    },
+    {
+     "id": "c",
+     "text": "Pay whenever you have extra money."
+    }
+   ],
+   "answer": "b",
+   "overtime": false,
+   "why": "Repayment history is the number one factor for most scores, and you do not need to carry a balance. Paying in full gets the best scores and no interest on purchases."
+  },
+  {
+   "label": "Call 3",
+   "q": "You are 19 and earn steady NIL pay of your own. No one will cosign. Can a card company open a credit card for you?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Yes, if your own income shows you can make the minimum payments."
+    },
+    {
+     "id": "b",
+     "text": "No. Under 21 you always need a cosigner."
+    },
+    {
+     "id": "c",
+     "text": "Only if a parent's income is counted for you."
+    }
+   ],
+   "answer": "a",
+   "overtime": false,
+   "why": "Under 21, the law allows either an independent ability to make the minimum payments or a cosigner who is 21 or older. Your own income can qualify; a parent's does not count unless they cosign."
+  },
+  {
+   "label": "Overtime",
+   "q": "Your free credit report shows a card you never opened. What is the best first move?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Ignore it. It will fall off on its own."
+    },
+    {
+     "id": "b",
+     "text": "Report it at IdentityTheft.gov for a recovery plan, and freeze your credit."
+    },
+    {
+     "id": "c",
+     "text": "Pay a credit repair company to remove it."
+    }
+   ],
+   "answer": "b",
+   "overtime": true,
+   "why": "An account you did not open is a sign of identity theft. IdentityTheft.gov gives a free step-by-step plan, a freeze stops new accounts, and you can dispute errors yourself for free."
+  }
+ ],
+ "disclaimer": "Educational content only. Not legal, tax, credit or investment advice. The interest example is hypothetical and uses an example rate that is not a quote of any card. This lesson does not recommend any card, bank, lender, app, investment or company. A parent should be part of any credit decision. If you think you have been scammed, tell a parent and report it. Built by NYC Honor Foundation volunteers.",
+ "onSite": "https://nychonor.org/nil-protect",
+ "hasTryItOnSite": true
+}

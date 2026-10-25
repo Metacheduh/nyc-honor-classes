@@ -1,0 +1,405 @@
+{
+ "id": "04",
+ "slug": "nil-investing",
+ "title": "Make It Grow",
+ "tagline": "Put the bag to work",
+ "kicker": "NYC Honor Academy · Module 04 · about 10 minutes",
+ "intro": "You set aside the tax and kept the rest. Now make it work. This lesson shows how money grows on its own growth, why cash sitting still loses value, what you can actually own, and how to spot a scam before it costs you. Then you make the calls in the Film Room.",
+ "updated": "Updated October 14, 2026 · inflation figure from the September 2026 CPI",
+ "minutes": 10,
+ "badge": "",
+ "blurb": "How money grows on its own growth, why cash loses value, what stocks, bonds and funds are, and how to spot an investment scam.",
+ "video": {
+  "title": "Watch first: $50 a month at 16 vs 26",
+  "file": "assets/film/nil-make-it-grow.mp4",
+  "poster": "assets/film/posters/nil-make-it-grow.jpg",
+  "caption": "$50 a month started at 16 versus 26, about 85 seconds",
+  "note": "About 85 seconds, with captions. 7% is an example rate, not a prediction; real investments can earn more, earn less, or lose money. The rest of this lesson shows the math.",
+  "vtt": "assets/film/nil-make-it-grow.vtt"
+ },
+ "youtube": "",
+ "blocks": [
+  {
+   "t": "h2",
+   "html": "What is compound growth?"
+  },
+  {
+   "t": "lead",
+   "html": "It is growth on growth. Your money earns a return, and then that return starts earning too. The SEC defines compound interest as interest paid on the original amount and on the interest already added. Over a year or two it looks small. Over decades it does most of the work."
+  },
+  {
+   "t": "p",
+   "html": "Say $1,000 earns 7% a year. After one year you have $1,070. In year two you earn 7% on $1,070, not on $1,000. So you gain $74.90 instead of $70 and end the year at $1,144.90. That extra $4.90 is growth on growth. Every year after that, the gap gets bigger."
+  },
+  {
+   "t": "note",
+   "html": "7% is an example rate, not a prediction. Real investments can earn more, earn less, or lose money, and past results do not guarantee future ones."
+  },
+  {
+   "t": "h2",
+   "html": "Why does starting at 16 beat starting at 26?"
+  },
+  {
+   "t": "lead",
+   "html": "Time. Money you put in at 16 gets ten more years to compound than money you put in at 26. In the example below, two players put in the same $50 a month. The one who starts at 16 puts in $6,000 more in total but ends up with about twice as much."
+  },
+  {
+   "t": "table",
+   "caption": "Same monthly amount, started at 16 or at 26, at an example 7% a year",
+   "head": [
+    "",
+    "Start at 16",
+    "Start at 26"
+   ],
+   "rows": [
+    [
+     "Put in each year",
+     "<b>$600</b> ($50 a month)",
+     "<b>$600</b> ($50 a month)"
+    ],
+    [
+     "Years until 65",
+     "<b>49</b>",
+     "<b>39</b>"
+    ],
+    [
+     "Total you put in",
+     "<b>$29,400</b>",
+     "<b>$23,400</b>"
+    ],
+    [
+     "Value at 65, at an example 7% a year",
+     "<b>about $243,317</b>",
+     "<b>about $119,181</b>"
+    ]
+   ]
+  },
+  {
+   "t": "p",
+   "html": "<b>How we did the math:</b> $600 goes in at the start of each year and grows 7% a year, added once a year, with no fees and no taxes taken out."
+  },
+  {
+   "t": "math",
+   "html": "Value = 600 × ((1.07<sup>years</sup> − 1) ÷ 0.07) × 1.07"
+  },
+  {
+   "t": "p",
+   "html": "Try your own numbers on the SEC's <a href=\"https://www.investor.gov/financial-tools-calculators/calculators/compound-interest-calculator\" target=\"_blank\" rel=\"noopener\">compound interest calculator at Investor.gov</a>. Depending on its settings, it may give a slightly different answer."
+  },
+  {
+   "t": "note",
+   "html": "Hypothetical example. 7% is an example rate, not a prediction, and real returns change from year to year. Past results do not guarantee future ones. Fees and taxes would lower these numbers."
+  },
+  {
+   "t": "h2",
+   "html": "Why does cash lose value?"
+  },
+  {
+   "t": "lead",
+   "html": "Because prices rise, and that rise is called inflation. Over the 12 months ending in September 2026, prices for everyday things went up 3.7%, according to the U.S. Bureau of Labor Statistics. Cash in a drawer does not grow, so each year it buys a little less."
+  },
+  {
+   "t": "p",
+   "html": "Here is what 3.7% means. Something that cost $100 in September 2025 cost about $103.70 in September 2026. A $100 bill that sat in a drawer that whole year now buys only about $96.43 worth of what it used to."
+  },
+  {
+   "t": "quote",
+   "html": "\"Inflation reduces purchasing power, which is a risk for investors receiving a fixed rate of interest.\"",
+   "cite": "SEC, Investor.gov, What is Risk?"
+  },
+  {
+   "t": "p",
+   "html": "The inflation rate changes every month. The 3.7% figure is from the Consumer Price Index released October 14, 2026. The newest number is always at <a href=\"https://www.bls.gov/cpi/\" target=\"_blank\" rel=\"noopener\">bls.gov/cpi</a>."
+  },
+  {
+   "t": "h2",
+   "html": "What can you actually own?"
+  },
+  {
+   "t": "lead",
+   "html": "Three basic things. A stock is a small piece of ownership in a company. A bond is a loan you make to a company or a government, which pays you interest. A fund pools money from many people and buys many stocks or bonds at once. These definitions come from the SEC's Investor.gov."
+  },
+  {
+   "t": "list",
+   "ordered": false,
+   "flags": false,
+   "items": [
+    "<b>Stocks.</b> A stock \"gives stockholders a share of ownership in a company.\" You can make money if the price goes up, or if the company pays out part of its earnings to owners, called a dividend.",
+    "<b>Bonds.</b> A bond is \"a debt security, like an IOU.\" The borrower promises to pay you interest and to pay back the full amount when the bond comes due.",
+    "<b>Funds.</b> A mutual fund or an exchange-traded fund (ETF) pools money from many investors and buys stocks, bonds or other assets. Each share you own is a small slice of everything the fund holds."
+   ]
+  },
+  {
+   "t": "p",
+   "html": "None of these is a bank deposit. The SEC says mutual funds are not guaranteed or insured by the FDIC or any other government agency, and you can lose some or all of the money you put in."
+  },
+  {
+   "t": "h2",
+   "html": "Why can't anyone promise you a return?"
+  },
+  {
+   "t": "lead",
+   "html": "Because bigger possible rewards come with bigger swings, and nothing is guaranteed. The SEC says all investments involve some degree of risk, and investors who take more risk look for higher returns to make up for it. Even large, well-known companies' stocks drop in some years."
+  },
+  {
+   "t": "p",
+   "html": "How often? The SEC says large company stocks as a group \"have lost money on average about one out of every three years.\" That is why timing matters. The SEC notes that people investing for many years may be comfortable with bigger swings, while people who need the money soon may prefer smaller ones."
+  },
+  {
+   "t": "p",
+   "html": "So money you need soon, like this year's tax set-aside from <a href=\"#/nil/03\">Module 03</a>, does not belong in stocks. <a href=\"#/nil/05\">Module 05</a> shows where it goes instead."
+  },
+  {
+   "t": "h2",
+   "html": "What is diversification, and what is an index fund?"
+  },
+  {
+   "t": "lead",
+   "html": "Diversification means spreading your money across many investments so one bad pick cannot sink you. The SEC sums it up as \"Don't put all your eggs in one basket.\" An index fund is one way to spread out: a fund that tries to match a market index by owning the companies in it."
+  },
+  {
+   "t": "p",
+   "html": "You can spread out across kinds of investments, like stocks and bonds, and inside each kind, like many companies in different industries. If one does badly, others may make up for it. Funds make this easier, because one share owns a small piece of many investments."
+  },
+  {
+   "t": "p",
+   "html": "An index fund follows what the SEC calls a passive strategy. It usually trades less and charges lower fees than a fund where managers pick and choose. Fees matter more than they look:"
+  },
+  {
+   "t": "quote",
+   "html": "\"Over time, higher fees and expenses can significantly lower investment returns.\"",
+   "cite": "SEC, Investor.gov, Index Fund."
+  },
+  {
+   "t": "p",
+   "html": "This lesson does not name any fund or company, and it is not telling you to buy anything. Spreading out lowers the risk of one bad pick. It does not remove risk."
+  },
+  {
+   "t": "h2",
+   "html": "How do you spot an investment scam?"
+  },
+  {
+   "t": "lead",
+   "html": "Watch for promises of guaranteed high returns, pressure to buy right now, and claims of inside or secret information. The SEC says there is no such thing as high guaranteed investment returns, and every investment involves risk. Any one of these signs is a reason to walk away."
+  },
+  {
+   "t": "list",
+   "ordered": false,
+   "flags": true,
+   "items": [
+    "\"Guaranteed\" returns, or an investment called \"risk-free.\"",
+    "Pressure to buy right now, or a deal \"only for a few people.\"",
+    "\"Inside\" or confidential information, and a push to act before others find out.",
+    "\"Everyone is buying it\" pitches.",
+    "Flashy pitches with lavish lifestyles or testimonials that may be fake.",
+    "Messages you did not ask for that want your personal information.",
+    "Being told to pay with a gift card, a credit card, or by wiring money abroad or to a personal account."
+   ]
+  },
+  {
+   "t": "quote",
+   "html": "\"There's no such thing as high guaranteed investment returns, and every investment involves risk.\"",
+   "cite": "SEC, Investor.gov, Protect Your Money: How to Avoid Investment Scams."
+  },
+  {
+   "t": "p",
+   "html": "NIL money can make you a target, because people know you just got paid. Before anyone touches your money, a parent can run a free background check on the person selling it at <a href=\"https://www.investor.gov/\" target=\"_blank\" rel=\"noopener\">Investor.gov</a>."
+  },
+  {
+   "t": "keys",
+   "title": "Make it grow checklist",
+   "pairs": [
+    [
+     "1",
+     "Tax money first. Set it aside the day you get paid (<a href=\"#/nil/03\">Module 03</a>)."
+    ],
+    [
+     "2",
+     "Money you need soon stays in insured savings (<a href=\"#/nil/05\">Module 05</a>)."
+    ],
+    [
+     "3",
+     "Money you will not touch for many years can be invested and given time."
+    ],
+    [
+     "4",
+     "Spread it out. Do not bet it all on one company."
+    ],
+    [
+     "5",
+     "Walk away from anything \"guaranteed\" or \"today only.\""
+    ]
+   ]
+  },
+  {
+   "t": "h2",
+   "html": "Sources"
+  },
+  {
+   "t": "list",
+   "ordered": false,
+   "flags": false,
+   "items": [
+    "SEC, Investor.gov, Glossary: Compound Interest; Compound Interest Calculator (checked Oct. 2026).",
+    "U.S. Bureau of Labor Statistics, Consumer Price Index, September 2026 news release (Oct. 14, 2026), all items CPI-U, 12-month change before seasonal adjustment: 336.940 in September 2026 against 324.800 in September 2025; BLS series CUUR0000SA0 (checked Oct. 14, 2026).",
+    "SEC, Investor.gov, What is Risk? (inflation, market risk, risk and return).",
+    "SEC, Investor.gov, Stocks; Bonds; Mutual Funds and ETFs.",
+    "SEC, Investor.gov, Asset Allocation (time horizon, risk tolerance, diversification).",
+    "SEC, Investor.gov, Glossary: Index Fund.",
+    "SEC, Investor.gov, Protect Your Money: How to Avoid Investment Scams; Red Flags of Investment Fraud Checklist.",
+    "SEC Office of Investor Education and Advocacy, Updated Investor Alert: Social Media and Investing, Avoiding Fraud (Nov. 2014)."
+   ]
+  }
+ ],
+ "warmup": [
+  {
+   "label": "Question 1",
+   "q": "You put in $500 and it earns an example 10% in year one, so you have $550. In year two, the 10% is figured on:",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$500, the amount you started with."
+    },
+    {
+     "id": "b",
+     "text": "$550, your money plus the first year's growth."
+    },
+    {
+     "id": "c",
+     "text": "Nothing. You only earn growth once."
+    }
+   ],
+   "answer": "b",
+   "overtime": false
+  },
+  {
+   "label": "Question 2",
+   "q": "Prices rise about 3% this year. You keep $200 in a shoebox the whole time. At the end of the year, the $200:",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Buys less than it did a year ago."
+    },
+    {
+     "id": "b",
+     "text": "Buys exactly what it did before."
+    },
+    {
+     "id": "c",
+     "text": "Has grown to about $206."
+    }
+   ],
+   "answer": "a",
+   "overtime": false
+  },
+  {
+   "label": "Question 3",
+   "q": "An account online says your money is \"guaranteed\" to triple, but only if you buy in tonight. What do you do?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Buy in before tonight."
+    },
+    {
+     "id": "b",
+     "text": "Ask to see other people's profits first."
+    },
+    {
+     "id": "c",
+     "text": "Walk away from it."
+    }
+   ],
+   "answer": "c",
+   "overtime": false
+  }
+ ],
+ "filmroom": [
+  {
+   "label": "Call 1",
+   "q": "$1,000 earns an example 7% a year. In year two, what does the 7% apply to?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Only the original $1,000."
+    },
+    {
+     "id": "b",
+     "text": "$1,070: the money plus last year's growth."
+    },
+    {
+     "id": "c",
+     "text": "Nothing. Growth only happens once."
+    }
+   ],
+   "answer": "b",
+   "overtime": false,
+   "why": "That is compound growth: last year's growth starts earning too, so year two adds $74.90, not $70."
+  },
+  {
+   "label": "Call 2",
+   "q": "Prices went up 3.7% over the last year. Your $100 sat in a drawer the whole time. What happened to it?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Nothing. It still buys $100 of stuff."
+    },
+    {
+     "id": "b",
+     "text": "It buys less, about $96.43 worth of what it used to."
+    },
+    {
+     "id": "c",
+     "text": "It grew to $103.70."
+    }
+   ],
+   "answer": "b",
+   "overtime": false,
+   "why": "Cash does not grow on its own. When prices rise, the same bill buys less. That is inflation."
+  },
+  {
+   "label": "Call 3",
+   "q": "Someone in your DMs says his trading plan is guaranteed to double your NIL money in a month, but you have to join today. What is the call?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Join now before the deadline passes."
+    },
+    {
+     "id": "b",
+     "text": "Ask for screenshots of his wins first, then decide."
+    },
+    {
+     "id": "c",
+     "text": "Walk away. \"Guaranteed\" plus \"today only\" are scam signs."
+    }
+   ],
+   "answer": "c",
+   "overtime": false,
+   "why": "The SEC lists guaranteed returns and pressure to buy right now as red flags. Screenshots and testimonials can be faked."
+  },
+  {
+   "label": "Overtime",
+   "q": "Which one is the best example of diversification?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "All your money in one company you love."
+    },
+    {
+     "id": "b",
+     "text": "A fund that owns hundreds of companies in many industries."
+    },
+    {
+     "id": "c",
+     "text": "Two different sneaker companies."
+    }
+   ],
+   "answer": "b",
+   "overtime": true,
+   "why": "Spreading money across many companies and industries means one bad pick cannot sink you. Two companies in the same business are not spread across industries."
+  }
+ ],
+ "disclaimer": "Educational content only. Not tax, legal, or investment advice. Returns shown are hypothetical, use an example rate that is not a prediction, and leave out fees and taxes. Past results do not guarantee future ones. This lesson does not recommend any investment, fund or company. Check your own situation with a parent and a tax professional. Built by NYC Honor Foundation volunteers.",
+ "onSite": "https://nychonor.org/nil-investing",
+ "hasTryItOnSite": true
+}

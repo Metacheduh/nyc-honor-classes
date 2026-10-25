@@ -1,0 +1,557 @@
+{
+ "id": "01",
+ "slug": "nil-budget",
+ "title": "Money Fundamentals",
+ "tagline": "Know where the bag goes.",
+ "kicker": "NYC Honor Academy · Module 01 · about 12 minutes",
+ "intro": "Allowance, a job, or your first deal: the money is small at first, and the habits you build with it are the ones you keep when it gets bigger. This lesson shows how to plan pay that changes month to month, what protects you when you pay by cash, card or app, how to buy smart, how banks work, and how to save when it is hard. Then you make the calls in the Film Room.",
+ "updated": "Updated October 1, 2026 · rules checked against the CFPB, FTC and FDIC",
+ "minutes": 12,
+ "badge": "",
+ "blurb": "A budget for pay that changes month to month, what protects you when you pay by cash, card or app, buying smart, and how banks and deposit insurance work.",
+ "video": {
+  "title": "Watch first: know where the bag goes",
+  "file": "assets/film/nil-money-fundamentals.mp4",
+  "poster": "assets/film/posters/nil-money-fundamentals.jpg",
+  "caption": "Money Fundamentals, about 87 seconds",
+  "note": "About 90 seconds, with captions. Example amounts are made up; card limits are from Regulations Z and E. The rest of this lesson explains each step.",
+  "vtt": "assets/film/nil-money-fundamentals.vtt"
+ },
+ "youtube": "GbAkvRV__4Q",
+ "blocks": [
+  {
+   "t": "h2",
+   "html": "How do you make a budget?"
+  },
+  {
+   "t": "lead",
+   "html": "Write down what comes in, then decide where every part of it goes before you spend it: needs, saving, giving, and wants. A budget is a plan you write down to decide how you'll spend your money each month. That is how consumer.gov, the federal government's plain-language money site, puts it."
+  },
+  {
+   "t": "list",
+   "ordered": false,
+   "flags": false,
+   "items": [
+    "<b>Income in.</b> Allowance, job pay, and NIL money. Write down each one and when it shows up.",
+    "<b>Needs.</b> Things you have to pay, like your share of a phone bill, bus fare or lunch. Some are fixed (the same every month, like a phone bill) and some are variable (food, rides).",
+    "<b>Saving.</b> Money for an emergency and for a goal. A short-term goal might be shoes next month. A long-term goal might be a car or college.",
+    "<b>Giving.</b> If it matters to you, give it a line too. More on that at the end.",
+    "<b>Wants.</b> Food with friends, games, gear. Wants are fine. They just come after the lines above."
+   ]
+  },
+  {
+   "t": "p",
+   "html": "Then track it. At the end of the month, check whether you spent what you planned, and use what you learn to plan the next month. A notebook, a notes app or a spreadsheet all work. The CFPB says to create a way that's easy for you to track income and spending in real time."
+  },
+  {
+   "t": "h3",
+   "html": "When your pay changes every month"
+  },
+  {
+   "t": "p",
+   "html": "NIL money is lumpy: a deal one month, nothing the next. But your bills come every month either way. One careful way to plan is to build your monthly budget on a month with no deal, then treat deal money as extra. The CFPB says that with pay that changes, it can be helpful to save during months that you earn more money so you have enough to pay for living expenses when you earn less money."
+  },
+  {
+   "t": "p",
+   "html": "When deal money comes in, the tax comes off first. Most NIL checks have no tax taken out, and below about $17,300 of profit about <b>14.1%</b> of NIL profit covers federal tax (<a href=\"#/nil/03\">Module 03</a> shows the math). Put that part away before you touch the rest."
+  },
+  {
+   "t": "p",
+   "html": "Here is one player's plan, with a $200 job every month and one $500 deal:"
+  },
+  {
+   "t": "table",
+   "caption": "Example income for three months",
+   "head": [
+    "Income",
+    "Sept.",
+    "Oct.",
+    "Nov."
+   ],
+   "rows": [
+    [
+     "Part-time job",
+     "$200",
+     "$200",
+     "$200"
+    ],
+    [
+     "NIL deal",
+     "$0",
+     "$500",
+     "$0"
+    ],
+    [
+     "<b>Total</b>",
+     "<b>$200</b>",
+     "<b>$700</b>",
+     "<b>$200</b>"
+    ]
+   ]
+  },
+  {
+   "t": "table",
+   "caption": "Example monthly plan built on $200",
+   "head": [
+    "Every month, built on $200",
+    "Amount"
+   ],
+   "rows": [
+    [
+     "Saving, first",
+     "$40"
+    ],
+    [
+     "Needs: phone share, bus fare, lunches",
+     "$90"
+    ],
+    [
+     "Giving",
+     "$10"
+    ],
+    [
+     "Wants",
+     "$60"
+    ],
+    [
+     "<b>Total</b>",
+     "<b>$200</b>"
+    ]
+   ]
+  },
+  {
+   "t": "p",
+   "html": "<b>October's $500 deal:</b> about $71 goes to the tax set-aside first. The other $429 goes to savings, to cover a month when the job hours drop or to reach a goal sooner. It does not raise the monthly wants line."
+  },
+  {
+   "t": "note",
+   "html": "Hypothetical example. The amounts are made up to show the idea. They are not a rule or a recommended split, and your lines will be different. The tax figure assumes a parent claims you and you have no business costs."
+  },
+  {
+   "t": "h2",
+   "html": "How should you pay for things?"
+  },
+  {
+   "t": "lead",
+   "html": "Know what protects you before you pay. Federal law caps what you can lose on a credit card or debit card that is lost or stolen, but the rules differ by card and by how fast you report it. Cash has no backup at all, and money you send on a payment app to the wrong person is hard to get back."
+  },
+  {
+   "t": "table",
+   "caption": "What protects you, by way of paying",
+   "head": [
+    "Way to pay",
+    "Lost, stolen, or used without your OK",
+    "Something goes wrong with what you bought"
+   ],
+   "rows": [
+    [
+     "<b>Cash</b>",
+     "Gone. The federal limits below are for cards and electronic transfers, not bills in your pocket.",
+     "No card company to dispute through. You have to work it out with the seller."
+    ],
+    [
+     "<b>Debit card</b>",
+     "$0 if you report it before it is used. Up to $50 if you report within 2 business days of learning it is gone. Up to $500 after that. Wait more than 60 days after your statement, and you could lose everything taken after that.",
+     "Money leaves your account right away. Dispute rights are more limited than with a credit card."
+    ],
+    [
+     "<b>Credit card</b>",
+     "At most $50, and $0 if you report it before it is used.",
+     "The strongest dispute rights: charged twice, wrong price, or an order that never came."
+    ],
+    [
+     "<b>Prepaid card</b>",
+     "Register it. Registering gets you the legal limits on losses.",
+     "Depends on the card. Gift cards don't have the same protections as other cards."
+    ],
+    [
+     "<b>Payment app</b>",
+     "A payment you did not make: report it to the app and your bank fast. Federal law generally requires the app to investigate.",
+     "Money you sent yourself, even to a scammer, is hard to get back."
+    ]
+   ]
+  },
+  {
+   "t": "quote",
+   "html": "\"The liability of a cardholder for unauthorized use of a credit card shall not exceed the lesser of $50 or the amount of money, property, labor, or services obtained by the unauthorized use before notification to the card issuer.\"",
+   "cite": "Regulation Z, 12 CFR 1026.12(b)(1)(ii), from the Truth in Lending Act."
+  },
+  {
+   "t": "quote",
+   "html": "\"If the consumer notifies the financial institution within two business days after learning of the loss or theft of the access device, the consumer's liability shall not exceed the lesser of $50 or the amount of unauthorized transfers that occur before notice to the financial institution.\"",
+   "cite": "Regulation E, 12 CFR 1005.6(b)(1), from the Electronic Fund Transfer Act. Paragraph (b)(2) sets the $500 limit after two business days, and (b)(3) the 60-day statement rule."
+  },
+  {
+   "t": "list",
+   "ordered": false,
+   "flags": false,
+   "items": [
+    "<b>Debit vs credit.</b> A debit card pays with money that is already in your checking account. A credit card borrows money you pay back later, usually with interest if you do not pay in full. The FTC says credit cards are safer than other payment cards because you have dispute rights that cover many problems. Under 21, you need your own income or a cosigner to get one (<a href=\"#/nil/06\">Module 06</a>).",
+    "<b>Payment apps.</b> The FTC warns that scammers push people to pay by app because once you do, it's hard for you to get your money back. Double-check who you are paying before you hit send. Money left sitting in an app is generally not FDIC-insured unless you signed up for extra services, so it does not belong there long (<a href=\"#/nil/05\">Module 05</a>).",
+    "<b>Report fast.</b> Every limit above gets better the sooner you tell the bank or card company. Check your account often; debit charges take money from your account right away."
+   ]
+  },
+  {
+   "t": "p",
+   "html": "Spotting the scam before you pay is <a href=\"#/nil/06\">Module 06</a>."
+  },
+  {
+   "t": "h2",
+   "html": "How do you buy smart?"
+  },
+  {
+   "t": "lead",
+   "html": "Compare the total cost, not the sticker. Look at what it costs over the time you will use it, the price per unit, and whether a \"sale\" is really a sale. The FTC says to learn the total cost of the product, including shipping, handling, delivery, taxes, or other fees."
+  },
+  {
+   "t": "list",
+   "ordered": false,
+   "flags": false,
+   "items": [
+    "<b>Cost over time.</b> For something you will use a long time, ask how long it lasts and what it costs to keep. Shoes that cost $60 and last 4 months cost $180 a year. Shoes that cost $110 and last a year cost $110. A $300 phone on a $25 monthly plan costs $900 over two years, before a case or a repair.",
+    "<b>Price per unit.</b> NIST, the federal standards agency, says unit pricing shows the price of all brands and sizes of a product per unit of measure, like per ounce or per bottle. The bigger pack is not always cheaper. Do the division.",
+    "<b>\"Sale\" and \"was\" prices.</b> Under the FTC's pricing guides, a \"was\" price is only honest if the item was really offered at that price, on a regular basis, for a reasonably substantial period of time. If the \"was\" price was made up, so is the deal. A countdown clock or a \"limited drop\" is pressure to decide fast. Slow down anyway.",
+    "<b>Some prices can move.</b> Prices in a store are usually fixed, but some can be negotiated, like a used car or something from a reseller. The FTC's advice on used cars is to shop around, compare offers, and negotiate the best deal you can.",
+    "<b>Do your homework.</b> Check the maker's site, a couple of sellers, and reviews from people who bought it. The FTC says to search the product or company name plus \"complaint\" or \"scam.\" Research takes time, so save the deep dive for things that cost a lot or that you will use a long time."
+   ]
+  },
+  {
+   "t": "quote",
+   "html": "\"Where the former price is genuine, the bargain being advertised is a true one.\"",
+   "cite": "FTC Guides Against Deceptive Pricing, 16 CFR 233.1(a)."
+  },
+  {
+   "t": "note",
+   "html": "The shoe and phone numbers are hypothetical examples, not prices of any real product."
+  },
+  {
+   "t": "h2",
+   "html": "How do banks work?"
+  },
+  {
+   "t": "lead",
+   "html": "A bank or credit union holds your deposits and pays you interest. It lends that money to borrowers, who pay it more interest than it pays you. At an insured bank or credit union, your deposits are insured by the federal government up to $250,000."
+  },
+  {
+   "t": "p",
+   "html": "The FDIC explains it this way: the bank lends your money to other people, they pay the money back to the bank with interest, and the bank gives you a small amount of the money they make. Here is what that gap looked like in 2026, using national averages:"
+  },
+  {
+   "t": "table",
+   "caption": "Average savings rate compared with average loan rates, 2026",
+   "head": [
+    "National average",
+    "Rate"
+   ],
+   "rows": [
+    [
+     "Savings account (banks pay you)",
+     "<b>0.37%</b>"
+    ],
+    [
+     "New car loan, 60 months (you pay a bank)",
+     "<b>7.14%</b>"
+    ],
+    [
+     "Personal loan, 24 months (you pay a bank)",
+     "<b>11.86%</b>"
+    ],
+    [
+     "Credit card (you pay a bank)",
+     "<b>20.94%</b>"
+    ]
+   ]
+  },
+  {
+   "t": "note",
+   "html": "Savings: FDIC national rate, September 2026. Loans and cards: Federal Reserve G.19, commercial banks, second quarter of 2026. These are averages across many banks; one bank's own rates can be higher or lower."
+  },
+  {
+   "t": "p",
+   "html": "<b>Banks and credit unions.</b> Both take deposits and make loans. A bank is a business owned by investors. A credit union is a not-for-profit owned by its members, and you have to join to use it."
+  },
+  {
+   "t": "p",
+   "html": "<b>Your money is insured.</b> Deposits at an FDIC-insured bank are covered up to $250,000 per depositor, per bank, for each account ownership category. Credit unions have the same $250,000 coverage through the NCUA. Both are backed by the full faith and credit of the United States. Insurance covers deposits, not stocks, bonds, funds or crypto (<a href=\"#/nil/05\">Module 05</a>)."
+  },
+  {
+   "t": "quote",
+   "html": "\"FDIC deposit insurance covers $250,000 per depositor, per FDIC-insured bank, for each account ownership category.\"",
+   "cite": "FDIC, Understanding Deposit Insurance."
+  },
+  {
+   "t": "p",
+   "html": "<b>Rates and fees are not the same everywhere.</b> One account may charge a monthly fee unless you keep a minimum balance; another may not. The CFPB says it is always a good idea to compare checking account fees and terms to see which account and fee structure will cost you less for the way you bank."
+  },
+  {
+   "t": "p",
+   "html": "<b>Who watches the banks.</b> Every bank and credit union has a charter from the state or federal government, and each is checked regularly by a regulator:"
+  },
+  {
+   "t": "list",
+   "ordered": false,
+   "flags": false,
+   "items": [
+    "The <b>OCC</b> (Office of the Comptroller of the Currency) regulates national banks.",
+    "The <b>Federal Reserve</b> regulates state-chartered banks that are members of the Federal Reserve System.",
+    "The <b>FDIC</b> regulates state-chartered banks that are not members, and insures deposits at all insured banks.",
+    "The <b>NCUA</b> supervises and insures federal credit unions, and insures most state-chartered ones.",
+    "In New York, the <b>Department of Financial Services</b> (DFS) charters and regulates state-chartered banks, and regulates state-chartered credit unions along with the NCUA. Other states have their own banking regulator."
+   ]
+  },
+  {
+   "t": "h2",
+   "html": "How do you save when it is hard?"
+  },
+  {
+   "t": "lead",
+   "html": "Pay yourself first, and make it automatic. Move a set amount to savings the day money comes in, before you spend any of it. The FDIC says to treat your savings like a bill and pay yourself first, even if it doesn't seem like that much."
+  },
+  {
+   "t": "list",
+   "ordered": false,
+   "flags": false,
+   "items": [
+    "<b>Make it automatic.</b> The CFPB says one common way is to set up recurring transfers through your bank or credit union so money moves on its own from checking to savings. A parent can help set one up.",
+    "<b>Start an emergency fund.</b> An emergency fund is a cash reserve that's specifically set aside for unplanned expenses or financial emergencies: a cracked phone screen, a bus pass, a lost job shift. The CFPB says the amount you need depends on your situation. Think about what surprise costs you have had before, and set a first goal from that. Even a small amount helps.",
+    "<b>Use the big months.</b> When a deal or a gift lands, save all or part of it. The CFPB suggests saving all or a portion of one-time money, like a tax refund or a cash gift, to build an emergency fund."
+   ]
+  },
+  {
+   "t": "h3",
+   "html": "Know your triggers"
+  },
+  {
+   "t": "p",
+   "html": "The CFPB teaches that advertisements, peers and your own impulses can push your spending. For athletes, the usual triggers are easy to name:"
+  },
+  {
+   "t": "list",
+   "ordered": false,
+   "flags": true,
+   "items": [
+    "Friends going out and expecting you to cover it now that you \"got a bag.\"",
+    "A sneaker drop or \"limited\" gear with a countdown.",
+    "Social media feeds full of ads and paid posts built to make you buy.",
+    "Subscriptions that renew every month, so small that you stop seeing them."
+   ]
+  },
+  {
+   "t": "p",
+   "html": "Plans that help: decide your wants line before the month starts, wait a day before any buy that is not in the plan, turn off drop alerts, and tell a friend or parent your savings goal. Saving looks different for everyone. What matters is that your plan fits your life and that you stick to it. If you spend down your emergency fund, build it back up."
+  },
+  {
+   "t": "h2",
+   "html": "Where does giving fit?"
+  },
+  {
+   "t": "lead",
+   "html": "Many people put giving in their budget on purpose, not just when someone asks. The national standards for personal finance list it as one part of a budget, alongside spending and saving. How much, and to whom, is your call."
+  },
+  {
+   "t": "p",
+   "html": "Giving can be money to a cause, a team or a place of worship. If you give money, the FTC suggests looking into the group first: search its name plus \"complaint\" or \"scam,\" and check its website for what it actually does with donations. If a tax deduction matters to the giver, the IRS's Tax Exempt Organization Search shows whether a group is registered as tax-exempt. The FTC says a charity that will only take crypto, a wire, a payment app or a gift card is likely a scam."
+  },
+  {
+   "t": "keys",
+   "title": "Money fundamentals",
+   "pairs": [
+    [
+     "1",
+     "Plan the month on a month with no deal. Deal money goes to tax and savings first."
+    ],
+    [
+     "2",
+     "Credit card stolen: at most $50. Debit card: report within 2 business days."
+    ],
+    [
+     "3",
+     "Money sent on an app to the wrong person is hard to get back."
+    ],
+    [
+     "4",
+     "Compare total cost and price per unit, and question the \"was\" price."
+    ],
+    [
+     "5",
+     "Deposits are insured up to $250,000. Pay yourself first, automatically."
+    ]
+   ]
+  },
+  {
+   "t": "h2",
+   "html": "Sources"
+  },
+  {
+   "t": "list",
+   "ordered": false,
+   "flags": false,
+   "items": [
+    "consumer.gov (FTC), Making a Budget (Aug. 2024); CFPB, Budgeting: How to create a budget and stick with it (page modified June 25, 2026); CFPB Building Blocks, Tracking income teacher guide (Summer 2022). All checked Oct. 1, 2026.",
+    "Regulation E, 12 CFR 1005.6 (liability of consumer for unauthorized transfers) and 1005.18(e)(3) (unverified prepaid accounts); Regulation Z, 12 CFR 1026.12(b) (liability of cardholder for unauthorized use), eCFR, current through Sept. 30, 2026.",
+    "CFPB, Ask CFPB: Am I responsible for unauthorized charges if my credit cards are lost or stolen?; How do I get my money back after I discover an unauthorized transaction or money missing from my bank account? (reviewed Aug. 28, 2026); Is the money I keep in my payment app safe?",
+    "CFPB, press release on its enforcement order against a payment app operator for failing to investigate unauthorized transactions (Jan. 16, 2025).",
+    "FTC, Lost or Stolen Credit, ATM, and Debit Cards; Comparing Credit, Charge, Secured Credit, Debit, or Prepaid Cards; Mobile Payment Apps: How To Avoid a Scam When You Use One (May 2022), consumer.ftc.gov.",
+    "FTC, Online Shopping (May 2023); Buying a Used Car From a Dealer (Apr. 2024); Before Giving to a Charity (Sept. 2025), consumer.ftc.gov. FTC Guides Against Deceptive Pricing, 16 CFR 233.1, eCFR.",
+    "NIST Special Publication 1181, Unit Pricing Guide: A Best Practice Approach to Unit Pricing (2015).",
+    "FDIC, Money Smart for Grades 3-5 and Grades 9-12, Parent/Caregiver Guides (how banks work; banks and credit unions); Federal Reserve Bank of St. Louis, Types of Savings Accounts lesson (2021).",
+    "FDIC, National Rates and Rate Caps (September 21, 2026); Federal Reserve Board, G.19 Consumer Credit (released Sept. 8, 2026), commercial bank interest rates, 2026 Q2.",
+    "FDIC, Understanding Deposit Insurance; NCUA, Share Insurance Coverage; CFPB, Ask CFPB: Should I get a checking account that pays interest? (reviewed Sept. 5, 2024).",
+    "Federal Reserve Board, Federal Banking Regulators for the CRA; OCC, HelpWithMyBank.gov: Who Regulates My Bank?; New York State Department of Financial Services, Who We Supervise.",
+    "FDIC Consumer News, February 2021 (pay yourself first); CFPB, An essential guide to building an emergency fund (page modified Oct. 29, 2025); CFPB Building Blocks, James resists impulse spending (Summer 2022).",
+    "Council for Economic Education and Jump$tart Coalition, National Standards for Personal Financial Education (2021), Spending standard 12-1."
+   ]
+  }
+ ],
+ "warmup": [
+  {
+   "label": "Question 1",
+   "q": "Most months you make $200 from a part-time job. Some months an NIL deal adds $500. Which month should your monthly plan be built on?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "A deal month. That is what you can really make."
+    },
+    {
+     "id": "b",
+     "text": "A month with no deal. Deal money goes to tax and savings first."
+    },
+    {
+     "id": "c",
+     "text": "Whatever month you are in. Spend what comes in."
+    }
+   ],
+   "answer": "b",
+   "overtime": false
+  },
+  {
+   "label": "Question 2",
+   "q": "Someone steals your credit card and charges $900 before you report it. Under federal law, what is the most you can owe for those charges?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "All $900. You should have reported it sooner."
+    },
+    {
+     "id": "b",
+     "text": "$50."
+    },
+    {
+     "id": "c",
+     "text": "$500."
+    }
+   ],
+   "answer": "b",
+   "overtime": false
+  },
+  {
+   "label": "Question 3",
+   "q": "You have $3,000 in a savings account at an FDIC-insured bank, and the bank fails. What happens to your money?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "It is gone. Banks fail and people lose out."
+    },
+    {
+     "id": "b",
+     "text": "You get back about half."
+    },
+    {
+     "id": "c",
+     "text": "All of it is covered. Insurance covers up to $250,000."
+    }
+   ],
+   "answer": "c",
+   "overtime": false
+  }
+ ],
+ "filmroom": [
+  {
+   "label": "Call 1",
+   "q": "Your NIL pay was $0 in September, $600 in October and $0 in November. Your phone bill is $40 every month. What is the smart move with October's $600?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Spend it in October. It is October's money."
+    },
+    {
+     "id": "b",
+     "text": "Put the tax set-aside away first, then save the rest for the months with no deal."
+    },
+    {
+     "id": "c",
+     "text": "Raise your spending every month to match October."
+    }
+   ],
+   "answer": "b",
+   "overtime": false,
+   "why": "Bills come every month, deals do not. Plan the month on a month with no deal, take tax off the top of deal money, and save the extra so it covers the slow months."
+  },
+  {
+   "label": "Call 2",
+   "q": "You want to buy $120 sneakers from a stranger online, and they never ship. Which way of paying gave you the best shot at getting your money back?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Sending it on a payment app."
+    },
+    {
+     "id": "b",
+     "text": "Mailing cash."
+    },
+    {
+     "id": "c",
+     "text": "A credit card, because you can dispute the charge."
+    }
+   ],
+   "answer": "c",
+   "overtime": false,
+   "why": "The FTC says credit cards have dispute rights that cover many problems, including an order that never came. Money you send yourself on an app, or in cash, is hard to get back."
+  },
+  {
+   "label": "Call 3",
+   "q": "Your savings are at a federally insured credit union. Who insures them, and up to how much?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "The NCUA, up to $250,000."
+    },
+    {
+     "id": "b",
+     "text": "The FDIC, up to $25,000."
+    },
+    {
+     "id": "c",
+     "text": "Nobody. Only banks are insured."
+    }
+   ],
+   "answer": "a",
+   "overtime": false,
+   "why": "The NCUA insures credit union accounts up to $250,000, the same limit the FDIC uses for banks. Both are backed by the full faith and credit of the United States."
+  },
+  {
+   "label": "Overtime",
+   "q": "A 12-pack of a sports drink is $9, marked \"Sale! Was $14.\" A 24-pack of the same drink is $16. Which costs less per bottle?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "The 12-pack. It is on sale."
+    },
+    {
+     "id": "b",
+     "text": "The 24-pack: about 67 cents a bottle, vs 75 cents."
+    },
+    {
+     "id": "c",
+     "text": "They cost the same per bottle."
+    }
+   ],
+   "answer": "b",
+   "overtime": true,
+   "why": "$9 divided by 12 is 75 cents a bottle. $16 divided by 24 is about 67 cents. The \"was $14\" tells you nothing unless the store really charged $14 for a good while. Hypothetical prices."
+  }
+ ],
+ "disclaimer": "Educational content only. Not legal, tax, banking or investment advice. The budget, shoe, phone and sports drink numbers are hypothetical examples, not rules and not prices of any real product. Rates shown are national averages, not a quote from any bank. This lesson does not recommend any bank, credit union, card, app, product or company. A parent should be part of opening any account. Built by NYC Honor Foundation volunteers.",
+ "onSite": "https://nychonor.org/nil-budget",
+ "hasTryItOnSite": true
+}

@@ -1,0 +1,361 @@
+{
+ "id": "02",
+ "slug": "nil-contracts",
+ "title": "Understanding NIL Deals",
+ "tagline": "Secure the bag, or walk away",
+ "kicker": "NYC Honor Academy · Module 02 · about 10 minutes",
+ "intro": "An NIL deal means a business pays you, in money or free stuff, to use your name, image or likeness. Before you say yes, you need to know three things: whether your league allows it, what the contract really asks of you, and why a parent has to be part of it. This lesson covers all three, then tests you in the Film Room.",
+ "updated": "Updated September 27, 2026 · rules checked September 2026",
+ "minutes": 10,
+ "badge": "",
+ "blurb": "Which rules apply at your school, what a contract is really offering, why a parent has to be part of it, and the red flags that mean walk away.",
+ "video": {
+  "title": "Watch first: red flags in an NIL contract",
+  "file": "assets/film/nil-contract-red-flags.mp4",
+  "poster": "assets/film/posters/nil-contract-red-flags.jpg",
+  "caption": "Red flags in an NIL contract, about 90 seconds",
+  "note": "About 90 seconds, with captions. The rest of this lesson explains each part of a deal.",
+  "vtt": "assets/film/nil-contract-red-flags.vtt"
+ },
+ "youtube": "1RsstRdlx5E",
+ "blocks": [
+  {
+   "t": "h2",
+   "html": "Can a high-school player do NIL deals?"
+  },
+  {
+   "t": "lead",
+   "html": "It depends on your league, not just your state. Most leagues near New York City allow NIL deals with rules: no school name, logo or uniform, and nothing tied to where you enroll. PSAL's posted rules, for New York City public schools, do not mention NIL, so ask first. Breaking a league rule can cost you your eligibility."
+  },
+  {
+   "t": "p",
+   "html": "Find your school in the table. If your league is not listed, or you are not sure, ask your athletic director for the rule <b>in writing</b> before you sign anything."
+  },
+  {
+   "t": "table",
+   "caption": "NIL rules by high-school league",
+   "head": [
+    "Where you play",
+    "What the rule says"
+   ],
+   "rows": [
+    [
+     "<b>NYSPHSAA</b><br>New York public schools outside NYC, including Long Island (Sections VIII and XI), plus some private schools",
+     "Paid endorsements are allowed if the deal has no link to your school, team, section or NYSPHSAA. No school uniform or logos in an ad. Break the rule and you lose amateur status in that sport, with a one-year wait to ask for reinstatement. Your school district may add its own rules."
+    ],
+    [
+     "<b>PSAL</b><br>New York City public schools",
+     "No NIL rule is posted. The amateur rule says you lose amateur status by taking gifts of value because you are a well-known athlete. Get a written OK from your school and the PSAL before any deal. That step is our advice, not a PSAL rule."
+    ],
+    [
+     "<b>CHSAA</b><br>New York Catholic schools",
+     "We could not find a published NIL policy. Ask your athletic director for the rule in writing."
+    ],
+    [
+     "<b>NJSIAA</b><br>New Jersey",
+     "Allowed since January 1, 2022. No school name or NJSIAA in the deal, no promoting a sponsor during team activities, and no school staff involved. Banned categories include alcohol, tobacco and vapes, cannabis, gambling and sports betting, adult content and weapons."
+    ],
+    [
+     "<b>PIAA</b><br>Pennsylvania",
+     "Allowed if the pay matches real work. No school name, nickname, logo or uniform. Nobody tied to your school can set up or pay for the deal, except your parent. You or your parent must tell your principal or athletic director within <b>72 hours</b> of signing."
+    ],
+    [
+     "<b>NEPSAC</b><br>New England prep schools",
+     "Allowed if the pay does not depend on how you play and is not a reason to enroll. You must register every deal with NEPSAC and give your school a copy. Your own school can still have stricter rules."
+    ]
+   ]
+  },
+  {
+   "t": "h2",
+   "html": "Does a high-school deal matter once I get to college?"
+  },
+  {
+   "t": "lead",
+   "html": "Yes. If you enroll at a Division I school, you must report NIL deals worth $600 or more that you made since the first day of your junior year of high school, or since July 1, 2025, if that is later. The deadline is 14 days after you enroll or before your first game, whichever comes first. A deal you never report can cost you eligibility."
+  },
+  {
+   "t": "p",
+   "html": "In college, outside NIL deals are checked by the College Sports Commission through a system called NIL Go, which checks that a deal is for real marketing work and, for many deals, that the pay is fair. New York's college NIL law, Education Law section 6438-c, also counts high-school students who have finished sophomore year and may play in college as student-athletes. It does not change your high school league's rules. Keep a copy of every deal you sign."
+  },
+  {
+   "t": "h2",
+   "html": "What is a contract really asking for?"
+  },
+  {
+   "t": "lead",
+   "html": "Read five parts before anything else: how long it lasts, who else you can work with, exactly what you have to do, how and when you get paid, and how either side can end it. Those five parts decide what a deal really costs you. If the contract is vague about any of them, ask for it in writing."
+  },
+  {
+   "t": "list",
+   "ordered": false,
+   "flags": false,
+   "items": [
+    "<b>Term.</b> How long does it last, and does it renew on its own?",
+    "<b>Exclusivity.</b> Does it stop you from working with other brands, even whole categories like \"all footwear\"? A long exclusive can block a bigger deal later.",
+    "<b>Deliverables.</b> How many posts, appearances or autographs, by when, and who approves them?",
+    "<b>Pay.</b> Cash, free gear, or both? When is it paid? Free products count as pay, and as taxable income (<a href=\"#/nil/03\">Module 03</a> covers that).",
+    "<b>Ending it.</b> Can you get out if something changes, like a new league rule or a move to college?"
+   ]
+  },
+  {
+   "t": "h2",
+   "html": "Why does a parent have to be part of it?"
+  },
+  {
+   "t": "lead",
+   "html": "In New York you are a minor until 18. Courts usually let a minor cancel a contract. A parent signing too does not by itself stop you from canceling, but a court can still make you or your family pay back what is fair for what you already got. A photo or ad release your parent signed is different: you usually can't cancel it."
+  },
+  {
+   "t": "p",
+   "html": "Here is how the pieces fit:"
+  },
+  {
+   "t": "list",
+   "ordered": false,
+   "flags": false,
+   "items": [
+    "<b>Using your name or picture needs written permission.</b> New York law says no person or business can use a living person's name, picture or voice to advertise without written consent. For anyone under 18, that consent must come from a parent or guardian.",
+    "<b>A release is hard to take back.</b> New York's highest court held in 1983 that a young model could not cancel an unrestricted photo release her parent signed. So before a parent signs, limit where the photos can be used and for how long.",
+    "<b>Canceling can still cost you.</b> In one case a young actor canceled his manager's contract and still had to keep paying commissions on jobs the manager had found him.",
+    "<b>Court approval is for performers and pros.</b> New York lets a court approve some minors' contracts so they can't be canceled, but the law names actors, models, musicians and professional athletes. Whether it covers a high-school NIL deal is unclear."
+   ]
+  },
+  {
+   "t": "p",
+   "html": "Bottom line: a parent should read and sign with you, and a lawyer should look at anything long, exclusive or worth real money. A bill in Albany would require a parent's written consent for minors' NIL deals, but it has not passed."
+  },
+  {
+   "t": "h2",
+   "html": "Do I have to say a post is an ad?"
+  },
+  {
+   "t": "lead",
+   "html": "Yes. If a brand pays you or gives you free stuff, you must say so clearly in the post itself, not only in your bio or at the end of a video. Plain words like \"ad\" or \"sponsored\" work, and #ad is fine. This comes from the Federal Trade Commission's Endorsement Guides."
+  },
+  {
+   "t": "quote",
+   "html": "\"Disclosures are likely to be missed if they appear only on an ABOUT ME or profile page, at the end of posts or videos, or anywhere that requires a person to click MORE.\"",
+   "cite": "Federal Trade Commission, Disclosures 101 for Social Media Influencers."
+  },
+  {
+   "t": "p",
+   "html": "Free products count even if the brand did not ask you to post. And what you say has to be true: only say you use a product if you really do, and do not repeat claims the brand cannot prove, like health benefits."
+  },
+  {
+   "t": "h2",
+   "html": "What about agents?"
+  },
+  {
+   "t": "lead",
+   "html": "New York's athlete agent law covers high-school players, not only college. An agent must be registered with the New York Secretary of State, the contract must be in writing, and you can cancel within 5 days of signing by written notice. An agent may not lie, make false promises, or give you anything of value to get you to sign."
+  },
+  {
+   "t": "list",
+   "ordered": false,
+   "flags": false,
+   "items": [
+    "An agent contract made without registration is void. You would not have to pay the agent, and the agent must give back anything you paid.",
+    "You cannot sign away your 5-day right to cancel.",
+    "If you sign with an agent, you must tell your athletic director within 72 hours, or before your next game if that comes first.",
+    "Before you sign, the agent must warn you that signing could make you ineligible to play.",
+    "A parent, brother or sister, grandparent or guardian helping you does not count as an agent."
+   ]
+  },
+  {
+   "t": "h2",
+   "html": "Red flags that mean walk away"
+  },
+  {
+   "t": "list",
+   "ordered": false,
+   "flags": true,
+   "items": [
+    "Someone wants money up front to \"get you deals.\"",
+    "An \"agent\" who will not show you proof they are registered.",
+    "A deal that uses your school name, logo or uniform.",
+    "An offer tied to transferring or enrolling at a school.",
+    "Alcohol, vapes, gambling or sports betting, or anything adult.",
+    "Pressure to sign today, or no copy of the contract for you.",
+    "A \"big brand\" rep using a personal email or phone number.",
+    "Anyone asking to be paid in gift cards, crypto or a payment app.",
+    "An open-ended photo release with no limits on use or time."
+   ]
+  },
+  {
+   "t": "h2",
+   "html": "Sources"
+  },
+  {
+   "t": "list",
+   "ordered": false,
+   "flags": false,
+   "items": [
+    "NYSPHSAA Handbook (Aug. 2025), Eligibility Standard 2, Amateur Rule, p. 28; section map, nysphsaa.org.",
+    "PSAL eligibility rules, psal.org/info/eligibility.aspx (checked Sep. 2026).",
+    "NJSIAA Constitution and Bylaws 2026-27, Article V, Section 2(D); NJSIAA NIL FAQ (May 2025).",
+    "PIAA Handbook 2026-27, By-Laws Article II, Sections 3(J) and 4.",
+    "NEPSAC NIL Policy (2023-24).",
+    "New York Education Law section 6438-c; L. 2023, ch. 154.",
+    "College Sports Commission, NIL Go and Rules and Policies pages, collegesportscommission.org (checked Sep. 2026).",
+    "New York General Obligations Law sections 1-202 and 3-101; Arts and Cultural Affairs Law section 35.03.",
+    "Scott Eden Management v. Kavovit, 149 Misc. 2d 262 (Sup. Ct. 1990); Shields v. Gross, 58 N.Y.2d 338 (1983).",
+    "New York Civil Rights Law sections 50 and 51.",
+    "New York General Business Law Article 39-E, sections 899-a, 899-c, 899-i, 899-j and 899-l.",
+    "16 CFR Part 255 (FTC Endorsement Guides, 2023); FTC, Disclosures 101 for Social Media Influencers.",
+    "Senate Bill S10289 (2026), in committee, not law.",
+    "16 CFR 255.1 (endorsements must reflect honest opinions); FTC consumer alert, Influencers: Spot a job scam (2024)."
+   ]
+  }
+ ],
+ "warmup": [
+  {
+   "label": "Question 1",
+   "q": "You play for a New York City public school. A pizza place offers you $150 for one Instagram post. What do you do before you agree?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Say yes. One post is too small to matter."
+    },
+    {
+     "id": "b",
+     "text": "Ask your school and the PSAL for an OK in writing."
+    },
+    {
+     "id": "c",
+     "text": "Say yes, as long as you wear your own clothes, not your jersey."
+    }
+   ],
+   "answer": "b",
+   "overtime": false
+  },
+  {
+   "label": "Question 2",
+   "q": "A headphone company gives you a free pair for two TikToks. How do the videos show they are paid?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Say \"ad\" or #ad in each video."
+    },
+    {
+     "id": "b",
+     "text": "Thank the brand once in your bio."
+    },
+    {
+     "id": "c",
+     "text": "They don't have to. Nobody paid you cash."
+    }
+   ],
+   "answer": "a",
+   "overtime": false
+  },
+  {
+   "label": "Question 3",
+   "q": "A man messages you saying he is an agent. He can line up deals if you send him $200 to get started. What is the smart move?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Send it. Agents always charge a signup fee."
+    },
+    {
+     "id": "b",
+     "text": "Send it, since you can cancel later."
+    },
+    {
+     "id": "c",
+     "text": "Don't pay, and ask him to prove he is registered with the state."
+    }
+   ],
+   "answer": "c",
+   "overtime": false
+  }
+ ],
+ "filmroom": [
+  {
+   "label": "Call 1",
+   "q": "You play for a NYC public school (PSAL). A local shop offers $300 to post about them. What is the right first move?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Sign. It is only one post."
+    },
+    {
+     "id": "b",
+     "text": "Sign, but leave out your school name."
+    },
+    {
+     "id": "c",
+     "text": "Get a written OK from your school and the PSAL first."
+    }
+   ],
+   "answer": "c",
+   "overtime": false,
+   "why": "PSAL's posted rules don't mention NIL, and its amateur rule bans taking gifts of value for athletic fame. Get it in writing before you sign."
+  },
+  {
+   "label": "Call 2",
+   "q": "A sneaker brand sends you free shoes for 3 posts. How should the posts say it?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Put \"sponsored\" in your bio once."
+    },
+    {
+     "id": "b",
+     "text": "Say \"ad\" or #ad in each post itself."
+    },
+    {
+     "id": "c",
+     "text": "Nothing. It was free stuff, not money."
+    }
+   ],
+   "answer": "b",
+   "overtime": false,
+   "why": "The FTC says the disclosure goes in the post itself. Free products count, and a bio-only mention is likely to be missed."
+  },
+  {
+   "label": "Call 3",
+   "q": "Someone in your DMs says he is an agent and can get you a bag, but wants $300 first. What do you do?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Walk. Ask for proof of state registration, and never pay to sign."
+    },
+    {
+     "id": "b",
+     "text": "Pay. That is how agents work."
+    },
+    {
+     "id": "c",
+     "text": "Pay, then cancel within 5 days if it goes bad."
+    }
+   ],
+   "answer": "a",
+   "overtime": false,
+   "why": "In New York an agent must be registered with the Secretary of State, and an unregistered agent may not reach out to you first. A fee up front with no proof is a red flag."
+  },
+  {
+   "label": "Overtime",
+   "q": "A brand wants your parent to sign a photo release with no limits on where or how long the photos run. What is true?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "No worries. Minors can always cancel later."
+    },
+    {
+     "id": "b",
+     "text": "It does not matter because your parent signed, not you."
+    },
+    {
+     "id": "c",
+     "text": "A parent-signed release usually can't be canceled, so limit use and time first."
+    }
+   ],
+   "answer": "c",
+   "overtime": true,
+   "why": "New York's highest court held that a model could not cancel an unrestricted release her parent signed. Set limits before anyone signs."
+  }
+ ],
+ "disclaimer": "Educational content only. Not tax, legal, or investment advice. League rules change, so confirm with your athletic director. Check your own situation with a parent, and have a lawyer review any real contract. Built by NYC Honor Foundation volunteers.",
+ "onSite": "https://nychonor.org/nil-contracts",
+ "hasTryItOnSite": true
+}

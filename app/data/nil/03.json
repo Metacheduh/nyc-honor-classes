@@ -1,0 +1,360 @@
+{
+ "id": "03",
+ "slug": "nil-taxes",
+ "title": "NIL and Taxes",
+ "tagline": "Keep the bag",
+ "kicker": "NYC Honor Academy · Module 03 · about 10 minutes",
+ "intro": "Most NIL checks come with no tax taken out. You get the whole amount, and the IRS expects its share later. This lesson shows when you owe, why free gear counts, and how much of each deal to set aside, using the 2026 IRS rules. Then you make the calls in the Film Room.",
+ "updated": "Updated September 27, 2026 · figures for tax year 2026",
+ "minutes": 10,
+ "badge": "",
+ "blurb": "Why most NIL checks come with no tax taken out, when you owe, why free gear counts, and how much to set aside.",
+ "video": {
+  "title": "Watch first: what a $1,000 deal really leaves you",
+  "file": "assets/film/nil-1000-deal.mp4",
+  "poster": "assets/film/posters/nil-1000-deal.jpg",
+  "caption": "What a $1,000 NIL deal really leaves you, about 80 seconds",
+  "note": "About 80 seconds, with captions. 2026 IRS figures; assumes a parent claims you, no business costs, and under about $17,300 of profit. The rest of this lesson explains each step.",
+  "vtt": "assets/film/nil-1000-deal.vtt"
+ },
+ "youtube": "zZGTXMVqGN0",
+ "blocks": [
+  {
+   "t": "h2",
+   "html": "Is NIL money taxable?"
+  },
+  {
+   "t": "lead",
+   "html": "Yes. All NIL income is taxable, including free products and gift cards, whether or not anyone sends you a tax form. If a brand pays you to post, show up or sign autographs and you are not their employee, the IRS treats that pay as self-employment income, which carries its own extra tax."
+  },
+  {
+   "t": "p",
+   "html": "There are two exceptions. If a company puts you on payroll and gives you a W-2, you are an employee and tax comes out of your pay. If a company only pays to use your picture or name and you do no work at all, that is a royalty, which is taxed differently. This lesson covers the first kind: you do something, you get paid."
+  },
+  {
+   "t": "h2",
+   "html": "Whose income is it if the brand pays my parent?"
+  },
+  {
+   "t": "lead",
+   "html": "Yours. Money you earn for NIL work is your income for taxes, not your parent's, even if the brand sends the payment to a parent. Before a brand pays you, it will usually ask for a Form W-9 with your Social Security number. Fill it out correctly. If you don't, a brand that pays you $2,000 or more in the year may have to hold back 24% of your pay and send it to the IRS. That money counts toward your tax when you file. Only give your Social Security number to a company you have checked is real (<a href=\"#/nil/02\">Module 02</a> shows the warning signs)."
+  },
+  {
+   "t": "h2",
+   "html": "Will I get a 1099, and does it matter?"
+  },
+  {
+   "t": "lead",
+   "html": "A business only has to send you a Form 1099-NEC once it pays you <b>$2,000</b> or more in a year, starting with payments made in 2026. It used to be $600. But the form is only the business's paperwork. A $900 deal with no form is still income you report."
+  },
+  {
+   "t": "p",
+   "html": "If you get paid through a payment app, you may never see a 1099 at all. Apps only have to send a Form 1099-K once you pass $20,000 and 200 payments in a year. You still owe the tax either way."
+  },
+  {
+   "t": "h2",
+   "html": "Does free gear count as income?"
+  },
+  {
+   "t": "lead",
+   "html": "Yes. Free shoes, clothes, products, gift cards or services you get for NIL work count at what they would normally sell for. So $500 of free shoes counts the same as $500 in cash, including for self-employment tax. Write down what you got, when, and what it was worth."
+  },
+  {
+   "t": "h2",
+   "html": "What is self-employment tax?"
+  },
+  {
+   "t": "lead",
+   "html": "It is Social Security and Medicare tax for people who work for themselves: 15.3% in total. You pay it on 92.35% of your profit, which works out to about 14.1% of what you keep after business costs. It starts once your NIL profit for the year reaches about <b>$433</b>."
+  },
+  {
+   "t": "p",
+   "html": "An employee pays half of this tax and the employer pays the other half. When you work for yourself, you pay both halves. You do get to subtract half of it when you figure your income tax."
+  },
+  {
+   "t": "h2",
+   "html": "Do I have to file a tax return if my parents claim me?"
+  },
+  {
+   "t": "lead",
+   "html": "Yes, once your NIL profit for the year reaches about <b>$433</b>, even if a parent claims you as a dependent. That is the point where net earnings from self-employment hit $400, and the IRS says anyone at that level must file their own federal return."
+  },
+  {
+   "t": "p",
+   "html": "Your 2026 return is due April 15, 2027. If you live in New York and have to file a federal return, you have to file a New York return too, and New York City residents may also owe city tax."
+  },
+  {
+   "t": "p",
+   "html": "A dependent's standard deduction in 2026 is the bigger of <b>$1,350</b> or earned income plus <b>$450</b>, up to <b>$16,100</b>. If NIL pay for work is your only income and your profit is under about $17,300, federal income tax is $0 and the only federal tax is self-employment tax."
+  },
+  {
+   "t": "h2",
+   "html": "How much should I set aside?"
+  },
+  {
+   "t": "lead",
+   "html": "Below about $17,300 of profit, about <b>14.1%</b> of NIL profit covers federal tax, and it is all self-employment tax. State tax comes on top, so set aside a little more. These figures assume a parent claims you and you have no business costs, and they come from the same math as our NIL Tax Calculator."
+  },
+  {
+   "t": "table",
+   "caption": "How much to set aside for federal tax, by NIL pay in 2026",
+   "head": [
+    "NIL pay in 2026",
+    "Set aside for federal tax",
+    "You keep, before state tax"
+   ],
+   "rows": [
+    [
+     "$1,000",
+     "<b>$141</b>",
+     "<b>$859</b>"
+    ],
+    [
+     "$3,000",
+     "<b>$424</b>",
+     "<b>$2,576</b>"
+    ],
+    [
+     "$3,000 cash + $500 gear",
+     "<b>$495</b>",
+     "<b>$3,005</b> (including the gear)"
+    ],
+    [
+     "$5,000",
+     "<b>$706</b>",
+     "<b>$4,294</b>"
+    ],
+    [
+     "$10,000",
+     "<b>$1,413</b>",
+     "<b>$8,587</b>"
+    ]
+   ]
+  },
+  {
+   "t": "p",
+   "html": "Notice the gear row: $500 of free shoes adds tax even though it is not cash, so you pay it out of your cash. New York taxes this income too, and so may any other state where you do NIL work. Check your state's rules. Want your own numbers? Use the <a href=\"https://nychonor.org/honor-system#nil-calculator\" target=\"_blank\" rel=\"noopener\">NIL Tax Calculator</a>."
+  },
+  {
+   "t": "h2",
+   "html": "Do I have to pay taxes during the year?"
+  },
+  {
+   "t": "lead",
+   "html": "Only if you expect to owe $1,000 or more when you file. Self-employment tax counts toward that. If you owed no tax for all of last year, there is no penalty for waiting until you file. You are also safe if you pay at least 90% of this year's tax or 100% of last year's, split across the four due dates."
+  },
+  {
+   "t": "p",
+   "html": "The 2026 due dates are April 15, June 15 and September 15, 2026, and January 15, 2027. On the table above, only the $10,000 year crosses $1,000. A player who owed nothing for 2025 has no penalty for 2026, but should have the money ready by April. Everyone else pays in pieces: the IRS checks each due date, so paying it all in January can still bring a penalty for the earlier dates. If most of your NIL money came late in the year, a tax professional can use the IRS's uneven-income method (on Form 2210) to shrink or remove that penalty."
+  },
+  {
+   "t": "h2",
+   "html": "Can I lower what I owe?"
+  },
+  {
+   "t": "lead",
+   "html": "Yes. Normal, needed costs of your NIL work lower the profit you pay tax on, like travel to an appearance, if you keep a log. The catch is proof. Keep receipts and a simple log of every payment, every piece of free gear and every cost, and keep them as long as you might need to back up your return."
+  },
+  {
+   "t": "keys",
+   "title": "Keep the bag checklist",
+   "pairs": [
+    [
+     "1",
+     "Move about 15% of every NIL payment into savings the day it arrives, more if you owe state tax."
+    ],
+    [
+     "2",
+     "Log free gear with its normal price and the date you got it."
+    ],
+    [
+     "3",
+     "Keep receipts for real costs of the work."
+    ],
+    [
+     "4",
+     "Keep every contract and every tax form, 1099 or not."
+    ],
+    [
+     "5",
+     "File your own return once NIL profit reaches about $433, and get help from a tax professional."
+    ]
+   ]
+  },
+  {
+   "t": "h2",
+   "html": "Sources"
+  },
+  {
+   "t": "list",
+   "ordered": false,
+   "flags": false,
+   "items": [
+    "IRS, Name, image and likeness (NIL) income, irs.gov (updated Aug. 2026).",
+    "26 U.S.C. 6041, as amended by Pub. L. 119-21, section 70433 (Form 1099-NEC threshold).",
+    "IRS, IR-2025-107, Form 1099-K threshold FAQs (Oct. 2025).",
+    "26 CFR 1.61-2(d)(1) (compensation paid other than in cash).",
+    "IRS Topic 554, Self-employment tax; IRS, Self-employment tax (Social Security and Medicare taxes).",
+    "26 U.S.C. 1401, 1402, 164(f) and 162.",
+    "IRS Rev. Proc. 2025-32, sections 4.01 and 4.14 (2026 brackets and standard deductions).",
+    "IRS Publication 501, Table 3 (other situations when you must file, including $400 of self-employment earnings).",
+    "IRS Form 1040-ES (2026), estimated tax rules and due dates.",
+    "26 U.S.C. 73(a) (a child's earnings are the child's income); 26 U.S.C. 6072(a) (return due date).",
+    "IRS Form W-9 and backup withholding instructions.",
+    "New York State Form IT-201 instructions, who must file.",
+    "IRS, Recordkeeping for small businesses."
+   ]
+  }
+ ],
+ "warmup": [
+  {
+   "label": "Question 1",
+   "q": "A store pays you $700 for an appearance and never sends you a tax form. What is true?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "You still report the $700 as income."
+    },
+    {
+     "id": "b",
+     "text": "No form means it is not taxable."
+    },
+    {
+     "id": "c",
+     "text": "Only deals of $2,000 or more are taxed."
+    }
+   ],
+   "answer": "a",
+   "overtime": false
+  },
+  {
+   "label": "Question 2",
+   "q": "A brand gives you a $300 jacket in exchange for posts. For taxes, the jacket is:",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Not income, because it is not cash."
+    },
+    {
+     "id": "b",
+     "text": "$300 of income, just like cash."
+    },
+    {
+     "id": "c",
+     "text": "Income only if you sell it."
+    }
+   ],
+   "answer": "b",
+   "overtime": false
+  },
+  {
+   "label": "Question 3",
+   "q": "Your parents claim you, and you make $5,000 of NIL profit this year. About how much should you set aside for federal tax?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$0. Your parents' deduction covers you."
+    },
+    {
+     "id": "b",
+     "text": "About $706 , roughly 14%."
+    },
+    {
+     "id": "c",
+     "text": "About $1,700, roughly a third."
+    }
+   ],
+   "answer": "b",
+   "overtime": false
+  }
+ ],
+ "filmroom": [
+  {
+   "label": "Call 1",
+   "q": "You did a $900 deal and the business never sent a 1099. What is true?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "No form means no tax."
+    },
+    {
+     "id": "b",
+     "text": "It is still income. The form is only the business's paperwork."
+    },
+    {
+     "id": "c",
+     "text": "You only owe tax on deals over $2,000."
+    }
+   ],
+   "answer": "b",
+   "overtime": false,
+   "why": "The $2,000 line decides who must send a form, not whether you owe. All NIL income is taxable."
+  },
+  {
+   "label": "Call 2",
+   "q": "A brand gives you $500 of free sneakers for posts. For taxes, that is:",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Nothing. It was not money."
+    },
+    {
+     "id": "b",
+     "text": "Only taxable if you sell the shoes."
+    },
+    {
+     "id": "c",
+     "text": "$500 of income, the same as cash."
+    }
+   ],
+   "answer": "c",
+   "overtime": false,
+   "why": "Things you get for NIL work count at what they would normally sell for, including for self-employment tax."
+  },
+  {
+   "label": "Call 3",
+   "q": "Your parents claim you, and your NIL profit this year is $3,000. About how much federal tax should you set aside?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "About $424 , all self-employment tax."
+    },
+    {
+     "id": "b",
+     "text": "About $1,000, a third of it."
+    },
+    {
+     "id": "c",
+     "text": "$0. Your parents' deduction covers it."
+    }
+   ],
+   "answer": "a",
+   "overtime": false,
+   "why": "Your standard deduction wipes out federal income tax, but self-employment tax of about 14.1% still applies."
+  },
+  {
+   "label": "Overtime",
+   "q": "Your parents claim you and you made $600 of NIL profit. Do you have to file your own tax return?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "No. Dependents never file."
+    },
+    {
+     "id": "b",
+     "text": "Yes. Past about $433 of profit you must file."
+    },
+    {
+     "id": "c",
+     "text": "Only if you got a 1099."
+    }
+   ],
+   "answer": "b",
+   "overtime": true,
+   "why": "Anyone with $400 or more of net self-employment earnings must file, dependent or not. That is about $433 of profit."
+  }
+ ],
+ "disclaimer": "Educational content only. Not tax, legal, or investment advice. Figures are federal only, for tax year 2026, and assume a parent claims you, you file single, and you have no business costs. Check your own situation with a parent and a tax professional. Built by NYC Honor Foundation volunteers.",
+ "onSite": "https://nychonor.org/nil-taxes",
+ "hasTryItOnSite": true
+}

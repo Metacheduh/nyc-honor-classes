@@ -1,0 +1,34 @@
+{
+  "_note": "The class library. To add a class: add an entry here, put its text files under app/data/, and (for a new kind of screen) add a renderer in app.js. 'cache' lists every file saved for offline the first time a kid opens that class.",
+  "classes": [
+    {
+      "id": "nil",
+      "kind": "lessons",
+      "title": "Secure the Bag",
+      "sub": "The NIL money course",
+      "blurb": "Seven short lessons on taxes, contracts, banking and keeping what you earn.",
+      "tone": "green",
+      "dataDir": "data/nil/",
+      "index": "data/nil/index.json",
+      "cache": ["data/nil/index.json", "data/nil/01.json", "data/nil/02.json", "data/nil/03.json", "data/nil/04.json", "data/nil/05.json", "data/nil/06.json", "data/nil/07.json"]
+    },
+    {
+      "id": "money",
+      "kind": "tools",
+      "title": "Money Tools",
+      "sub": "Three tools that do the math",
+      "blurb": "Set aside tax from a deal, split a month, track a savings goal.",
+      "tone": "navy",
+      "script": "money.js",
+      "cache": ["money.js", "../nil-tax-engine.js"]
+    },
+    { "id": "thinking",    "kind": "soon", "title": "Thinking",      "sub": "Intro class" },
+    { "id": "math",        "kind": "soon", "title": "Math",          "sub": "Intro class" },
+    { "id": "physics",     "kind": "soon", "title": "Physics",       "sub": "Intro class" },
+    { "id": "engineering", "kind": "soon", "title": "Engineering",   "sub": "Intro class" },
+    { "id": "history",     "kind": "soon", "title": "World History", "sub": "Intro class" }
+  ],
+  "sponsors": {
+    "ask": { "title": "Your company here", "line": "Sponsor a class", "detail": "A Course Sponsor gift of $3,900 pays for a year of the free money course for high-school athletes. Course sponsors are credited on the course page.", "email": "eslyn@nychonor.org", "subject": "Course Sponsor ($3,900)" }
+  }
+}

@@ -1,0 +1,466 @@
+{
+ "id": "07",
+ "slug": "nil-insurance",
+ "title": "Risk and Insurance",
+ "tagline": "Cover the bag before you need it.",
+ "kicker": "NYC Honor Academy · Module 07 · about 12 minutes",
+ "intro": "Athletes get hurt. Phones crack, cars crash, and things get stolen. This lesson shows how insurance works, what the words on a policy mean, what health, car, renters and disability coverage do, and why savings you can reach is your first line of protection. Then you make the calls in the Film Room.",
+ "updated": "Updated October 10, 2026 · rules checked against HealthCare.gov, the NAIC and New York DFS",
+ "minutes": 12,
+ "badge": "",
+ "blurb": "How insurance works, what a deductible really means, health and car coverage in New York, renters and disability insurance, and savings as your own insurance.",
+ "video": null,
+ "youtube": "",
+ "blocks": [
+  {
+   "t": "h2",
+   "html": "What is insurance?"
+  },
+  {
+   "t": "lead",
+   "html": "A way to manage the risk of a big, sudden cost. You pay an insurance company a regular fee, called a premium, and in return it pays for covered losses. The NAIC, the group of every state's top insurance regulators, says insurance helps you avoid paying the entire cost of treatment, repairs or rebuilding on your own."
+  },
+  {
+   "t": "quote",
+   "html": "\"Insurance is a way to manage your financial risks.\"",
+   "cite": "NAIC, How Does Insurance Work?"
+  },
+  {
+   "t": "p",
+   "html": "A risk is anything that could cost you money you did not plan to spend: an injury, a crash, a fire, a theft. The national standards for personal finance describe four ways to handle a risk:"
+  },
+  {
+   "t": "list",
+   "ordered": false,
+   "flags": false,
+   "items": [
+    "<b>Avoid it.</b> Skip the thing that causes it. Don't leave your bag in an unlocked car.",
+    "<b>Reduce it.</b> Make it less likely or less costly. Wear the mouth guard. Put a case on the phone. Drive the speed limit.",
+    "<b>Keep it.</b> Pay small losses yourself, out of savings.",
+    "<b>Transfer it.</b> Pay a premium so an insurance company takes on the big losses."
+   ]
+  },
+  {
+   "t": "p",
+   "html": "<b>Why some people pay more.</b> The NAIC says the price is set on your own risk, and more risk and more coverage usually mean a higher premium. Its auto guide says drivers under 25 tend to have more accidents, so they pay higher premiums, and your driving record counts too."
+  },
+  {
+   "t": "p",
+   "html": "<b>Is a premium wasted if nothing happens?</b> No. You paid to know that a big loss would not wipe you out. A year with no claim is the outcome you wanted."
+  },
+  {
+   "t": "h2",
+   "html": "What do premium, deductible, copay and coinsurance mean?"
+  },
+  {
+   "t": "lead",
+   "html": "The premium is what you pay to keep the coverage, every month whether you use it or not. The deductible is what you pay yourself before the plan starts to pay. After that, you usually pay a copay (a fixed amount) or coinsurance (a percentage) and the plan pays the rest, up to a yearly out-of-pocket maximum."
+  },
+  {
+   "t": "list",
+   "ordered": false,
+   "flags": false,
+   "items": [
+    "<b>Premium.</b> HealthCare.gov calls it the amount you pay for your health insurance every month. The NAIC says you pay it to keep your coverage active, regardless of whether you file a claim.",
+    "<b>Deductible.</b> \"With a $2,000 deductible, for example, you pay the first $2,000 of covered services yourself\" (HealthCare.gov). Car and renters policies have deductibles too: the amount you pay on a claim before the policy pays the loss.",
+    "<b>Copay.</b> A fixed amount, like $20 for a doctor visit, that you pay after you've paid your deductible.",
+    "<b>Coinsurance.</b> A percentage, like 20%, that you pay after you've paid your deductible.",
+    "<b>Out-of-pocket maximum.</b> The most you have to pay for covered services in a plan year. For a Marketplace plan in 2026, it can be no more than $10,600 for one person. Your premiums don't count toward it."
+   ]
+  },
+  {
+   "t": "p",
+   "html": "Here is HealthCare.gov's own example of a big year, with a $3,000 deductible, 20% coinsurance and a $6,850 out-of-pocket maximum:"
+  },
+  {
+   "t": "table",
+   "caption": "Who pays for $12,000 of covered care",
+   "head": [
+    "Step",
+    "You pay"
+   ],
+   "rows": [
+    [
+     "The first $3,000 (the deductible)",
+     "<b>$3,000</b>"
+    ],
+    [
+     "20% of the other $9,000 (coinsurance)",
+     "<b>$1,800</b>"
+    ],
+    [
+     "Total for $12,000 of covered care",
+     "<b>$4,800</b>"
+    ]
+   ]
+  },
+  {
+   "t": "math",
+   "html": "You pay = deductible + coinsurance % × (cost − deductible), never more than the out-of-pocket maximum"
+  },
+  {
+   "t": "note",
+   "html": "Example amounts from HealthCare.gov's coinsurance page. Real plans set their own deductibles, coinsurance and limits."
+  },
+  {
+   "t": "quote",
+   "html": "\"Generally, plans with lower monthly premiums have higher deductibles.\"",
+   "cite": "HealthCare.gov, Deductible."
+  },
+  {
+   "t": "p",
+   "html": "That trade runs through every kind of insurance. A lower premium usually means you pay more when something happens. HealthCare.gov's advice: if you expect to need a lot of care, a plan with a slightly higher premium but a lower deductible may save you a lot of money."
+  },
+  {
+   "t": "h2",
+   "html": "Why does health insurance matter for an athlete?"
+  },
+  {
+   "t": "lead",
+   "html": "Because one injury can cost more than a season of NIL pay. HealthCare.gov says fixing a broken leg can cost up to $7,500, and the average 3-day hospital stay is around $30,000. Health insurance protects you from costs like that."
+  },
+  {
+   "t": "list",
+   "ordered": false,
+   "flags": false,
+   "items": [
+    "<b>You can stay on a parent's plan.</b> If a parent's plan covers dependents, you usually can stay on it until you turn 26. On a parent's job-based plan, HealthCare.gov says that generally holds even if you marry, start or leave school, or live away from home.",
+    "<b>New York goes further.</b> Under New York's \"Age 29\" law, a young adult can buy into a parent's group plan through age 29 if they are unmarried, can't get health insurance through their own job, and live, work or reside in New York or the insurer's service area. The young adult or the parent pays a separate premium for it (New York DFS).",
+    "<b>Checkups are covered.</b> Most plans must cover preventive services, like vaccines and screening tests, at no cost to you from an in-network provider, even before you meet your deductible."
+   ]
+  },
+  {
+   "t": "p",
+   "html": "A school or club sport may have its own accident coverage. Ask your athletic director what it covers and what it leaves to your family's plan."
+  },
+  {
+   "t": "h2",
+   "html": "What does car insurance cover, and what does New York require?"
+  },
+  {
+   "t": "lead",
+   "html": "New York requires every car to carry liability insurance of at least $25,000/$50,000/$10,000, plus $50,000 of no-fault coverage and uninsured motorists coverage. Liability pays for harm you cause to other people and their property. It does not fix your own car."
+  },
+  {
+   "t": "list",
+   "ordered": false,
+   "flags": false,
+   "items": [
+    "<b>Bodily injury liability.</b> Injuries you cause to someone else. In New York the minimum is $25,000 for one person and $50,000 for two or more, and $50,000 and $100,000 when someone dies.",
+    "<b>Property damage liability.</b> Damage you cause to someone else's car or property. New York's minimum is $10,000 per accident.",
+    "<b>No-fault (personal injury protection).</b> Your own policy pays up to $50,000 per person for medical bills and lost earnings, whoever caused the crash.",
+    "<b>Uninsured motorists.</b> Protects you if a driver with no insurance hits you, at the same minimums as bodily injury.",
+    "<b>Collision and comprehensive.</b> Optional under the law, though a lender usually requires them on a car loan. Collision pays for damage to your car from a crash. Comprehensive pays for damage that isn't a crash, like theft, fire, hail or hitting an animal."
+   ]
+  },
+  {
+   "t": "quote",
+   "html": "\"These minimums are too low to fully cover you if you cause a serious accident.\"",
+   "cite": "NAIC, A Consumer's Guide to Auto Insurance (2022)."
+  },
+  {
+   "t": "p",
+   "html": "If you cause $18,000 of damage to another car and your property damage limit is $10,000, the policy pays up to its limit. You could owe the rest. The NAIC says most insurers let you buy higher limits, often without much increase in your premium. Driving without insurance can get you fined and the car impounded."
+  },
+  {
+   "t": "p",
+   "html": "<b>Before you buy any policy,</b> check that the company and the agent are licensed. The NAIC says it's illegal for unlicensed companies or agents to sell insurance, and an unlicensed one may not pay your claims. In New York, DFS can confirm a license."
+  },
+  {
+   "t": "h2",
+   "html": "Do renters need insurance?"
+  },
+  {
+   "t": "lead",
+   "html": "If you want your own things covered, yes. New York DFS says a landlord does not provide insurance for a tenant's personal property. Renters insurance covers your belongings and your liability if someone is hurt in your home."
+  },
+  {
+   "t": "list",
+   "ordered": false,
+   "flags": false,
+   "items": [
+    "<b>Your stuff.</b> The NAIC says personal property coverage pays to repair or replace your belongings if they are damaged, destroyed or stolen.",
+    "<b>Liability.</b> If a guest gets hurt in your place, it can pay their medical and legal costs. DFS says to make sure the policy has liability coverage.",
+    "<b>Not every disaster.</b> DFS says a standard renters policy does not cover a flood or earthquake.",
+    "<b>Actual cash value or replacement cost.</b> Actual cash value pays what your old item was worth at the time of the loss. Replacement cost pays for a new one. Replacement cost usually costs more, and pays more."
+   ]
+  },
+  {
+   "t": "p",
+   "html": "<b>Heading to college?</b> The NAIC says a student living on campus may be covered by a parent's homeowners or renters policy, but in many cases a student who lives off campus is not. Check before you move. Keep a list of what you own, with prices, model and serial numbers, and photos or video."
+  },
+  {
+   "t": "h2",
+   "html": "What if an injury stops your income?"
+  },
+  {
+   "t": "lead",
+   "html": "That is what disability insurance is for. The NAIC says it provides income if a worker is unable to perform their job duties, and a typical policy pays about 60% of what you earned before. It is not the same as workers' compensation, and it does not pay medical bills."
+  },
+  {
+   "t": "list",
+   "ordered": false,
+   "flags": false,
+   "items": [
+    "<b>Short-term</b> coverage typically replaces part of your pay for three to six months.",
+    "<b>Long-term</b> coverage generally begins six months after the disability and can last years, or until retirement age.",
+    "<b>The waiting period.</b> Benefits start after a waiting period. The NAIC says 30 days is common.",
+    "<b>What counts as disabled.</b> Some policies pay if you can't do your own job. Others pay only if you can't do any job you're qualified for. For an athlete, that difference is the whole policy."
+   ]
+  },
+  {
+   "t": "p",
+   "html": "For NIL money, ask a simple question before you sign: what happens to the pay if you get hurt and can't post, appear or play? The answer is in the contract (<a href=\"#/nil/02\">Module 02</a>). Most high-school players don't have income that needs this kind of coverage yet. A pro or college athlete with real earnings is a different case, and a parent should be part of that decision."
+  },
+  {
+   "t": "h2",
+   "html": "How is an emergency fund your own insurance?"
+  },
+  {
+   "t": "lead",
+   "html": "Savings pays the deductible and the small losses that insurance doesn't. When you pick a higher deductible to lower your premium, the NAIC's warning is to be sure you can afford the deductible in case you have a loss. That money has to be somewhere you can reach."
+  },
+  {
+   "t": "p",
+   "html": "Keeping a risk works only if you have the cash. A $1,000 deductible saves on the premium, but if a crash happens and you have $200 saved, you can't pay your share. Build the emergency fund from <a href=\"#/nil/01\">Module 01</a> first, then let it decide how high a deductible you can carry."
+  },
+  {
+   "t": "p",
+   "html": "Here is how keeping a risk compares with transferring it, for a phone. The prices are made up:"
+  },
+  {
+   "t": "table",
+   "caption": "A phone protection plan compared with paying yourself, over one year",
+   "head": [
+    "What happens this year",
+    "With a plan: $8 a month, $99 deductible",
+    "No plan: pay from savings"
+   ],
+   "rows": [
+    [
+     "Nothing breaks",
+     "<b>$96</b>",
+     "<b>$0</b>"
+    ],
+    [
+     "Cracked screen, $150 repair",
+     "<b>$195</b>",
+     "<b>$150</b>"
+    ],
+    [
+     "Phone lost, $600 to replace",
+     "<b>$195</b>",
+     "<b>$600</b>"
+    ]
+   ]
+  },
+  {
+   "t": "math",
+   "html": "With a plan: $8 × 12 = $96 a year, plus $99 for each claim"
+  },
+  {
+   "t": "note",
+   "html": "Hypothetical example. The plan price, deductible and repair costs are made up to show the idea, and the plan is assumed to cover loss. Real plans differ, and many don't cover a lost phone at all. Read what it covers."
+  },
+  {
+   "t": "p",
+   "html": "The plan wins only if something big happens. If you could cover a $600 loss from savings, keeping the risk can make sense. If you couldn't, transferring it may be worth the premium. That is the question behind every insurance choice."
+  },
+  {
+   "t": "keys",
+   "title": "Cover the bag",
+   "pairs": [
+    [
+     "1",
+     "Insurance trades a small, sure cost (the premium) for protection from a big, sudden one."
+    ],
+    [
+     "2",
+     "A higher deductible means a lower premium, and more to pay yourself when something happens."
+    ],
+    [
+     "3",
+     "Your parent's health plan can cover you until 26; New York's Age 29 option can go further."
+    ],
+    [
+     "4",
+     "New York requires car liability of at least 25/50/10, plus $50,000 of no-fault."
+    ],
+    [
+     "5",
+     "A landlord's insurance doesn't cover your things. Savings covers your deductible."
+    ]
+   ]
+  },
+  {
+   "t": "h2",
+   "html": "Sources"
+  },
+  {
+   "t": "list",
+   "ordered": false,
+   "flags": false,
+   "items": [
+    "NAIC (National Association of Insurance Commissioners), How Does Insurance Work?, content.naic.org (checked Oct. 10, 2026).",
+    "NAIC, A Consumer's Guide to Auto Insurance (2022): why you need auto insurance, coverages in an auto policy, how insurers determine your premium, deductibles, smart shopping, getting premium quotes.",
+    "NAIC Consumer Insight: Renting Your Home? Protect Your Belongings with Renters Insurance (Jan. 2020); Renters Insurance for College Students; Simplifying the Complications of Disability Insurance (May 2019).",
+    "HealthCare.gov glossary: Premium; Deductible; Copayment; Coinsurance; Out-of-pocket maximum/limit (2026 limits).",
+    "HealthCare.gov: Protection from high medical costs; Preventive health services; How to get or stay on a parent's plan.",
+    "New York State Department of Financial Services: Auto Insurance (mandatory coverage); FAQ: Coverage Expansion Through Age 29, Young Adult Option; Renter's Insurance, dfs.ny.gov (checked Oct. 10, 2026).",
+    "New York State DMV, Insurance requirements, dmv.ny.gov (minimum liability amounts, checked against DFS).",
+    "Council for Economic Education and Jump$tart Coalition, National Standards for Personal Financial Education (2021), Managing Risk standard 8-5 (avoid, reduce, retain or transfer risk)."
+   ]
+  }
+ ],
+ "warmup": [
+  {
+   "label": "Question 1",
+   "q": "Your health plan has a $2,000 deductible. Before the plan starts to pay, who pays the first $2,000 of covered care?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "The plan pays it, because you pay a premium."
+    },
+    {
+     "id": "b",
+     "text": "You do."
+    },
+    {
+     "id": "c",
+     "text": "The doctor writes it off."
+    }
+   ],
+   "answer": "b",
+   "overtime": false
+  },
+  {
+   "label": "Question 2",
+   "q": "You rent an apartment and your landlord has insurance on the building. Your laptop is stolen from your room. Whose insurance covers it?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "The landlord's. It covers everything in the building."
+    },
+    {
+     "id": "b",
+     "text": "Nobody's. Laptops are never covered."
+    },
+    {
+     "id": "c",
+     "text": "Only your own renters insurance, if you have it."
+    }
+   ],
+   "answer": "c",
+   "overtime": false
+  },
+  {
+   "label": "Question 3",
+   "q": "You pick a higher deductible on the same policy. What usually happens to your premium?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "It goes down."
+    },
+    {
+     "id": "b",
+     "text": "It goes up."
+    },
+    {
+     "id": "c",
+     "text": "It stays the same."
+    }
+   ],
+   "answer": "a",
+   "overtime": false
+  }
+ ],
+ "filmroom": [
+  {
+   "label": "Call 1",
+   "q": "You tear a ligament and need $12,000 of covered care. Your plan has a $3,000 deductible, 20% coinsurance and a $6,850 out-of-pocket maximum. How much do you pay?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$3,000. The plan pays everything after the deductible."
+    },
+    {
+     "id": "b",
+     "text": "$4,800: the $3,000 deductible plus 20% of the other $9,000."
+    },
+    {
+     "id": "c",
+     "text": "$6,850, the out-of-pocket maximum."
+    }
+   ],
+   "answer": "b",
+   "overtime": false,
+   "why": "You pay the whole deductible first, then your 20% share of the rest: $3,000 + $1,800 = $4,800. That is under the $6,850 maximum, so the maximum doesn't kick in."
+  },
+  {
+   "label": "Call 2",
+   "q": "You move into an off-campus apartment for college. Your parents have homeowners insurance and your landlord insures the building. Is your stuff covered?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Maybe not. Check your parents' policy, and look at renters insurance for your own things."
+    },
+    {
+     "id": "b",
+     "text": "Yes. The landlord's policy covers the whole building."
+    },
+    {
+     "id": "c",
+     "text": "Yes. A parent's policy always covers a student."
+    }
+   ],
+   "answer": "a",
+   "overtime": false,
+   "why": "A landlord's insurance doesn't cover a tenant's things, and the NAIC says a student living off campus is, in many cases, not covered by a parent's policy. Check first, then decide."
+  },
+  {
+   "label": "Call 3",
+   "q": "A $1,000 deductible would cut your car insurance premium. You have $200 saved. What is the call?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Take it. A lower premium is always better."
+    },
+    {
+     "id": "b",
+     "text": "Drop the insurance and keep the money."
+    },
+    {
+     "id": "c",
+     "text": "Pick a deductible you could pay today, and build savings before raising it."
+    }
+   ],
+   "answer": "c",
+   "overtime": false,
+   "why": "A higher deductible lowers the premium, but the NAIC says to be sure you can afford the deductible if you have a loss. With $200 saved, you couldn't. Driving without insurance isn't an option in New York."
+  },
+  {
+   "label": "Overtime",
+   "q": "You have New York's minimum car insurance and cause $18,000 of damage to another car. Your property damage limit is $10,000. Who pays the other $8,000?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Your insurance pays all of it."
+    },
+    {
+     "id": "b",
+     "text": "You could. The policy pays only up to its limit."
+    },
+    {
+     "id": "c",
+     "text": "The other driver's no-fault covers it."
+    }
+   ],
+   "answer": "b",
+   "overtime": true,
+   "why": "Liability insurance pays up to the limit you bought. The NAIC says state minimums are too low to fully cover you in a serious accident. No-fault pays for injuries, not damage to the other car."
+  }
+ ],
+ "disclaimer": "Educational content only. Not insurance, legal, tax or investment advice. The phone plan example is hypothetical, with made-up prices. This lesson does not recommend any insurance company, agent, policy or product. Coverage depends on the policy you buy, so read it, and a parent should be part of any insurance decision. Built by NYC Honor Foundation volunteers.",
+ "onSite": "https://nychonor.org/nil-insurance",
+ "hasTryItOnSite": true
+}

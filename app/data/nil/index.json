@@ -1,0 +1,90 @@
+{
+ "course": "Secure the Bag",
+ "source": "https://nychonor.org/academy",
+ "lessons": [
+  {
+   "id": "01",
+   "slug": "nil-budget",
+   "title": "Money Fundamentals",
+   "tagline": "Know where the bag goes.",
+   "minutes": 12,
+   "blurb": "A budget for pay that changes month to month, what protects you when you pay by cash, card or app, buying smart, and how banks and deposit insurance work.",
+   "badge": "",
+   "hasVideo": true,
+   "quiz": 4,
+   "warm": 3
+  },
+  {
+   "id": "02",
+   "slug": "nil-contracts",
+   "title": "Understanding NIL Deals",
+   "tagline": "Secure the bag, or walk away",
+   "minutes": 10,
+   "blurb": "Which rules apply at your school, what a contract is really offering, why a parent has to be part of it, and the red flags that mean walk away.",
+   "badge": "",
+   "hasVideo": true,
+   "quiz": 4,
+   "warm": 3
+  },
+  {
+   "id": "03",
+   "slug": "nil-taxes",
+   "title": "NIL and Taxes",
+   "tagline": "Keep the bag",
+   "minutes": 10,
+   "blurb": "Why most NIL checks come with no tax taken out, when you owe, why free gear counts, and how much to set aside.",
+   "badge": "",
+   "hasVideo": true,
+   "quiz": 4,
+   "warm": 3
+  },
+  {
+   "id": "04",
+   "slug": "nil-investing",
+   "title": "Make It Grow",
+   "tagline": "Put the bag to work",
+   "minutes": 10,
+   "blurb": "How money grows on its own growth, why cash loses value, what stocks, bonds and funds are, and how to spot an investment scam.",
+   "badge": "",
+   "hasVideo": true,
+   "quiz": 4,
+   "warm": 3
+  },
+  {
+   "id": "05",
+   "slug": "nil-accounts",
+   "title": "Accounts That Build Wealth",
+   "tagline": "Give the bag a home",
+   "minutes": 10,
+   "blurb": "Checking vs savings, what FDIC and SIPC protect, accounts for minors, and how NIL pay for work can go into a Roth IRA.",
+   "badge": "",
+   "hasVideo": true,
+   "quiz": 4,
+   "warm": 3
+  },
+  {
+   "id": "06",
+   "slug": "nil-protect",
+   "title": "Protect the Bag",
+   "tagline": "Spot the scam. Own your credit.",
+   "minutes": 12,
+   "blurb": "The scams aimed at athletes, how to guard your identity, how credit scores work, credit cards before 21, and what debt really costs.",
+   "badge": "",
+   "hasVideo": true,
+   "quiz": 4,
+   "warm": 3
+  },
+  {
+   "id": "07",
+   "slug": "nil-insurance",
+   "title": "Risk and Insurance",
+   "tagline": "Cover the bag before you need it.",
+   "minutes": 12,
+   "blurb": "How insurance works, what a deductible really means, health and car coverage in New York, renters and disability insurance, and savings as your own insurance.",
+   "badge": "",
+   "hasVideo": false,
+   "quiz": 4,
+   "warm": 3
+  }
+ ]
+}

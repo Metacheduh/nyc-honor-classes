@@ -1,0 +1,409 @@
+{
+ "id": "05",
+ "slug": "nil-accounts",
+ "title": "Accounts That Build Wealth",
+ "tagline": "Give the bag a home",
+ "kicker": "NYC Honor Academy · Module 05 · about 10 minutes",
+ "intro": "Money needs a place to live. This lesson shows the difference between checking, savings and investing accounts, what protects each one, and the biggest idea in the course: how NIL money you earn by working can go into a Roth IRA and grow for decades. Then you make the calls in the Film Room.",
+ "updated": "Updated October 1, 2026 · IRA limit for tax year 2026",
+ "minutes": 10,
+ "badge": "",
+ "blurb": "Checking vs savings, what FDIC and SIPC protect, accounts for minors, and how NIL pay for work can go into a Roth IRA.",
+ "video": {
+  "title": "Watch first: your first Roth IRA",
+  "file": "assets/film/nil-first-roth-ira.mp4",
+  "poster": "assets/film/posters/nil-first-roth-ira.jpg",
+  "caption": "Your first Roth IRA, about 85 seconds",
+  "note": "About 85 seconds, with captions. 2026 IRS figures; 7% is an example rate, not a prediction. Educational only, not tax advice.",
+  "vtt": "assets/film/nil-first-roth-ira.vtt"
+ },
+ "youtube": "nsJNTBI0f_o",
+ "blocks": [
+  {
+   "t": "h2",
+   "html": "Checking, savings or high-yield savings: what is the difference?"
+  },
+  {
+   "t": "lead",
+   "html": "Checking is for spending: your debit card and payments run through it. Savings is for money you are holding, and it pays a low interest rate. A high-yield savings account is a savings account that pays a higher rate. At an FDIC-insured bank, all three are deposits the FDIC protects."
+  },
+  {
+   "t": "p",
+   "html": "The FDIC protects your deposits if an insured bank fails. The limit is big enough for almost any player:"
+  },
+  {
+   "t": "quote",
+   "html": "\"FDIC deposit insurance covers $250,000 per depositor, per FDIC-insured bank, for each account ownership category.\"",
+   "cite": "FDIC, Understanding Deposit Insurance."
+  },
+  {
+   "t": "p",
+   "html": "Two catches. First, the FDIC does not cover stocks, bonds, mutual funds or crypto, even when a bank sells them. Second, a payment app is not a bank. The FDIC says companies that are not banks \"are never FDIC-insured\" themselves. Your money is only covered once it actually sits in an insured bank, so check the bank's name with the FDIC's free BankFind tool."
+  },
+  {
+   "t": "h2",
+   "html": "What is a brokerage account, and can a minor have one?"
+  },
+  {
+   "t": "lead",
+   "html": "A brokerage account is where you buy and hold investments like stocks, bonds and funds. Because you are under 18, an adult opens it for you as a custodial account under your state's UTMA or UGMA law. The adult runs it for your benefit, and it becomes yours at the adult age your state sets."
+  },
+  {
+   "t": "p",
+   "html": "FINRA, the regulator for brokerage firms, explains that money in these custodial accounts must be used only for the child's benefit, and that it passes to the child at the age of majority, which differs by state. After that, it is yours to use."
+  },
+  {
+   "t": "p",
+   "html": "A brokerage account has its own protection, called SIPC. If a member brokerage firm fails and customers' cash or investments are missing, SIPC works to restore them, up to $500,000, which includes up to $250,000 in cash. But it does not cover losses from the market:"
+  },
+  {
+   "t": "quote",
+   "html": "\"SIPC does not protect against the decline in value of your securities.\"",
+   "cite": "SIPC, What SIPC Protects."
+  },
+  {
+   "t": "p",
+   "html": "SIPC also does not cover worthless stocks someone sold you, or losses from bad investment advice. FDIC protects deposits at a bank. SIPC protects against a brokerage firm failing. Neither one protects you from a bad investment."
+  },
+  {
+   "t": "h2",
+   "html": "The key idea: can I put NIL money in a Roth IRA?"
+  },
+  {
+   "t": "lead",
+   "html": "Yes, if it is pay for work. The IRS counts self-employment earnings as compensation for an IRA, and there is no age limit. For <b>2026</b> you can put in up to <b>$7,500</b> or what you earned from work, whichever is less. Money in a Roth IRA can grow, and qualified withdrawals later are tax-free."
+  },
+  {
+   "t": "p",
+   "html": "A Roth IRA is a retirement account. You put in money you already earned, with no tax break now. The payoff comes later: the growth can come out tax-free. Here are the rules, straight from the IRS."
+  },
+  {
+   "t": "list",
+   "ordered": false,
+   "flags": false,
+   "items": [
+    "<b>NIL pay for work counts.</b> Posts, appearances, camps and autograph sessions are work. The IRS says compensation includes self-employment income. A deal that only pays to use your name or picture, with no work, may not count, because the IRS leaves out \"earnings and profits from property.\" Ask a tax professional about that kind.",
+    "<b>The limit is the lesser of two numbers.</b> For 2026, the IRS limit is $7,500 (IRS Notice 2025-67). If you earned less than that, your limit is what you earned.",
+    "<b>\"What you earned\" is a little less than your NIL profit.</b> For self-employed people, the IRS counts profit minus the deductible half of self-employment tax. On $3,000 of NIL profit (the <a href=\"#/nil/03\">Module 03</a> example, with about $424 of self-employment tax), that is about <b>$2,788</b>.",
+    "<b>No minimum age.</b> The IRS says Roth IRA contributions can be made \"regardless of your age.\" Because you are a minor, an adult opens it as a custodial IRA and controls it until you reach the adult age in your state (FINRA).",
+    "<b>Deadline.</b> Money for 2026 can go in any time during 2026 or by the due date of your 2026 return, April 15, 2027."
+   ]
+  },
+  {
+   "t": "h2",
+   "html": "When can money come out of a Roth IRA tax-free?"
+  },
+  {
+   "t": "lead",
+   "html": "Two different answers. The money you put in can come out at any time with no tax and no penalty, because the IRS counts withdrawals as your contributions first. The growth comes out tax-free only in a qualified withdrawal: after age 59½ and at least 5 years after your first Roth contribution."
+  },
+  {
+   "t": "list",
+   "ordered": false,
+   "flags": false,
+   "items": [
+    "<b>Your contributions.</b> The IRS says a return of your regular contributions is not counted as income. Under the ordering rules, any withdrawal comes from contributions first, until you have taken out everything you put in.",
+    "<b>The growth.</b> A qualified withdrawal is tax-free. It has to come after the 5-year period that starts with the first year you contributed, and on or after age 59½. (Disability, death and up to $10,000 for a first home also qualify.)",
+    "<b>Growth taken out early.</b> If it is not a qualified withdrawal, the growth part can be taxed, and the IRS says you must generally pay a 10% additional tax on the taxable part."
+   ]
+  },
+  {
+   "t": "p",
+   "html": "Taking money out early is allowed for what you put in, but it also takes away the years it had left to grow."
+  },
+  {
+   "t": "h2",
+   "html": "What could $1,000 at 16 turn into?"
+  },
+  {
+   "t": "lead",
+   "html": "At an example rate of 7% a year, $1,000 put into a Roth IRA at 16 and never touched grows to about $19,628 by age 60. If you take it out in a qualified withdrawal, none of that is taxed. This is a hypothetical example, not a promise."
+  },
+  {
+   "t": "table",
+   "caption": "$1,000 put in a Roth IRA at 16, at an example 7% a year",
+   "head": [
+    "Age",
+    "Years invested",
+    "Value at an example 7%"
+   ],
+   "rows": [
+    [
+     "16",
+     "0",
+     "<b>$1,000</b>"
+    ],
+    [
+     "26",
+     "10",
+     "<b>about $1,967</b>"
+    ],
+    [
+     "60",
+     "44",
+     "<b>about $19,628</b>"
+    ]
+   ]
+  },
+  {
+   "t": "math",
+   "html": "Value = 1,000 × 1.07<sup>years</sup>"
+  },
+  {
+   "t": "p",
+   "html": "One more step: to put in $1,000, you need about $1,076 of NIL profit, because the IRS counts your profit minus half of your self-employment tax."
+  },
+  {
+   "t": "note",
+   "html": "Hypothetical example. 7% is an example rate, not a prediction. Real investments can earn more, earn less, or lose money, and past results do not guarantee future ones. Fees would lower these numbers. A parent can help open it; talk to a tax professional."
+  },
+  {
+   "t": "h2",
+   "html": "Where should money go: savings or investing?"
+  },
+  {
+   "t": "lead",
+   "html": "It depends on when you need it. Money you need soon, like your tax set-aside or an emergency cushion, belongs in insured savings, where it will not drop in value. Money you will not touch for many years has time to be invested and ride out the ups and downs."
+  },
+  {
+   "t": "table",
+   "caption": "Where money can go, by when you need it",
+   "head": [
+    "Goal",
+    "When you need it",
+    "Where it usually lives"
+   ],
+   "rows": [
+    [
+     "Tax set-aside (<a href=\"#/nil/03\">Module 03</a>)",
+     "By April",
+     "Insured savings"
+    ],
+    [
+     "Emergency cushion",
+     "Any time",
+     "Insured savings"
+    ],
+    [
+     "Gear, a phone, a car",
+     "Soon",
+     "Insured savings"
+    ],
+    [
+     "Retirement",
+     "Decades away",
+     "Roth IRA, invested"
+    ],
+    [
+     "Long-term goals",
+     "Many years away",
+     "Custodial brokerage, invested"
+    ]
+   ]
+  },
+  {
+   "t": "quote",
+   "html": "\"Investors with a longer time horizon may feel comfortable taking on riskier or more volatile investments. Those with a shorter time horizon may prefer to take on less risky or less volatile investments.\"",
+   "cite": "SEC, Investor.gov, Asset Allocation."
+  },
+  {
+   "t": "keys",
+   "title": "Give the bag a home",
+   "pairs": [
+    [
+     "1",
+     "Tax money goes to insured savings the day you get paid."
+    ],
+    [
+     "2",
+     "Check that the bank is FDIC-insured, not just the app."
+    ],
+    [
+     "3",
+     "Money for years from now can be invested, with an adult on a custodial account."
+    ],
+    [
+     "4",
+     "NIL pay for work can go into a Roth IRA, up to what you earned or $7,500 for 2026."
+    ],
+    [
+     "5",
+     "A parent can help open it; talk to a tax professional."
+    ]
+   ]
+  },
+  {
+   "t": "h2",
+   "html": "Sources"
+  },
+  {
+   "t": "list",
+   "ordered": false,
+   "flags": false,
+   "items": [
+    "FDIC, Understanding Deposit Insurance, fdic.gov (checked Oct. 2026).",
+    "FDIC Consumer Resource Center, Banking With Third-Party Apps (June 2024).",
+    "SEC, Investor.gov, What is Risk? (FDIC and SIPC; savings pay a low interest rate).",
+    "FINRA, Ways to Invest for Children (June 30, 2026): custodial IRAs; UGMA and UTMA custodial accounts.",
+    "SIPC, What SIPC Protects, sipc.org (checked Oct. 2026).",
+    "IRS Notice 2025-67, 2026 Amounts Relating to Retirement Plans and IRAs (section 219(b)(5)(A) limit, $7,500); IRS news release IR-2025-111 (Nov. 13, 2025); IRS, Retirement topics: IRA contribution limits.",
+    "IRS Publication 590-A (2025): What Is Compensation? (self-employment income); Table 1-1; Roth IRAs, age and contribution limit; When Can You Make Contributions?",
+    "IRS Publication 560 (2025): net earnings from self-employment for retirement plans.",
+    "IRS Publication 590-B (2025): Roth IRAs, What Are Qualified Distributions?; Ordering Rules for Distributions; Additional Tax on Early Distributions.",
+    "26 U.S.C. 408A(d)(1), (d)(2) and (d)(4)(B) (qualified distributions; ordering rules).",
+    "SEC, Investor.gov, Asset Allocation (time horizon)."
+   ]
+  }
+ ],
+ "warmup": [
+  {
+   "label": "Question 1",
+   "q": "Your $1,500 is in a savings account at an FDIC-insured bank, and the bank goes under. Your money is:",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Protected. FDIC insurance covers up to $250,000."
+    },
+    {
+     "id": "b",
+     "text": "Lost along with the bank."
+    },
+    {
+     "id": "c",
+     "text": "Only covered above $250,000."
+    }
+   ],
+   "answer": "a",
+   "overtime": false
+  },
+  {
+   "label": "Question 2",
+   "q": "Stocks fall, and the investments in your custodial brokerage account lose 15%. Does SIPC make up the loss?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Yes, up to $500,000."
+    },
+    {
+     "id": "b",
+     "text": "Yes, but only the cash part."
+    },
+    {
+     "id": "c",
+     "text": "No. SIPC does not cover a drop in value."
+    }
+   ],
+   "answer": "c",
+   "overtime": false
+  },
+  {
+   "label": "Question 3",
+   "q": "You earn $2,000 of NIL profit from appearances in 2026. The most you could put in a Roth IRA for 2026 is:",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$0, because you are under 18."
+    },
+    {
+     "id": "b",
+     "text": "$7,500, the 2026 limit."
+    },
+    {
+     "id": "c",
+     "text": "A bit less than $2,000, what you earned from the work."
+    }
+   ],
+   "answer": "c",
+   "overtime": false
+  }
+ ],
+ "filmroom": [
+  {
+   "label": "Call 1",
+   "q": "You have $3,000 in a savings account at an FDIC-insured bank, and the bank fails. What happens to your money?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "It is gone."
+    },
+    {
+     "id": "b",
+     "text": "It is covered. FDIC insurance goes up to $250,000."
+    },
+    {
+     "id": "c",
+     "text": "Only money over $250,000 is covered."
+    }
+   ],
+   "answer": "b",
+   "overtime": false,
+   "why": "FDIC insurance covers $250,000 per depositor, per insured bank, for each ownership category."
+  },
+  {
+   "label": "Call 2",
+   "q": "The stock market drops and your custodial brokerage account falls 20%. Does SIPC pay you back?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Yes, up to $500,000."
+    },
+    {
+     "id": "b",
+     "text": "No. SIPC does not cover a drop in value."
+    },
+    {
+     "id": "c",
+     "text": "Yes, but only for the cash part."
+    }
+   ],
+   "answer": "b",
+   "overtime": false,
+   "why": "SIPC helps when a brokerage firm fails and assets are missing. It does not protect against investments losing value."
+  },
+  {
+   "label": "Call 3",
+   "q": "You made $3,000 of NIL profit from posts and appearances in 2026. What is the most you can put in a Roth IRA for 2026?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "$7,500, the 2026 limit."
+    },
+    {
+     "id": "b",
+     "text": "No more than what you earned from the work: a little under $3,000."
+    },
+    {
+     "id": "c",
+     "text": "$0. You have to be 18."
+    }
+   ],
+   "answer": "b",
+   "overtime": false,
+   "why": "The limit is the lesser of $7,500 or what you earned. There is no age limit, and for self-employment the IRS counts profit minus half your self-employment tax, about $2,788 here."
+  },
+  {
+   "label": "Overtime",
+   "q": "You put $1,000 in a Roth IRA at 16. By 19 it has grown to $1,300 and you need cash. What can you take out with no tax and no penalty?",
+   "choices": [
+    {
+     "id": "a",
+     "text": "Nothing until you turn 59½."
+    },
+    {
+     "id": "b",
+     "text": "The $1,000 you put in."
+    },
+    {
+     "id": "c",
+     "text": "All $1,300."
+    }
+   ],
+   "answer": "b",
+   "overtime": true,
+   "why": "Withdrawals count as your contributions first, and those come out with no tax. The $300 of growth taken out early could be taxed plus a 10% additional tax."
+  }
+ ],
+ "disclaimer": "Educational content only. Not tax, legal, or investment advice. The IRA limit is for tax year 2026. Returns shown are hypothetical, use an example rate that is not a prediction, and leave out fees. Past results do not guarantee future ones. This lesson does not recommend any account provider, investment, fund or company. A parent can help open an account; talk to a tax professional. Built by NYC Honor Foundation volunteers.",
+ "onSite": "https://nychonor.org/nil-accounts",
+ "hasTryItOnSite": true
+}
