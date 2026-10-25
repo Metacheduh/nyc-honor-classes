@@ -5,7 +5,7 @@
      class is opened. Videos and other range requests are never cached (too big; they need a connection).
    - Nothing here reads or sends anything a kid types; it only handles static files.
    Bump VERSION to push a new shell to everyone. */
-const VERSION = 'v3';
+const VERSION = 'v4';
 const SHELL = 'nyh-shell-' + VERSION;
 const CLASS_CACHE = 'nyh-class-v1';
 const SHELL_FILES = [
