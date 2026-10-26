@@ -4,7 +4,9 @@
    Everything runs in the browser. Nothing typed on the page is sent
    anywhere or saved: no fetch, no storage, no analytics.
 
-   Sources, all read October 14, 2026:
+   Sources, all read October 14, 2026, and re-checked against the same
+   primary documents October 25, 2026 (tests/math.test.js in the public
+   nyc-honor-classes repo pins each figure):
    - Social Security 6.2% and Medicare 1.45% (employee share), 2026 wage
      base $184,500: IRS Tax Topic 751; SSA Contribution and Benefit Base.
    - Federal 2026 single brackets, $16,100 standard deduction, and the

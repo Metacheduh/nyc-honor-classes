@@ -8,12 +8,12 @@
 
    STRUCTURE: data/classes.json is the library. Each class has a kind ('lessons', 'tools', 'soon').
    To add a class, add an entry there plus its data files; add a renderer here only for a new kind.
-   Opening a class saves its listed files for offline use (Cache API, cache 'nyh-class-v1'). */
+   Opening a class saves its listed files for offline use (Cache API, cache CLASS_CACHE). */
 (function () {
     'use strict';
 
     var STORE_KEY = 'nyh_app_v1';
-    var CLASS_CACHE = 'nyh-class-v1';
+    var CLASS_CACHE = 'nyh-class-v2'; // must match sw.js
     var main = document.getElementById('main');
     var barTitle = document.getElementById('bar-title');
     var backBtn = document.getElementById('back');
@@ -75,9 +75,13 @@
         backBtn.hidden = !showBack;
         backBtn.onclick = function () { location.hash = backHref || '#/'; };
     }
+    // After a screen change, move focus to the new content so a screen reader starts there.
+    // Not on the first screen: there the skip link and header stay first in the Tab order.
+    var firstScreen = true;
     function done(node) {
         main.innerHTML = ''; main.appendChild(node);
         window.scrollTo(0, 0);
+        if (firstScreen) { firstScreen = false; return; }
         main.focus({ preventScroll: true });
     }
 
@@ -145,8 +149,11 @@
             tiles.appendChild(a);
         });
         wrap.appendChild(tiles);
-        wrap.appendChild(el('h2', null, 'More classes on the way'));
-        wrap.appendChild(soon);
+        // Classes not built yet stay off the home screen until classes.json sets showComingSoon: true.
+        if (catalog.showComingSoon === true && soon.children.length) {
+            wrap.appendChild(el('h2', null, 'More classes on the way'));
+            wrap.appendChild(soon);
+        }
 
         // Sponsors spot: the ask only. No sponsor is named anywhere in the app (Eslyn, Oct 24 2026);
         // sponsor credits live on nychonor.org. Lessons never show a sponsor (the course hub promises
@@ -168,7 +175,10 @@
         getJSON(cls.index).then(function (idx) {
             var s = load();
             var wrap = el('div');
-            wrap.innerHTML = '<p class="crumb">NYC Honor Academy</p><h1>' + esc(cls.title) + '</h1><p class="lede">' + esc(cls.blurb) + ' Each lesson is about ten minutes, with a short video and a quiz at the end.</p>';
+            var vids = idx.lessons.filter(function (L) { return L.hasVideo; }).length;
+            var vidLine = vids === idx.lessons.length ? 'a short video' : vids ? 'a short video in ' + vids + ' of the ' + idx.lessons.length : '';
+            wrap.innerHTML = '<p class="crumb">NYC Honor Academy</p><h1>' + esc(cls.title) + '</h1><p class="lede">' + esc(cls.blurb) +
+                ' Each lesson is about ten minutes, with a warm-up before, a quiz at the end' + (vidLine ? ' and ' + vidLine : '') + '.</p>';
             var ul = el('ul', { 'class': 'lessons' });
             idx.lessons.forEach(function (L) {
                 var st = s.lessons[L.id] || {};
@@ -206,13 +216,14 @@
         return '';
     }
 
-    function quizEl(L, qs, mode) {
+    // run: shared by the two quizzes on one lesson screen, so the Film Room result can show the warm-up too.
+    function quizEl(L, qs, mode, run) {
         var graded = mode === 'film';
         var sec = el('section', { 'class': 'quiz ' + (graded ? 'film' : 'warm'), 'aria-labelledby': 'qh-' + mode });
         var total = qs.length, answered = 0, right = 0;
         sec.innerHTML = (graded ? '<span class="qscore" id="qs" aria-live="polite">0 / ' + total + '</span>' : '') +
             '<h2 id="qh-' + mode + '">' + (graded ? 'Film Room' : 'Warm-up: 3 quick questions') + '</h2>' +
-            '<p class="small">' + (graded ? 'Three calls and one in overtime. Make the call, then see why.' : 'Optional. Take your best guess before the lesson. You will find out in the lesson.') + '</p>';
+            '<p class="small">' + (graded ? 'Three calls and one in overtime. Make the call, then see why.' : 'Optional. Take your best guess before the lesson. Your score and the answers show up when you finish the Film Room at the end.') + '</p>';
         var result = el('div', { 'class': 'result', tabindex: '-1', hidden: '' });
         qs.forEach(function (q, qi) {
             var c = el('div', { 'class': 'call' });
@@ -240,6 +251,7 @@
                         sec.querySelector('#qs').textContent = right + ' / ' + total;
                     } else {
                         v.textContent = 'Got it. You will see the answer in the lesson.';
+                        run.warm.push({ call: c, choices: ch, q: q, ok: ok, picked: b });
                     }
                     if (answered === total) finish();
                 });
@@ -254,10 +266,27 @@
         function finish() {
             if (!graded) return;
             var s = load(), prev = s.lessons[L.id] || {};
-            s.lessons[L.id] = { done: 1, best: Math.max(prev.best || 0, right), total: total, last: right, at: Date.now() };
+            // Warm-up score counts only when every warm-up question was answered (it is optional).
+            var wTotal = (L.warmup || []).length, wDone = run.warm.length === wTotal && wTotal > 0;
+            var wRight = run.warm.filter(function (x) { return x.ok; }).length;
+            var rec = { done: 1, best: Math.max(prev.best || 0, right), total: total, last: right, at: Date.now() };
+            if (wDone) { rec.warm = wRight; rec.warmTotal = wTotal; }
+            else if (prev.warm != null) { rec.warm = prev.warm; rec.warmTotal = prev.warmTotal; }
+            s.lessons[L.id] = rec;
             var saved = save();
+            // Now that the lesson is done, show the warm-up answers too.
+            run.warm.forEach(function (x) {
+                Array.prototype.forEach.call(x.choices.children, function (btn, i) {
+                    if (x.q.choices[i].id === x.q.answer) btn.classList.add('right');
+                    else if (btn === x.picked) btn.classList.add('wrong');
+                });
+                var v = x.call.querySelector('.verdict');
+                v.className = 'verdict ' + (x.ok ? 'good' : 'bad');
+                v.textContent = x.ok ? 'Your guess was right.' : 'Your guess was off. The right answer is marked.';
+            });
             var line = right === total ? 'Perfect game. You ran the film clean.' : right >= total - 1 ? 'Good game. Reread the one you missed and run it back.' : 'Run it back. Reread the lesson above, then try the calls again.';
-            result.innerHTML = '<b class="big">' + right + ' / ' + total + '</b><p>' + line + '</p>' +
+            var warmLine = wDone ? '<p class="small">Warm-up, before the lesson: ' + wRight + ' / ' + wTotal + '. Film Room, after: ' + right + ' / ' + total + '. The warm-up answers are now marked above.</p>' : '';
+            result.innerHTML = '<b class="big">' + right + ' / ' + total + '</b><p>' + line + '</p>' + warmLine +
                 (saved ? '<p class="small">Saved on this phone.</p>' : '<p class="small">This browser is not saving progress (private mode or blocked storage).</p>') +
                 '<div class="mark"><button type="button" class="btn ghost" id="again">Run it back</button><a class="btn" href="#/nil">All lessons</a></div>';
             result.hidden = false; result.focus();
@@ -288,14 +317,21 @@
                     '<p class="vn">' + L.video.note + ' <span class="small">Videos need a connection; the lesson text below works offline.</span></p>' +
                     (L.youtube ? '<p class="vlinks"><a href="https://www.youtube.com/watch?v=' + esc(L.youtube) + '" target="_blank" rel="noopener">Watch on YouTube</a></p>' : '');
             } else {
-                v.innerHTML = '<p class="novid">No video for this lesson yet. The lesson is written out below.</p>';
+                v.innerHTML = '<p class="novid">This lesson is text only, with no video. It is all written out below, so it works with no signal.</p>';
             }
             wrap.appendChild(v);
+            var src = v.querySelector('source');
+            if (src) src.addEventListener('error', function () {
+                if (!navigator.onLine) return; // offline: the note under the video already says it needs a connection
+                v.querySelector('video').hidden = true;
+                v.querySelector('.vn').innerHTML = 'The video did not load here.' + (L.youtube ? ' Use the YouTube link below.' : '') + ' The lesson text below covers everything in it.';
+            });
 
-            if (L.warmup && L.warmup.length) wrap.appendChild(quizEl(L, L.warmup, 'warm'));
+            var run = { warm: [] };
+            if (L.warmup && L.warmup.length) wrap.appendChild(quizEl(L, L.warmup, 'warm', run));
             var prose = el('div', { 'class': 'prose' }, L.blocks.map(renderBlock).join(''));
             wrap.appendChild(prose);
-            if (L.filmroom && L.filmroom.length) wrap.appendChild(quizEl(L, L.filmroom, 'film'));
+            if (L.filmroom && L.filmroom.length) wrap.appendChild(quizEl(L, L.filmroom, 'film', run));
             if (L.hasTryItOnSite) {
                 wrap.appendChild(el('p', { 'class': 'small' }, 'This lesson also has a hands-on "Try it" on the website: <a href="' + esc(L.onSite) + '#try-it" target="_blank" rel="noopener">open it on nychonor.org</a>.' +
                     (L.id === '03' ? ' In this app, the Money Tools class has the same tax math.' : '')));

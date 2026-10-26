@@ -1,5 +1,7 @@
 {
   "_note": "The class library. To add a class: add an entry here, put its text files under app/data/, and (for a new kind of screen) add a renderer in app.js. 'cache' lists every file saved for offline the first time a kid opens that class.",
+  "_showComingSoon": "Set showComingSoon to true to list the 'kind: soon' classes on the home screen again. Hidden until a class exists (Eslyn, Oct 25 2026).",
+  "showComingSoon": false,
   "classes": [
     {
       "id": "nil",

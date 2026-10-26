@@ -1,20 +1,23 @@
 /* NYC Honor Classes: service worker.
    - Install: saves the app shell (page, styles, script, icons, the site's own fonts, the class list).
    - Fetch: same-origin GETs answer from the cache first and refresh in the background, so the app opens
-     with no signal. Lesson text and tool code are added to cache 'nyh-class-v1' by app.js the first time a
-     class is opened. Videos and other range requests are never cached (too big; they need a connection).
+     with no signal. Lesson text and tool code are added to cache CLASS_CACHE by app.js the first time a
+     class is opened. Videos and other range requests are never cached (too big; they need a connection);
+     captions and posters are, once seen.
    - Nothing here reads or sends anything a kid types; it only handles static files.
    Bump VERSION to push a new shell to everyone. */
-const VERSION = 'v3';
+const VERSION = 'v4';
 const SHELL = 'nyh-shell-' + VERSION;
-const CLASS_CACHE = 'nyh-class-v1';
+const CLASS_CACHE = 'nyh-class-v2'; // bump with app.js when lesson or tool files change
 const SHELL_FILES = [
   './', 'index.html', 'app.css', 'app.js', 'manifest.webmanifest',
   'data/classes.json',
   'icons/icon-192.png', 'icons/icon-512.png', 'icons/apple-touch-icon.png',
   '../fonts/fonts.css', '../fonts/inter-latin.woff2', '../fonts/inter-latin-ext.woff2',
   '../fonts/jetbrains-mono-latin.woff2', '../fonts/jetbrains-mono-latin-ext.woff2',
-  '../assets/nyc-honor-crest-nav.png'
+  '../assets/nyc-honor-crest-nav.png',
+  // Home-screen trailer: poster and captions only (small), so the home screen has no failed loads offline.
+  '../assets/film/posters/nil-course-trailer-v2.jpg', '../assets/film/nil-course-trailer.vtt'
 ];
 
 self.addEventListener('install', (e) => {
@@ -24,7 +27,7 @@ self.addEventListener('install', (e) => {
 self.addEventListener('activate', (e) => {
   e.waitUntil(
     caches.keys().then((keys) => Promise.all(
-      keys.filter((k) => k.startsWith('nyh-shell-') && k !== SHELL).map((k) => caches.delete(k))
+      keys.filter((k) => (k.startsWith('nyh-shell-') && k !== SHELL) || (k.startsWith('nyh-class-') && k !== CLASS_CACHE)).map((k) => caches.delete(k))
     )).then(() => self.clients.claim())
   );
 });
@@ -34,7 +37,7 @@ self.addEventListener('fetch', (e) => {
   if (req.method !== 'GET') return;
   const url = new URL(req.url);
   if (url.origin !== self.location.origin) return;           // never touch third-party requests
-  if (req.headers.has('range') || /\.(mp4|vtt)$/i.test(url.pathname)) return; // video: network only
+  if (req.headers.has('range') || /\.mp4$/i.test(url.pathname)) return; // video: network only (captions and posters are small and get cached)
   e.respondWith((async () => {
     const hit = await caches.match(req, { ignoreSearch: true });
     const refresh = fetch(req).then(async (res) => {
