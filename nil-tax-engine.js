@@ -31,7 +31,8 @@
 
    Re-checked October 25, 2026 against Rev. Proc. 2025-32 (Tables 2
    and 3, sec. 4.14), IRS Topic 751 and the 2026 Instructions for
-   Forms 1099-MISC and 1099-NEC; tests/math.test.js pins each figure.
+   Forms 1099-MISC and 1099-NEC; tests/math.test.js in the public
+   nyc-honor-classes repo pins each figure.
 
    State tax is deliberately NOT modeled.
    ───────────────────────────────────────────────────────────── */

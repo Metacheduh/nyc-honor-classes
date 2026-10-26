@@ -4,7 +4,7 @@ Run from the repo root with a local server going (python3 -m http.server 8000):
     python3 tests/e2e.py http://127.0.0.1:8000 no-films
 "no-films" ignores 404s for the lesson films, which live on nychonor.org, not in this repo.
 Prints PASS/FAIL lines; exits 1 on any FAIL."""
-import sys, json, re
+import sys, os, json, re
 from playwright.sync_api import sync_playwright
 
 BASE = sys.argv[1].rstrip('/')
@@ -141,7 +141,7 @@ with sync_playwright() as p:
     sim = ctx.new_page()
     sim.on('console', lambda m: errors.append(m.text) if m.type == 'error' else None)
     sim.on('pageerror', lambda e: errors.append(str(e)))
-    sim.goto(BASE + '/budget-simulator/')
+    sim.goto(BASE + os.environ.get('NYH_SIM_PATH', '/budget-simulator/'))
     sim.wait_for_selector('#p-net')
     w = sim.evaluate('document.documentElement.scrollWidth')
     check(w <= 375, f'simulator: no sideways scroll at 375px ({w})')
