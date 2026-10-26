@@ -328,14 +328,14 @@
     },
     {
      "id": "b",
-     "text": "It is covered. FDIC insurance goes up to $250,000."
+     "text": "Only money over $250,000 is covered."
     },
     {
      "id": "c",
-     "text": "Only money over $250,000 is covered."
+     "text": "It is covered. FDIC insurance goes up to $250,000."
     }
    ],
-   "answer": "b",
+   "answer": "c",
    "overtime": false,
    "why": "FDIC insurance covers $250,000 per depositor, per insured bank, for each ownership category."
   },
@@ -345,18 +345,18 @@
    "choices": [
     {
      "id": "a",
-     "text": "Yes, up to $500,000."
+     "text": "No. SIPC does not cover a drop in value."
     },
     {
      "id": "b",
-     "text": "No. SIPC does not cover a drop in value."
+     "text": "Yes, up to $500,000."
     },
     {
      "id": "c",
      "text": "Yes, but only for the cash part."
     }
    ],
-   "answer": "b",
+   "answer": "a",
    "overtime": false,
    "why": "SIPC helps when a brokerage firm fails and assets are missing. It does not protect against investments losing value."
   },
@@ -391,14 +391,14 @@
     },
     {
      "id": "b",
-     "text": "The $1,000 you put in."
+     "text": "All $1,300."
     },
     {
      "id": "c",
-     "text": "All $1,300."
+     "text": "The $1,000 you put in."
     }
    ],
-   "answer": "b",
+   "answer": "c",
    "overtime": true,
    "why": "Withdrawals count as your contributions first, and those come out with no tax. The $300 of growth taken out early could be taxed plus a 10% additional tax."
   }

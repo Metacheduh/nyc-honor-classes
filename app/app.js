@@ -149,8 +149,11 @@
             tiles.appendChild(a);
         });
         wrap.appendChild(tiles);
-        wrap.appendChild(el('h2', null, 'More classes on the way'));
-        wrap.appendChild(soon);
+        // Classes not built yet stay off the home screen until classes.json sets showComingSoon: true.
+        if (catalog.showComingSoon === true && soon.children.length) {
+            wrap.appendChild(el('h2', null, 'More classes on the way'));
+            wrap.appendChild(soon);
+        }
 
         // Sponsors spot: the ask only. No sponsor is named anywhere in the app (Eslyn, Oct 24 2026);
         // sponsor credits live on nychonor.org. Lessons never show a sponsor (the course hub promises

@@ -34,6 +34,9 @@ with sync_playwright() as p:
     txt = page.inner_text('main')
     check('Sirmium' not in txt and 'BigO' not in txt, 'home: no Sirmium/BigO')
     check('not tax, legal or investment advice' in txt, 'home: advice line present')
+    check(page.locator('.soon').count() == 0 and 'Coming soon' not in txt, 'home: no "Coming soon" class tiles')
+    keys = page.evaluate('Object.keys(localStorage)')
+    check(set(keys) <= {'nyh_app_v1'}, f'home: browser storage holds only progress (keys: {keys})')
 
     # Each lesson: render, quizzes, scoring
     for n in range(1, 8):
@@ -69,6 +72,11 @@ with sync_playwright() as p:
         check(rec['best'] == total - 1 and rec['total'] == total and rec.get('warm') == warm_right, f'lesson {lid}: score saved on device')
         check('educational content only' in body.lower() and 'advice' in body.lower(), f'lesson {lid}: disclaimer present')
 
+    keys = page.evaluate('Object.keys(localStorage)')
+    check(set(keys) == {'nyh_app_v1'}, f'app: after all lessons, browser storage holds only progress (keys: {keys})')
+    key5 = ''.join(q['answer'] for q in json.load(open('app/data/nil/05.json'))['filmroom'])
+    check(len(set(key5)) >= 2, f'lesson 05: Film Room key is mixed ({key5})')
+    check(bool(json.load(open('app/data/nil/04.json')).get('youtube')), 'lesson 04: has a YouTube link')
     page.goto(BASE + '/app/#/nil')
     page.wait_for_selector('ul.lessons')
     check(page.locator('.chip.gold').count() == 7, 'lesson list: all 7 show a saved score')
@@ -138,11 +146,19 @@ with sync_playwright() as p:
 
     # Budget simulator
     errors.clear(); bad.clear()
-    sim = ctx.new_page()
+    # Fresh browser profile, so the app's own progress key from above isn't counted against the simulator.
+    sctx = b.new_context(viewport={'width': 375, 'height': 812}, device_scale_factor=2, is_mobile=True, has_touch=True)
+    sim = sctx.new_page()
     sim.on('console', lambda m: errors.append(m.text) if m.type == 'error' else None)
     sim.on('pageerror', lambda e: errors.append(str(e)))
-    sim.goto(BASE + os.environ.get('NYH_SIM_PATH', '/budget-simulator/'))
+    sim.goto(BASE + os.environ.get('NYH_SIM_PATH', '/budget-simulator/') + '?src=test&utm_source=test')
     sim.wait_for_selector('#p-net')
+    sim.wait_for_timeout(300)
+    keys = sim.evaluate('Object.keys(localStorage).concat(Object.keys(sessionStorage))')
+    check(keys == [] and sim.evaluate('document.cookie') == '', f'simulator: stores nothing in the browser, even with ?src= (keys: {keys})')
+    sim.click('#hamburger') if sim.locator('#hamburger').is_visible() else None
+    check(sim.locator('#mobile-menu.show').count() == 1, 'simulator: menu opens with the menu-only script')
+    sim.evaluate('closeMenu()')
     w = sim.evaluate('document.documentElement.scrollWidth')
     check(w <= 375, f'simulator: no sideways scroll at 375px ({w})')
     check(sim.eval_on_selector('#wage', 'e=>e.min') == '17', 'simulator: NYC wage slider starts at the $17 minimum')
@@ -155,6 +171,12 @@ with sync_playwright() as p:
     sim.fill('#ef-goal', '1000'); sim.fill('#ef-start', '400'); sim.fill('#ef-month', '0'); sim.dispatch_event('#ef-month', 'input')
     check('$25 a month' in sim.inner_text('#ef-msg'), 'simulator: emergency hint uses what is left ($600 over 24 months = $25)')
     check(not errors, 'simulator: no console errors ' + ('; '.join(errors[:5])))
+    # Site layout only: donation pages still record where a visitor came from.
+    if os.environ.get('NYH_SITE'):
+        d = ctx.new_page()
+        d.goto(BASE + '/donate.html?src=e2e-check')
+        d.wait_for_timeout(500)
+        check(d.evaluate("localStorage.getItem('nyh_last')") == 'e2e-check' and bool(d.evaluate("localStorage.getItem('nyh_src')")), 'donate page: attribution still recorded')
     b.close()
 
 print(f'\n{len(fails)} failed')

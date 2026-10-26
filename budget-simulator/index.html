@@ -29,6 +29,8 @@
     <link rel="stylesheet" href="course.css">
     <!-- Course-family page for students: NO Clarity, NO GA4, no course-count tally, self-hosted fonts.
          The simulator (budget-simulator.js) does its math in the browser and sends and saves nothing.
+         The page loads nav-only.js (menu only), not the site-wide main.js, because main.js stores
+         where a visitor came from in localStorage for donation credit. This page stores nothing.
          Tax figures are 2026 and must be re-verified every January (see the header of budget-simulator.js).
          Wording rule: this page "covers" NYSED topics; never claim it satisfies the requirement. -->
     <style>
@@ -517,7 +519,7 @@ totals come out a little lower than these.</p>
         </div>
     </footer>
 
-    <script src="main.js" defer></script>
+    <script src="nav-only.js" defer></script>
     <script src="budget-simulator.js"></script>
     <script>
     (function () {
