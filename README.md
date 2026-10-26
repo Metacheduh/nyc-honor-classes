@@ -22,6 +22,15 @@ Then open http://localhost:8000/app/ or http://localhost:8000/budget-simulator/.
 
 Lessons live in `app/data/nil/01.json` to `07.json`, and the class list is in `app/data/classes.json`. Edit those to adapt the content. Tax figures are for 2026; check them against the IRS and your state before each school year.
 
+## Tests
+
+```bash
+node --test tests/math.test.js          # tax and money math vs the 2026 IRS and NY figures
+python3 tests/e2e.py http://127.0.0.1:8000 no-films   # every lesson, quiz, tool and step in a headless phone browser
+```
+
+The second one needs Python Playwright and a local server running. The lesson films are hosted on nychonor.org and aren't in this repo, so a local copy shows a note instead of the video; the lesson text is complete without them.
+
 ## Licenses
 
 - **Code** (JavaScript, HTML, CSS): MIT, see `LICENSE`.

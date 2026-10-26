@@ -540,7 +540,7 @@
         }
 
         function paycheck() {
-            var wage = num('wage', 16, 40), hours = num('hours', 1, 40), weeks = num('weeks', 1, 52);
+            var wage = num('wage', S.MIN_WAGE[$('region').value] || 16, 40), hours = num('hours', 1, 40), weeks = num('weeks', 1, 52);
             var dep = $('dependent').checked, nyc = $('nyc-live').checked;
             $('wage-v').textContent = m2(wage);
             $('hours-v').textContent = hours;
@@ -590,7 +590,7 @@
             $('ef-progress-wrap').setAttribute('aria-label', Math.round(pct) + '% of the goal saved so far');
             var msg;
             if (months === 0) msg = 'You already have your goal. Keep it somewhere safe and separate from spending money.';
-            else if (months === Infinity) msg = 'At $0 a month you won’t reach ' + m0(goal) + '. Even ' + m0(Math.max(5, goal / 24)) + ' a month gets you there in about two years.';
+            else if (months === Infinity) msg = 'At $0 a month you won’t reach ' + m0(goal) + '. Even ' + m0(Math.max(5, Math.ceil((goal - start) / 24))) + ' a month gets you there in about two years.';
             else msg = 'Saving ' + m0(mo) + ' a month, you reach ' + m0(goal) + ' in ' + years(months) + '.';
             $('ef-msg').textContent = msg;
             state.ef = { goal: goal, months: months, mo: mo };
@@ -680,6 +680,9 @@
         $('b-503020').addEventListener('click', function () { $('needs').value = 50; $('wants').value = 30; all(); });
         $('print-btn').addEventListener('click', function () { window.print(); });
         var rt; window.addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(growth, 150); });
+        // The wage slider starts at the chosen region's minimum wage, so it can't go below it on first load.
+        $('wage').min = S.MIN_WAGE[$('region').value];
+        if (parseFloat($('wage').value) < S.MIN_WAGE[$('region').value]) $('wage').value = S.MIN_WAGE[$('region').value];
         all();
     })();
     </script>

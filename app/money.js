@@ -25,7 +25,7 @@
     var E = function () { return root.NIL_ENGINE; };
     var CAP = 1000000;
     function num(v) { var n = Number(String(v).replace(/[^0-9.]/g, '')); return isFinite(n) && n > 0 ? Math.min(n, CAP) : 0; }
-    function money(n) { return '$' + Math.round(n).toLocaleString('en-US'); }
+    function money(n) { var r = Math.round(n); return (r < 0 ? '-$' : '$') + Math.abs(r).toLocaleString('en-US'); }
     function moneyField(id, label, value, hint, extra) {
         return '<div class="field"><label for="' + id + '">' + label + '</label><div class="money"><span aria-hidden="true">$</span>' +
             '<input id="' + id + '" type="text" inputmode="decimal" autocomplete="off" value="' + value + '"' + (hint ? ' aria-describedby="' + id + '-h"' : '') + (extra || '') + '></div>' +
@@ -90,7 +90,7 @@
             '<p>Build the month on what comes in when there is no deal. Slide each line until nothing is left over. The lines are the ones in Module 01: saving first, needs, giving, wants.</p>' +
             moneyField('income', 'Money that comes in most months', b.income, 'Allowance, job pay. Leave deal money out for now.') +
             LINES.map(function (l) { return '<div class="slider"><label for="r-' + l[0] + '"><span>' + l[1] + '</span><output id="v-' + l[0] + '" for="r-' + l[0] + '">$0</output></label>' +
-                '<input id="r-' + l[0] + '" type="range" min="0" max="200" step="5" value="' + (b[l[0]] || 0) + '"></div>'; }).join('') +
+                '<input id="r-' + l[0] + '" type="range" min="0" max="' + Math.max(1, Math.round(b.income || 200)) + '" step="1" value="' + (b[l[0]] || 0) + '"></div>'; }).join('') +
             '<div class="light bars" aria-hidden="true">' + LINES.map(function (l) { return '<div class="bar2"><span>' + l[1].replace(', first', '') + '</span><div class="track"><i id="bb-' + l[0] + '"></i></div></div>'; }).join('') + '</div>' +
             '<p class="status" id="left" aria-live="polite"></p>' +
             '<div class="chips"><button type="button" class="pchip" id="ex">Show the lesson\'s plan</button><button type="button" class="pchip" id="clr">Start over</button></div>' +
@@ -101,16 +101,17 @@
         var income = $(host, '#income'), ranges = {};
         LINES.forEach(function (l) { ranges[l[0]] = $(host, '#r-' + l[0]); });
         function render() {
-            var inc = Math.max(5, Math.round(num(income.value) / 5) * 5), used = 0;
+            // Whole-dollar steps, so any whole-dollar income can be split to exactly $0 left.
+            var inc = Math.max(1, Math.round(num(income.value))), used = 0;
             LINES.forEach(function (l) {
-                var r = ranges[l[0]]; r.max = String(Math.max(inc, 5));
+                var r = ranges[l[0]]; r.max = String(inc);
                 if (Number(r.value) > inc) r.value = String(inc);
                 var v = Number(r.value) || 0; used += v;
                 $(host, '#v-' + l[0]).textContent = money(v);
                 r.setAttribute('aria-valuetext', money(v));
                 setBar($(host, '#bb-' + l[0]), inc ? v / inc * 100 : 0);
             });
-            var left = num(income.value) - used, st = $(host, '#left');
+            var left = Math.round(num(income.value)) - used, st = $(host, '#left');
             st.className = 'status ' + (left === 0 && num(income.value) > 0 ? 'good' : left < 0 ? 'bad' : '');
             st.textContent = num(income.value) <= 0 ? 'Type what comes in to start.' : left === 0 ? 'Every dollar has a job. Nothing left over, nothing short.' : left > 0 ? money(left) + ' still needs a job.' : 'You planned ' + money(-left) + ' more than comes in.';
             var d = num($(host, '#deal').value), out = $(host, '#dealout');
@@ -167,8 +168,8 @@
         });
         list.addEventListener('click', function (e) {
             var add = e.target.getAttribute && e.target.getAttribute('data-add'), del = e.target.getAttribute && e.target.getAttribute('data-del');
-            if (add) { var g = byId(add), v = num($(host, '#a-' + add).value); if (g && v > 0) { g.saved = Math.min(CAP, g.saved + v); ctx.save(); drawList(); ctx.toast('Added ' + money(v)); } }
-            if (del && window.confirm('Delete this goal?')) { var s = ctx.load(); s.goals = s.goals.filter(function (x) { return x.id !== del; }); ctx.save(); drawList(); }
+            if (add) { var g = byId(add), v = num($(host, '#a-' + add).value); if (g && v > 0) { g.saved = Math.min(CAP, g.saved + v); ctx.save(); drawList(); ctx.toast('Added ' + money(v)); var again = $(host, '#a-' + add); if (again) again.focus(); } }
+            if (del && window.confirm('Delete this goal?')) { var s = ctx.load(); s.goals = s.goals.filter(function (x) { return x.id !== del; }); ctx.save(); drawList(); $(host, '#gname').focus(); }
         });
         drawList();
     }

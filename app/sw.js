@@ -1,13 +1,13 @@
 /* NYC Honor Classes: service worker.
    - Install: saves the app shell (page, styles, script, icons, the site's own fonts, the class list).
    - Fetch: same-origin GETs answer from the cache first and refresh in the background, so the app opens
-     with no signal. Lesson text and tool code are added to cache 'nyh-class-v1' by app.js the first time a
+     with no signal. Lesson text and tool code are added to cache CLASS_CACHE by app.js the first time a
      class is opened. Videos and other range requests are never cached (too big; they need a connection).
    - Nothing here reads or sends anything a kid types; it only handles static files.
    Bump VERSION to push a new shell to everyone. */
-const VERSION = 'v3';
+const VERSION = 'v4';
 const SHELL = 'nyh-shell-' + VERSION;
-const CLASS_CACHE = 'nyh-class-v1';
+const CLASS_CACHE = 'nyh-class-v2'; // bump with app.js when lesson or tool files change
 const SHELL_FILES = [
   './', 'index.html', 'app.css', 'app.js', 'manifest.webmanifest',
   'data/classes.json',
@@ -24,7 +24,7 @@ self.addEventListener('install', (e) => {
 self.addEventListener('activate', (e) => {
   e.waitUntil(
     caches.keys().then((keys) => Promise.all(
-      keys.filter((k) => k.startsWith('nyh-shell-') && k !== SHELL).map((k) => caches.delete(k))
+      keys.filter((k) => (k.startsWith('nyh-shell-') && k !== SHELL) || (k.startsWith('nyh-class-') && k !== CLASS_CACHE)).map((k) => caches.delete(k))
     )).then(() => self.clients.claim())
   );
 });
